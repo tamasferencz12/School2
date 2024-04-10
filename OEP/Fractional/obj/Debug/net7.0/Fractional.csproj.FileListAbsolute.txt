@@ -1,0 +1,15 @@
+/Users/tamas/Desktop/School II./OEP/Fractional/bin/Debug/net7.0/Fractional
+/Users/tamas/Desktop/School II./OEP/Fractional/bin/Debug/net7.0/Fractional.deps.json
+/Users/tamas/Desktop/School II./OEP/Fractional/bin/Debug/net7.0/Fractional.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Fractional/bin/Debug/net7.0/Fractional.dll
+/Users/tamas/Desktop/School II./OEP/Fractional/bin/Debug/net7.0/Fractional.pdb
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.csproj.AssemblyReference.cache
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.dll
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/refint/Fractional.dll
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.pdb
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/Fractional.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Fractional/obj/Debug/net7.0/ref/Fractional.dll

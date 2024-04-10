@@ -1,0 +1,37 @@
+A java nyelv:
+	- C alapu
+	- Obijektumelvu
+	- Imperativ
+	- Erosen tipusos
+	- Statikus + Dinamikus tipusrendszer
+	- Generikus, konkurens eszkozok
+
+Jellemzoi:
+	- Konnyu szoftverfejlesztes
+	- Gazdag infrastruktura
+		Szabvanyos
+		Dokumentacio
+		Kiterjesztesek
+	- Flatformfuggetlen(JVM):
+		Write once, run everywhere
+	- Eroforrasintenziv
+
+Parancssorban:
+	-1. ls
+		Main.java
+	-2. javac Main.java
+	-3. ls
+		Main.class Main.java
+	-4. java Main
+		Hello World
+
+Objektumelvu programozas:
+	- Objektum
+	- Osztaly
+	- Absztrakcio (mi a fontos a szamunkra?!) 
+		egysegbe zaras (enkapszulacio)
+		informacio elrejtese (nem lehet ralatni kivulrol)
+	- Oroklodes
+	- Alaptipusossag, altipusos polimorfizmus
+	- Feluldefinialas, dinamikus kotes
+

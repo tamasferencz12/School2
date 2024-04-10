@@ -1,0 +1,14 @@
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/bin/Debug/net8.0/Kaktusz
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/bin/Debug/net8.0/Kaktusz.deps.json
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/bin/Debug/net8.0/Kaktusz.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/bin/Debug/net8.0/Kaktusz.dll
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/bin/Debug/net8.0/Kaktusz.pdb
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.dll
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/refint/Kaktusz.dll
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.pdb
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/Kaktusz.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/kaktusz/Kaktusz/obj/Debug/net8.0/ref/Kaktusz.dll

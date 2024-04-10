@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu" xml:lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="ELTE Informatikai Kar" />
+  <title>Programozási nyelvek Java</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">
+  body {
+      max-width: 100% !important;
+  }
+
+  pre > code
+  {
+      all: unset;
+  }
+
+  code
+  {
+      color: blue;
+      font-size: 14px;
+      white-space: pre;
+      border-radius: 3px;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      padding: 2px 4px;
+
+      display: inline-block;
+
+      background-image: radial-gradient(ellipse farthest-corner at 50% 50%, #e4e4e4, #ffffff);
+  }
+
+
+  pre code,
+  code.sourceCode
+  {
+    	margin-left: 3em;
+    	padding: 0.5em;
+
+    	border: 0.1em green solid !important;
+
+      display: inline-block;
+  }
+
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-spacing: 0;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      width: auto !important;
+  }
+
+  table th {
+      padding: 3px 10px;
+      background-color: white;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+  }
+
+  table td {
+      padding: 3px 10px;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      border-right: none;
+  }
+
+  nav#TOC {
+      position: fixed;
+      top: .2em;
+      right: .2em;
+      border: 1px solid black;
+  }
+
+  h2#toc-title {
+      margin-top: 0em;
+  }
+
+  nav#TOC::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  a {
+      color: blue;
+      text-decoration: underline !important;
+  }
+
+  </style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 class="hu" id="tömb-enum-memmap">06. Tömb, enum, memmap</h1>
+<h3 class="hu" id="feladat">1. feladat</h3>
+<p>Készítsük el az <code>ArrayUtilStructureTest</code> osztályban leírt
+szerkezetű programot. Ez egy tömb maximális elemét számítja ki az alábbi
+módokon. A visszatérési érték mindegyik esetben ugyanaz, a kiszámítás
+módja azonban eltérő.</p>
+<ul>
+<li><code>max()</code>: a tömb elemeit indexelve járjuk be a tömböt, az
+eddig érintett rész maximumát számon tartva, és lecserélve, ha az
+indexelt tömbelem ennél nagyobb
+<ul>
+<li>Az üres tömb maximum értéke legyen <code>0</code>.</li>
+<li>Nemüres tömbre az érintett rész maximuma az
+<code>Integer.MIN_VALUE</code> értékről induljon.</li>
+<li>A csere egy egyszerű <code>if</code> vizsgálattal történjen.</li>
+</ul></li>
+<li><code>max2()</code>: hasonlóan, de a csere a <code>?:</code>
+operátorral történjen</li>
+<li><code>max3()</code>: hasonlóan, de a csere a <code>Math.max()</code>
+hívással történjen</li>
+<li><code>max4()</code>: hasonlóan, de a ciklus ne indexelő, hanem
+bejáró legyen</li>
+</ul>
+<p>Írjuk meg az alábbi funkcionális teszteket.</p>
+<ul>
+<li><code>maxLength0</code>: üres tömb maximuma <code>0</code>
+<ul>
+<li>Mind a négy metódust próbáljuk ki.</li>
+<li>A fentebb említett “Megengedett egyszerűsítés” továbbra is él.</li>
+</ul></li>
+<li><code>maxLength1</code>: egyelemű tömböt tesztel
+<ul>
+<li>Paraméterezett tesztelővel próbáljuk ki, ami az egyetlen elem
+értékét több módon állítja be.</li>
+<li>Az értékek között szerepeljen <code>0</code>, <code>1</code>, nagy
+értékek, negatív értékek.</li>
+</ul></li>
+<li><code>maxLength2</code>: kételemű tömböt tesztel
+<ul>
+<li>Paraméterezett tesztelővel próbáljuk ki, ami egy <code>min</code> és
+egy <code>max</code> értéket használ.</li>
+<li>Mind a négy metódust próbáljuk ki úgy is, hogy az értékek
+<code>min, max</code> sorrendben szerepelnek a tömbben, és úgy is, hogy
+a sorrendjük <code>max, min</code>.</li>
+</ul></li>
+</ul>
+<p>A <code>minMax()</code> metódus a tömb minimumát és maximumát egy
+kételemű tömbben adja ki.</p>
+<ul>
+<li>A megvalósítás a maximum/minimum meghatározására a fenti lehetőségek
+közül bármelyiket használhatja.</li>
+<li>Tipp: szükség lesz az <code>Integer.MAX_VALUE</code> értékre.</li>
+<li>Készüljenek ehhez funkcionális tesztek: <code>minMaxLengthN</code>,
+ahol <code>N=0, 1, 2</code>.</li>
+</ul>
+<p>A <code>array.util.main.Main.main()</code> metódus próbálja ki a
+kódot úgy, hogy a felhasználó kézzel adja meg az adatokat.</p>
+<ul>
+<li>Először az <code>arrayLenTxt</code> változóba olvassuk be a tömb
+hosszát, és alakítsuk számmá az <code>arrayLen</code> változóba.</li>
+<li>Ezután készítsünk egy <code>arrayLen</code> méretű tömböt.</li>
+<li>Utána olvassunk be <code>arrayLen</code> bemenetet, és tároljuk el
+számként a tömb elemeiben.</li>
+<li>Végül írjuk ki a tömböt magát és a fenti metódusok segítségével
+meghatározott minimumát/maximumát.
+<ul>
+<li>A tömbök <code>System.out.println(array)</code> módon kiírva nem
+mutatják meg az elemeiket…</li>
+<li>… ezért <code>System.out.println(Arrays.toString(array))</code>
+használatával lehet őket kiíratni, ahol az osztály teljes neve
+<code>java.util.Arrays</code>.</li>
+<li>A <code>minMax()</code> adta tömböt is így írjuk ki.</li>
+</ul></li>
+</ul>
+<h3 class="hu" id="feladat-1">2. feladat</h3>
+<p>Készítsük el a <code>SectorTimerTestSuite</code> osztályban leírt
+szerkezetű programokat. Ezek egy versenyautó köreinek időmérését
+próbálják megvalósítani, az utolsó kivételével szándékosan rosszul.</p>
+<p>Először a <code>race.car.WrongSectorTimer1</code> osztályt készítsük
+el. <em>Szándékosan rontsuk el úgy</em>, hogy az adattagjai
+<code>public</code> láthatóságúak legyenek. Próbáljuk ki a
+következőket.</p>
+<ul>
+<li>A következő tesztesetek mind úgy indulnak, hogy egy
+<code>1, 2, 3</code> tartalmú tömbbel példányosítani kell az osztályt.
+<ul>
+<li>Kísérletező kedvűeknek: <code>@BeforeEach</code> használatával még
+elegánsabb megoldás adható.</li>
+</ul></li>
+<li><code>seemsGood</code>: az adattag három elemű tömb a megfelelő
+értékekkel</li>
+<li><code>setArrayElemsBreaksEncapsulation</code>: a tömb mező egyes
+értékeit közvetlenül el lehet érni és be lehet állítani; ez a hosszát
+nem változtatja meg
+<ul>
+<li>Ez a teszt (és a következő) szokatlan, mert egy <strong>direkt
+rossz</strong> megvalósítást próbál ki.</li>
+<li>Éppen ezért akkor zöld (elfogadott), ha <strong>rosszul működik az
+osztály</strong>.</li>
+</ul></li>
+<li><code>setArrayElemsBreaksEncapsulation2</code>: az adattagban a tömb
+teljesen lecserélhető, ez megváltoztatja a hosszát és az értékeit
+is</li>
+</ul>
+<p>Próbáljuk megjavítani: készítsük el a
+<code>race.car.WrongSectorTimer2</code> osztályt. Az adattag láthatósága
+legyen most <code>private</code>, de a getterek, setterek és a
+konstruktor megvalósítása legyen naívan egyszerű.</p>
+<ul>
+<li>Most már nem elérhető kívülről az adattag. Ez helyes.</li>
+<li><code>seemsGood</code>: mint korábban</li>
+<li><code>constructorBreaksEncapsulation</code>: a
+<code>WrongSectorTimer2</code> példányt egy lokális változóban levő,
+<code>1, 2, 3</code> tartalmú tömb inicializálja, majd írjuk át ennek a tömbnek az
+elemeit
+<ul>
+<li>Ez a <code>timer.getSectorTimes()</code> eredményének hosszát nem
+változtatja meg.</li>
+<li>Ellenőrzendő: a <code>timer.getSectorTimes()</code> a módosított tömb értékeit adja vissza,
+ nem pedig a konstruktornak átadott értékeket.</li>
+</ul></li>
+<li><code>getterBreaksEncapsulation</code>: kérjük le a
+<code>timer.getSectorTimes()</code> értékeket és módosítsuk őket a metódusban.
+<ul>
+<li>Ez a <code>timer.getSectorTimes()</code> eredményének hosszát nem
+változtatja meg, de az elemeket igen, amit nem volna szabad.</li>
+</ul></li>
+<li><code>setterBreaksEncapsulation</code>: a setternek egy
+<code>4, 5, 6, 7</code> tartalmú, lokális változóban tárolt tömb
+átadása, majd a lokális változón keresztül a tömbelemek módosítása
+<ul>
+<li>Ez a reprezentáció a példányban tárolt tömb hosszát és értékeit is módosítja.</li>
+</ul></li>
+</ul>
+<p>Most tényleg javítsuk meg az enkapszulációt:
+<code>race.car.SectorTimer</code> osztály.</p>
+<ul>
+<li>A konstruktor, getter, setter egyaránt készítsen másolatot annak
+során, hogy átveszi/kiadja a reprezentáció tömbjét.
+<ul>
+<li>Még jobb, ha a konstruktor és a setter egy közös, privát
+<code>initSectorTimes</code> segédfüggvényre hív át.</li>
+</ul></li>
+<li>A tesztelőben legyen <code>constructorEncapsulatesWell</code>,
+<code>getterEncapsulatesWell</code> és
+<code>setterEncapsulatesWell</code> metódus.
+<ul>
+<li>Ezek ugyanazt próbálják ki, mint a fentiek, és ugyanazokat az
+<code>assertX</code> vizsgálatokat hajtsák végre.</li>
+<li>Figyeljük meg, hogy az enkapszuláció most jól működik: nem tudunk
+kívülről ,,betörni’’ a reprezentációba.</li>
+</ul></li>
+<li>A konstruktornak/getternek/setternek legyen olyan változata is, ami
+a tömb másolását a <code>System.arraycopy</code> művelettel hajtja
+végre.
+<ul>
+<li>Ne találjuk fel a spanyolviaszt: ha elérhető
+beépített/könyvtári/sztenderd megoldás/eszköz, akkor használjuk!</li>
+<li>Mivel egy osztályban nem lehet két, azonos paraméterezésű
+konstruktor, az egyik kapjon egy extra <code>boolean</code> paramétert,
+amit nem használunk benne.</li>
+<li>A konstruktor és a setter *vararg* stílusban kapja meg a paramétereit, ne csak egyszerű tömbként.</li>
+</ul></li>
+</ul>
+<h3 class="hu" id="feladat-2">3. feladat</h3>
+<p>Készítsük el az <code>ElectionTestSuite</code> által leírt osztály és
+felsorolási típust. Egy olyan szavazást írnak le, amelyben jelöltekre
+lehet szavazatokat leadni.</p>
+<p>Az <code>ElectionTestStructureTest</code> osztály az elkészítendő
+tesztek szerkezetét mutatja.</p>
+<ul>
+<li><code>noVotes</code>: ha nincsen egy szavazat sem, az első jelölt
+győz (ez most <code>JACK</code>)</li>
+<li><code>singleCandidate</code>: a megadott számú szavazatot adják le,
+mindegyiket ugyanarra a jelöltre, aki ezáltal győz
+<ul>
+<li>Felsorolási típus átadható a tesztelőnek: a metódus paraméterének
+legyen <code>Candidate</code> a típusa, és a CSV részre az enum-érték
+neve kerüljön.</li>
+</ul></li>
+<li><code>twoCandidatesSameVoteCount</code>: ketten ugyanannyi
+szavazatot kapnak, aki az enumban a korábbi elem, az győz
+<ul>
+<li>Kipróbálandó: bármelyik sorrendben is kapják a szavazatokat, ugyanez
+az eredmény.</li>
+</ul></li>
+<li><code>candidateVoteCount</code>: a jelöltek sorban 1, 4, 3 és 2
+szavazatot kapnak
+<ul>
+<li>Kipróbálandó: <code>getCandidatesWithMoreVotesThan</code> a helyes
+eredményt adja a 0, 1, 2, 3 és 4 paraméterre is.</li>
+<li>Mivel egy <code>@CsvSource</code> nem tud nyilvánvaló módon tömböt
+kapni paraméterként, a hívásokat és az elvárt értékeket sorrendben bele
+kell írni a metódusba.
+<ul>
+<li>Nehezebb változat: az elvárt értékeket egy szövegben (így:
+<code>'JILL,SAM,MAX'</code>) kell átadni, és ezekből egy rövid
+kódrészlet alakítja ki az elvárandó <code>Candidate</code> tömböt.</li>
+</ul></li>
+<li>Itt nem <code>assertEquals</code>, hanem
+<code>assertArrayEquals</code> vizsgálat szükséges.</li>
+</ul></li>
+</ul>
+<h3 class="hu" id="feladat-3">4. feladat</h3>
+<p>Rajzoljon memóriatérképet (memory map) a következő Java program
+kommentben jelzett soraihoz. (Másképp: Rajzolja fel a stack és heap
+pillanatnyi állapotát következő Java program végrehajtása során). A
+konstruktor paramétereitől tekintsünk el.</p>
+<p>Az (5) végrehajtása után mely objektumokat törölheti a
+szemétgyűjtő?</p>
+<p>Main.java:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Foo <span class="op">{</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> x<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Foo</span><span class="op">(</span><span class="dt">int</span> initX<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> initX<span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> counter <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>       <span class="co">// (1)</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        Foo obj<span class="op">;</span>                <span class="co">// (2)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        obj <span class="op">=</span> <span class="kw">new</span> <span class="fu">Foo</span><span class="op">(</span><span class="dv">5</span><span class="op">);</span>       <span class="co">// (3)</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        Foo obj2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Foo</span><span class="op">(</span><span class="dv">7</span><span class="op">);</span>  <span class="co">// (4)</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        obj2 <span class="op">=</span> obj<span class="op">;</span>             <span class="co">// (5)</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">// ...</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Írja át <code>Foo</code> konstruktorát hogy <code>initX</code>
+helyett <code>x</code> legyen a paraméter, tegye egyértelművé a
+<code>this</code> kulcsszóval, hogy melyik <code>x</code> azonosítóra
+hivatkozik.</p>
+<h2 class="hu" id="gyakorló-feladatok-5">Gyakorló feladatok</h2>
+<h3 class="hu" id="gyakorló-feladat">1. gyakorló feladat</h3>
+<p>Rajzoljon memóriatérképet (memory map) a következő Java programhoz.
+(Másképp: Rajzolja fel a stack és heap pillanatnyi állapotát következő
+Java program végrehajtása során).</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Foo <span class="op">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> x<span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Foo</span><span class="op">(</span><span class="dt">int</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">x</span> <span class="op">=</span> x<span class="op">;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        Foo obj <span class="op">=</span> <span class="kw">new</span> <span class="fu">Foo</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        obj <span class="op">=</span> <span class="kw">new</span> <span class="fu">Foo</span><span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        Foo obj2 <span class="op">=</span> obj<span class="op">;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        obj2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Foo</span><span class="op">(</span><span class="dv">20</span><span class="op">);</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</body>
+</html>

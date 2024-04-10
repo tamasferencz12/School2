@@ -1,0 +1,23 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/card";
+@import "components/hamburger";
+
+@import "layout/navbar";
+@import "layout/mainContainer";
+@import "layout/footer";
+@import "layout/write";
+@import "layout/header";
+@import "layout/specialities";
+@import "layout/learnings";
+@import "layout/schools";
+
+@import "pages/home";

@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{184ADD0A-1337-410D-BEDB-A4EE3C694A6B}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Szappan PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Szappan/Dispenser.cs">
+    <Files>
+      <File FileName="Szappan/Program.cs" />
+      <File FileName="Szappan/Dispenser.cs" Line="6" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Szappan" expanded="True">
+            <Node name="Szappan" expanded="True">
+              <Node name="Dispenser.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

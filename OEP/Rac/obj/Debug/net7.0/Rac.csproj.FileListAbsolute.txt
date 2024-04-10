@@ -1,0 +1,15 @@
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.csproj.AssemblyReference.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rac
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rac.deps.json
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rac.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rac.dll
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rac.pdb
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.dll
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/refint/Rac.dll
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.pdb
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rac.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/ref/Rac.dll

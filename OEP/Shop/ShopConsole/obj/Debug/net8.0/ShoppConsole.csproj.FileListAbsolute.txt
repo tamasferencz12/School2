@@ -1,0 +1,14 @@
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/bin/Debug/net8.0/ShoppConsole
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/bin/Debug/net8.0/ShoppConsole.deps.json
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/bin/Debug/net8.0/ShoppConsole.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/bin/Debug/net8.0/ShoppConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/bin/Debug/net8.0/ShoppConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/refint/ShoppConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ShoppConsole.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Shopp/ShoppConsole/obj/Debug/net8.0/ref/ShoppConsole.dll

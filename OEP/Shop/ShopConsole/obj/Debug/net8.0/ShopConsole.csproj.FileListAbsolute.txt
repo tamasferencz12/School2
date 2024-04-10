@@ -1,0 +1,14 @@
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/bin/Debug/net8.0/ShopConsole
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/bin/Debug/net8.0/ShopConsole.deps.json
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/bin/Debug/net8.0/ShopConsole.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/bin/Debug/net8.0/ShopConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/bin/Debug/net8.0/ShopConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/refint/ShopConsole.dll
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ShopConsole.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Shop/ShopConsole/obj/Debug/net8.0/ref/ShopConsole.dll

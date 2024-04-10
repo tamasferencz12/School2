@@ -1,0 +1,132 @@
+.section-learnings {
+  background-image: linear-gradient(
+    to right top,
+    $color-secondary,
+    $color-primary
+  );
+  height: 75vh;
+  padding-top: 15vh;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 75em) {
+    height: 120vh;
+    padding: 10rem 0;
+  }
+}
+
+.section-languages {
+  display: flex;
+  height: 45vh;
+  padding: 20rem 0;
+  align-items: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url(../../img/section_picture.jpeg);
+  background-size: cover;
+  margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+
+  @media only screen and (max-width: 75em) {
+    padding: 0;
+    height: 120vh;
+  }
+}
+
+.section-favorite {
+  background-image: linear-gradient(to left, $color-secondary, $color-primary);
+  height: 100vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+.section-schools {
+  position: relative;
+  padding: 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-write {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-secondary
+  );
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.write {
+  background-image: linear-gradient(
+      rgba($color-grey-dark-3, 0.6) 0%,
+      rgba($color-grey-dark-3, 0.8) 30%
+    ),
+    url(../../img/email_picture.jpeg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(), url(../../img/email_picture.jpeg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(), url(../../img/email_picture.jpeg);
+  }
+
+  &__form {
+    width: 30vw;
+    padding: 6rem;
+    background-color: $color-grey-dark-3;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}
+
+.ind2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url(../../img/section_picture.jpeg);
+
+  @include respond(phone) {
+    height: auto;
+    padding: 2rem 0 2rem 0;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    padding: 3rem 0 3rem 0;
+  }
+}
+

@@ -1,0 +1,16 @@
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/Circle_Point
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/Circle_Point.deps.json
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/Circle_Point.runtimeconfig.json
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/Circle_Point.dll
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/Circle_Point.pdb
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.csproj.AssemblyReference.cache
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.AssemblyInfo.cs
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.dll
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/refint/Circle_Point.dll
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.pdb
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/Circle_Point.genruntimeconfig.cache
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/obj/Debug/net7.0/ref/Circle_Point.dll
+/Users/tamas/Desktop/OEP/Circle_Point/Circle_Point/bin/Debug/net7.0/input.txt

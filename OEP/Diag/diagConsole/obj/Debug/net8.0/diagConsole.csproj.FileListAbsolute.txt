@@ -1,0 +1,14 @@
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/bin/Debug/net8.0/diagConsole
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/bin/Debug/net8.0/diagConsole.deps.json
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/bin/Debug/net8.0/diagConsole.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/bin/Debug/net8.0/diagConsole.dll
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/bin/Debug/net8.0/diagConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.dll
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/refint/diagConsole.dll
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.pdb
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/diagConsole.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Diag/diagConsole/obj/Debug/net8.0/ref/diagConsole.dll

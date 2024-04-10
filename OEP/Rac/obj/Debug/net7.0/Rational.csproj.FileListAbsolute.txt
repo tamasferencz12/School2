@@ -1,0 +1,15 @@
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rational
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rational.deps.json
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rational.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rational.dll
+/Users/tamas/Desktop/School II./OEP/Rac/bin/Debug/net7.0/Rational.pdb
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.csproj.AssemblyReference.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.dll
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/refint/Rational.dll
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.pdb
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/Rational.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Rac/obj/Debug/net7.0/ref/Rational.dll

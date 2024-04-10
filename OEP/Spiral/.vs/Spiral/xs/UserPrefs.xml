@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{5DABF385-8682-4422-8B1F-D84AE8AEAEF3}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Spiral/Notebook.cs">
+    <Files>
+      <File FileName="Spiral/Program.cs" />
+      <File FileName="Spiral/Notebook.cs" Line="39" Column="9" />
+      <File FileName="Spiral/Page.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Spiral" expanded="True">
+            <Node name="Spiral" expanded="True">
+              <Node name="Notebook.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Spiral PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

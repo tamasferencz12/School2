@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: 'Write Once Run Anywhere '
+  - text: Westside One Residents' Association
+  - text: Weave On Right Advantage
+  - text: When Online RPGs Attack
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18464#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 14 Feb 2024 07:49:01 UTC"
+record: -1
+selected_options:
+  - 0
+local_check: false

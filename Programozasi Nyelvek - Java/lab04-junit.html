@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu" xml:lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="ELTE Informatikai Kar" />
+  <title>Programozási nyelvek Java</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">
+  body {
+      max-width: 100% !important;
+  }
+
+  pre > code
+  {
+      all: unset;
+  }
+
+  code
+  {
+      color: blue;
+      font-size: 14px;
+      white-space: pre;
+      border-radius: 3px;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      padding: 2px 4px;
+
+      display: inline-block;
+
+      background-image: radial-gradient(ellipse farthest-corner at 50% 50%, #e4e4e4, #ffffff);
+  }
+
+
+  pre code,
+  code.sourceCode
+  {
+    	margin-left: 3em;
+    	padding: 0.5em;
+
+    	border: 0.1em green solid !important;
+
+      display: inline-block;
+  }
+
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-spacing: 0;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      width: auto !important;
+  }
+
+  table th {
+      padding: 3px 10px;
+      background-color: white;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+  }
+
+  table td {
+      padding: 3px 10px;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      border-right: none;
+  }
+
+  nav#TOC {
+      position: fixed;
+      top: .2em;
+      right: .2em;
+      border: 1px solid black;
+  }
+
+  h2#toc-title {
+      margin-top: 0em;
+  }
+
+  nav#TOC::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  a {
+      color: blue;
+      text-decoration: underline !important;
+  }
+
+  </style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 class="hu" id="egységtesztelés-junit">4. Egységtesztelés: JUnit</h1>
+<h2 class="en hu" id="demo-4">Demo</h2>
+<h3 class="hu" id="demó">1. demó</h3>
+<p>Írjunk <code>fib()</code> metódust a
+<code>famous.sequence.Fibonacci</code> osztályba, amely egy
+<code>n</code> számot kap meg, és kiadja <a
+href="https://hu.wikipedia.org/wiki/Fibonacci-sz%C3%A1mok">az
+<code>n</code>-edik Fibonacci-számot</a>. Feltesszük, hogy az
+<code>n</code> bemenet kis, pozitív szám.</p>
+<p>Teszteljük a következőképpen.</p>
+<ul>
+<li>A metódus kapjon <code>static</code> minősítőt. Erről a kulcsszóról
+részletesebben később lesz szó.</li>
+<li>A mellékelt <code>famous.sequence.FibonacciStructureTest</code>
+használata.
+<ul>
+<li>Ezt a csomagjának megfelelő könyvtárba kell elhelyezni.</li>
+<li>Ez a <code>CheckThat</code> eszközt használja, aminek szintén
+elérhetőnek kell lennie.</li>
+<li>Fordítás és futtatás. A parancsokat lásd az előadás fóliáin.
+<ul>
+<li>Először a <code>FibonacciStructureTest</code> osztályt
+fordítsuk.</li>
+<li>Most a <code>Fibonacci.java</code> osztályt külön paranccsal kell
+lefordítani, mert a tesztelő nem hivatkozik rá közvetlenül, és így az
+előző fordításban a <code>javac</code> nem keresi meg.</li>
+<li>Futtassuk a teszteket.</li>
+</ul></li>
+</ul></li>
+<li>Készítsünk <code>famous.sequence.FibonacciTest</code> tesztelőt.
+<ul>
+<li>Ebben legyen teszt néhány konkrét <code>n</code> értékre.</li>
+<li>Próbáljuk ki a paraméterezett tesztelőt is.</li>
+<li>Fordítás és futtatás.
+<ul>
+<li>A folyamat jobb megértése érdekében töröljük le a korábban elkészült
+összes <code>.class</code> fájlt. (A <code>.java</code> fájlok
+maradjanak meg!)</li>
+<li>Fordítsuk le a <code>FibonacciTest</code> kódját. Ez a
+<code>Fibonacci.java</code> fájlt is megtalálja és lefordítja.</li>
+<li>Futtassuk a teszteket.</li>
+</ul></li>
+</ul></li>
+<li>A mellékelt <code>famous.sequence.FibonacciTestSuite</code>
+használata.
+<ul>
+<li>Ezt is a csomagjának megfelelő könyvtárba kell elhelyezni.</li>
+<li>Ismét töröljük le a korábban elkészült összes <code>.class</code>
+fájlt.</li>
+<li>Fordítsuk le a <code>FibonacciTestSuite</code> kódját. Ezúttal
+<code>Fibonacci.java</code> és a két korábbi tesztelő is lefordul.</li>
+<li>Futtassuk a teszteket.</li>
+</ul></li>
+</ul>
+<h2 class="hu" id="feladatok-4">Feladatok</h2>
+<h3 class="hu" id="feladat">1. feladat</h3>
+<p>Készítsünk <a
+href="https://hu.wikipedia.org/wiki/H%C3%A1romsz%C3%B6gsz%C3%A1mok">háromszögszámokat</a>
+kiszámító
+<code>static famous.sequence.TriangularNumbers.getTriangularNumber()</code>
+metódust.</p>
+<ul>
+<li>A tesztelő kód a <code>famous.sequence.TriangularNumbersTest</code>
+osztályba kerüljön.</li>
+<li>Ehhez is jár mellékelt strukturális tesztelő és suite is, ezeknek is
+rendben le kell futniuk.
+<ul>
+<li>A fájlokat a megfelelő könyvtárba kell elhelyezni, különben nem
+működnek.</li>
+</ul></li>
+</ul>
+<p>Kipróbálandók a következő bemenetek.</p>
+<ul>
+<li>nulla</li>
+<li>egy</li>
+<li><a
+href="https://hu.wikipedia.org/wiki/Carl_Friedrich_Gauss#Fiatalkora">a
+számra, a fiatal Gauss anekdotájában szerepel</a></li>
+<li>mínusz egy</li>
+<li>más negatív szám</li>
+</ul>
+<p>A tesztelőbe írjunk szándékosan egy rossz tesztesetet is, direkt
+elrontott elvárt eredménnyel. Vizsgáljuk meg a futtatás eredményét,
+benne az összefoglalóval és a <em>stack trace</em> részleteivel.</p>
+<p>Az osztályba kerüljön <code>getTriangularNumberAlternative()</code>
+is. Ez a képlettel dolgozzon, és adja ugyanazt a kimenetet, mint
+<code>getTriangularNumber()</code>.</p>
+<ul>
+<li>A tesztelő próbálja ezt is ki.</li>
+</ul>
+<h3 class="hu" id="feladat-1">2. feladat</h3>
+<p>Készítsük el a
+<code>static math.operation.safe.Increment.increment()</code>
+metódust.</p>
+<ul>
+<li>Legyen <code>static</code> minősítőjű.</li>
+<li>Bemenete egy <code>int</code>.</li>
+<li>Ha a bemenete a legnagyobb ábrázolható egész, azzal tér vissza,
+különben a bemeneténél eggyel nagyobb egésszel.
+<ul>
+<li>Erre így lehet hivatkozni:
+<code>Integer.A_MEGFELELŐ_ADATTAG_NEVE</code>.</li>
+<li>A keresett név <a
+href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Integer.html#field-summary">a
+Java API dokumentációból</a> olvasható ki.</li>
+</ul></li>
+</ul>
+<p>Ugyanebbe a csomagba készítsük el az <code>IncrementTest</code>
+osztályt az <code>increment()</code> működésének kipróbálására.</p>
+<ul>
+<li>Bemenete legyen nulla.</li>
+<li>Bemenete legyen a legkisebb ábrázolható egész.</li>
+<li>Bemenete legyen a legnagyobb ábrázolható egész.</li>
+<li>Bemenete legyen egy közepesen nagy, pozitív egész.</li>
+<li>Bemenete legyen egy közepesen nagy, negatív egész.</li>
+<li>Bemenete legyen <code>-1</code>.</li>
+</ul>
+<p>Készítsünk egy hasonló tesztelő fájlt egy másik csomagba is, és
+próbáljuk ki ott is.</p>
+<h3 class="hu" id="feladat-2">3. feladat</h3>
+<p>Készítsük el a mellékelt strukturális tesztelőben
+(<code>RecordLabelStructureTest</code>,
+<code>ArtistStructureTest</code>, <code>FanStructureTest</code>) leírt
+osztályokat a megadott szerkezettel.</p>
+<p>Ebben a feladatban előre meg van adva néhány funkcionális teszt is.
+Ezeket a fájlokat bővítsük az alábbi tesztekkel.</p>
+<ul>
+<li>Tesztelendő, hogy létrehozás után mindegyik objektumra helyes
+értéket adnak a getterek.
+<ul>
+<li>A rajongónak, a rajongó művészének, és a rajongó művésze kiadójának
+a neve megfelelő kell, hogy legyen.</li>
+<li>A rajongó létrehozás után közvetlenül még nem költött el pénzt.</li>
+</ul></li>
+</ul>
+<p>A funkcionális tesztelőben az alábbi tesztek érhetők el a
+<code>Fan</code> osztályhoz. Itt a feladat a megvalósítás
+elkészítése.</p>
+<ul>
+<li><code>buyMerchandise()</code> kiszámítja a rajongó által vásárolt
+termék árát.
+<ul>
+<li>A rajongó természetesen csak a kedvenc művészétől vesz
+termékeket.</li>
+<li>Az alapár paraméterként van megadva, de ha a rajongó másokkal együtt
+veszi meg a terméket, az a darabárat fejenként 10%-kal, de legfeljebb
+20%-kal csökkenti.
+<ul>
+<li>A további rajongókat deklaráljuk egy <em>vararg</em> paraméterben,
+így: <code>Fan... friends</code>.</li>
+<li>Így hívható meg a metódus:
+<code>fan1.buyMerchandise(100, friend1, friend2, friend3)</code>, ahol
+mindegyik <code>friendN</code> egy <code>Fan</code> példány.</li>
+<li>A költségcsökkentés mértéke akkor sem haladja meg a 20%-ot, ha
+kettőnél több extra rajongó csatlakozik.</li>
+</ul></li>
+<li>A metódus visszatérési értéke a számított darabár.
+<ul>
+<li>Ezt az összeget elkölti a rajongó és mindegyik barátja.</li>
+<li>Az összes költés felét megkapja a kiadó a <code>gotIncome()</code>
+segítségével.</li>
+</ul></li>
+</ul></li>
+<li><code>favesAtSameLabel()</code> azt vizsgálja meg, hogy ugyanaz a
+művész-e két rajongó kedvence.</li>
+<li>Az alábbi négy metódus állítsa elő a rajongó szöveges
+reprezentációját. Ezek visszatérési értéke megegyezik, de más-más módon
+állítják elő azt.
+<ul>
+<li>A <code>toString1()</code> metódus a <code>+</code> operátorral fűz
+össze szövegrészleteket.
+<ul>
+<li>Ez hatékony, de macerás megírni és olvasni.</li>
+</ul></li>
+<li>A <code>toString2()</code> metódus a <code>formatted</code> metódust
+használja ilyen módon:
+<code>"%s=%d".formatted("one hundred", 100)</code>.
+<ul>
+<li>Ezt könnyű olvasni.</li>
+</ul></li>
+<li>A <code>toString3()</code> metódus ezt használja:
+<code>String.format("%s=%d", "one hundred", 100)</code>.
+<ul>
+<li>Ez az előzőhöz hasonló, kicsit régebbi stílusú.</li>
+</ul></li>
+<li>A <code>toString4()</code> metódus egy <code>StringBuilder</code>
+példányt használ.
+<ul>
+<li>A <code>sb.append(123)</code> hívással lehet bővíteni a
+tartalmat.</li>
+<li>A <code>sb.toString()</code> hívással lehet szövegként kinyerni a
+tartalmat.</li>
+<li>Ez akkor hasznos, ha a kimenet hosszú és összetett.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 class="hu" id="feladat-3">4. feladat</h3>
+<p>A <code>math.operation.textual.Adder.addAsText()</code> metódus két
+<code>String</code> paramétert vár.</p>
+<ul>
+<li>Ha mindkettő értelmezhető egész számként, az eredmény az összegük
+szövegesen.</li>
+<li>Hasonlóan működik, ha a bemenetek értelmezhetőek lebegőpontos
+számként.</li>
+<li>Ha a bemenetek nem szám jellegűek, az eredmény a következő szöveg:
+<code>Operands are not numbers</code>.</li>
+<li>Az implementáció forráskódja <strong>nem</strong> elérhető, csak a
+<code>.class</code> fájl.
+<ul>
+<li>Ezt a megfelelő könyvtárba kell tenni.</li>
+</ul></li>
+</ul>
+<p>Ugyanebbe a csomagba készítsük el az <code>AdderTest</code> osztályt,
+ami a következőket próbálja ki.</p>
+<ul>
+<li><code>wrongInput</code>: legalább az egyik paraméter nem
+szöveges</li>
+<li><code>addZero</code>: egy számhoz nullát adunk hozzá
+<ul>
+<li>Mindkét oldal lehessen a nulla.</li>
+<li>Kipróbálandó: a nulla vagy a szám lebegőpontos.</li>
+</ul></li>
+<li><code>add</code>: összeadunk két számot
+<ul>
+<li>Az összeadás mindkét sorrendben ugyanazt az eredményt adja.</li>
+<li>Kipróbálandó: mindkét szám egész; mindkettő lebegőpontos; egyik
+ilyen, másik olyan.</li>
+</ul></li>
+<li><code>addCommutative</code>: két szám összeadva a megadott
+sorrendben és ahhoz képest fordítva ugyanazt az eredményt adja.</li>
+</ul>
+<p>Megengedett egyszerűsítés.</p>
+<ul>
+<li>Egy metódusba szabad egynél több <code>assertX</code> hívást is
+írni.</li>
+<li>Ez realisztikus kódban nem jó választás.</li>
+<li>Létezik erre jobb megoldás (<code>assertAll</code>), de az túlmutat
+a kurzus keretein.</li>
+</ul>
+<p>A fentieket a következő módokon lehet bővíteni.</p>
+<ul>
+<li>Néhány (vagy akár mindegyik) feltétel több paraméterrel is
+kipróbálható (<code>@ParameterizedTest</code>).</li>
+<li>A <code>wrongInput</code> teszt kerüljön át az
+<code>AdderInvalidTest.java</code> fájlba. Egy test suite hívja meg
+mindkét osztályt.</li>
+</ul>
+<h2 class="hu" id="gyakorló-feladatok-4">Gyakorló feladatok</h2>
+<h3 class="hu" id="gyakorló-feladat">1. gyakorló feladat</h3>
+<p>Implementálja a <a
+href="https://hu.wikipedia.org/wiki/Caesar-rejtjel">Caesar-kódolást</a>
+a <code>cipher.CaesarCipher</code> osztályban a következőek szerint.</p>
+<ul>
+<li>Az eltolási távolságot konstruktor paraméterként kapja meg
+(<code>shift</code>) és tárolja el.</li>
+<li>Az <code>encrypt()</code> metódus egy szöveget kap meg, és az
+alábbiak szerint, karakterenként kódolja el.
+<ul>
+<li>Ha a karakter nem betű (<code>'a'</code> és <code>'z'</code> közötti
+karakter), akkor megtartjuk. Különben a <code>shift</code> pozícióval
+odébb levő karaktert adjuk a kimenethez.
+<ul>
+<li>Például: <code>'d'</code> hárommal eltolva <code>'g'</code>
+lesz.</li>
+<li>Figyelem: az eltolás átfordulhat: <code>'z'</code> kettő távolsággal
+eltolva <code>'b'</code> lesz.</li>
+<li>Figyelem: az eltolás lehet negatív, és akkor is átfordulhat:
+<code>'c'</code> <code>-5</code> távolsággal eltolva <code>'x'</code>
+lesz.</li>
+</ul></li>
+<li>További részletek.
+<ul>
+<li>Az eredmény szöveget <code>+</code> operátorral összefűzve is elő
+lehet állítani, de még jobb <code>StringBuilder</code>
+használatával.</li>
+<li>Az eltolás után típuskényszerítést kell használni:
+<code>(char)shiftedChar</code>.</li>
+</ul></li>
+</ul></li>
+<li>A <code>decrypt()</code> metódus legyen az <code>encrypt()</code>
+ellentéte.</li>
+</ul>
+<p>A <code>cipher.CaesarCipherTest</code> osztály a következőket
+tesztelje.</p>
+<ul>
+<li><code>noShift</code>: ha <code>shift</code> értéke <code>0</code>,
+<code>encrypt()</code> és <code>decrypt()</code> egyaránt az eredeti
+szöveget adja</li>
+<li><code>encryptBy</code>: adott szöveg elkódolása adott
+<code>shift</code> távolsággal
+<ul>
+<li>üres szöveg (a <code>textBlock</code> részre <code>''</code> alakban
+írható le)</li>
+<li>egybetűs szöveg</li>
+<li>hosszabb szöveg</li>
+<li>nem csak kisbetűket tartalmazó szöveg</li>
+</ul></li>
+<li><code>inverseOperation</code>: két, egymással ellentétes hatású
+művelet meghívása egymás után, az eredmény az eredeti szöveg
+<ul>
+<li><code>encrypt()</code>, aztán <code>decrypt()</code> ugyanolyan
+<code>shift</code> távolsággal</li>
+<li><code>decrypt()</code>, aztán <code>encrypt()</code> ugyanolyan
+<code>shift</code> távolsággal</li>
+<li><code>encrypt()</code> <code>shift</code> távolsággal, aztán
+<code>encrypt()</code> <code>-shift</code> távolsággal</li>
+<li><code>encrypt()</code> <code>-shift</code> távolsággal, aztán
+<code>encrypt()</code> <code>shift</code> távolsággal</li>
+<li><code>decrypt()</code> <code>shift</code> távolsággal, aztán
+<code>decrypt()</code> <code>-shift</code> távolsággal</li>
+<li><code>decrypt()</code> <code>-shift</code> távolsággal, aztán
+<code>decrypt()</code> <code>shift</code> távolsággal</li>
+</ul></li>
+</ul>
+<h3 class="hu" id="feladat-4">2. feladat</h3>
+<h5 class="hu" id="a-1">a</h5>
+<p>Írjunk <code>static math.operation.Power.power()</code> metódust,
+amely természetes számok hatványozását valósítja meg (a hatvány alap és
+kitevő is természetes szám). Bár az eredmény mindig egész lesz, a
+visszatérési érték legyen <code>double</code>, mert nemsokára
+továbbfejlesztjük ezt a függvényt. A 0 nulladik hatványa most legyen
+1.</p>
+<p>Tesztelje a <code>power()</code> függvényt.</p>
+<h5 class="hu" id="b-1">b</h5>
+<p>Fejlesszük tovább a <code>power()</code> függvényt úgy, hogy negatív
+egész kitevővel is helyesen működjön.</p>
+<p>Próbálja ki, hogy az a feladatban megírt unit tesztek továbbra is
+sikeresen lefutnak-e.</p>
+<p>Bővítse a unit teszteket negatív kitevő helyességét ellenőrző
+esetekkel.</p>
+</body>
+</html>

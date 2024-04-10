@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{9802B3D0-8085-4BA5-AEEA-506865C19E07}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Labyrinth/Program.cs">
+    <Files>
+      <File FileName="Labyrinth/Program.cs" Line="49" Column="41" />
+      <File FileName="Labyrinth/Labyrinth.cs" Line="28" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Labyrinth" expanded="True">
+            <Node name="Labyrinth" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Labyrinth PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

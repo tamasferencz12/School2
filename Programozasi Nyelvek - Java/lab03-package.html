@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu" xml:lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="ELTE Informatikai Kar" />
+  <title>Programozási nyelvek Java</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">
+  body {
+      max-width: 100% !important;
+  }
+
+  pre > code
+  {
+      all: unset;
+  }
+
+  code
+  {
+      color: blue;
+      font-size: 14px;
+      white-space: pre;
+      border-radius: 3px;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      padding: 2px 4px;
+
+      display: inline-block;
+
+      background-image: radial-gradient(ellipse farthest-corner at 50% 50%, #e4e4e4, #ffffff);
+  }
+
+
+  pre
+  {
+    	margin-left: 3em;
+    	padding: 0.5em;
+
+    	border: 0.1em green solid !important;
+
+      display: inline-block;
+  }
+
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-spacing: 0;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      width: auto !important;
+  }
+
+  table th {
+      padding: 3px 10px;
+      background-color: white;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+  }
+
+  table td {
+      padding: 3px 10px;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      border-right: none;
+  }
+
+  nav#TOC {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      border: 1px solid black;
+  }
+
+  </style>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 class="hu" id="csomagkezelés">Csomagkezelés</h1>
+<h2 class="en hu" id="demo-3">Demo</h2>
+<h3 class="hu" id="demó">1. demó</h3>
+<p>Szervezze az előző órai <code>Point</code> osztályt és az azt
+bemutató főprogramot a <code>point2d</code> csomagba.</p>
+<ol type="a">
+<li>A <code>Point</code> osztály ne látszódjon ki a csomagból.
+<ol type="i">
+<li>Készítse el a <code>pointless.AnotherMain</code> osztályt. Ez a
+<code>pointless</code> csomag <code>AnotherMain</code> osztálya lesz. A
+megfelelő fájl: <code>pointless/AnotherMain.java</code>.
+<ul>
+<li>Próbálja példányosítani a <code>Point</code> osztályt az
+<code>AnotherMain</code> osztályból. Figyelje meg a hibaüzenetet.</li>
+</ul></li>
+</ol></li>
+</ol>
+<h2 class="hu" id="feladatok-3">Feladatok</h2>
+<h3 class="hu" id="feladat">1. feladat</h3>
+<p>A <code>Point</code> osztály váljon láthatóvá más csomagokból is.</p>
+<ol type="a">
+<li>Az <code>AnotherMain</code> most már valóban készítsen
+<code>Point</code> példányokat, két módon.
+<ol type="i">
+<li>A teljesen minősített neve használatával.</li>
+<li>Egy <code>import</code> segítségével.</li>
+</ol></li>
+<li>Készítse el a <code>PointMainInDefaultPackage</code> osztályt a
+névtelen csomagban.
+<ul>
+<li>Ebből használható-e a <code>Point</code>: készíthető-e <code>Point</code> példány a <code>PointMainInDefaultPackage</code> osztályban?</li>
+<li>Megfordítva: ez az osztály használható-e a <code>Point</code> osztályból?</li>
+</ul></li>
+</ol>
+<h3 class="hu" id="feladat-1">2. feladat</h3>
+<p>Készítsen <code>plane.PublicCircle</code> osztályt, amellyel egy
+síkbeli kört reprezentálunk. Egy körnek van középpontja,
+<code>double</code> típusú <code>x</code>, <code>y</code> adattagja,
+amelyeket inicializáljunk 0-ra, illetve sugara (<code>radius</code>),
+amelyet inicializáljunk 1-re. Az adattagok legyenek publikusak
+benne.</p>
+<ol type="a">
+<li>Írjon <code>getArea()</code> metódust, amely ismét a kör területével
+térjen vissza.
+<ol type="i">
+<li>A <code>plane.but.not.flying.CircleMain.main</code> metódus a
+következőket tegye.
+<ul>
+<li>Példányosítson egy kör objektumot.</li>
+<li>Írja ki a területét.</li>
+<li>Állítsa be a középpontját (5, 2)-re, sugarát 10-re.</li>
+<li>Írja ki újra a területét.</li>
+</ul></li>
+</ol></li>
+<li>Készítsen az előzőhöz hasonló <code>plane.Circle</code> osztályt, de
+ebben az adattagokhoz csak megfelelően megírt getter és setter metódus
+férhessen hozzá.
+<ol type="i">
+<li>Az utóbbi váltson ki egy <code>IllegalArgumentException</code>
+kivételt, ha a sugara 0 vagy negatív szám lenne.</li>
+<li>A <code>CircleMain.main</code> próbálja ki az új funkcionalitást.
+<ul>
+<li>A kivételt nem kell elkapni, azzal az anyag későbbi részén
+foglalkozunk.</li>
+</ul></li>
+</ol></li>
+<li>A <code>Circle</code> osztályhoz készítsünk konstruktort, az
+adattagok beállítását ezzel végezzük.
+<ol type="i">
+<li>A konstruktor a setterhez hasonlóan válthasson ki kivételt.</li>
+<li>A <code>CircleMain.main</code> próbálja ki az új
+funkcionalitást.</li>
+</ol></li>
+</ol>
+<h3 class="hu" id="feladat-2">3. feladat</h3>
+<p>Készítsen <code>string.utils.IterLetter</code> osztályt.</p>
+<ol type="a">
+<li>Ennek a konstruktora <code>String</code> paraméterű.
+<ul>
+<li>Ha ez <code>null</code>, váltson ki
+<code>IllegalArgumentException</code> kivételt.</li>
+</ul></li>
+<li>Az osztálynak legyen egy <code>printNext()</code> metódusa.
+<ul>
+<li>Ez egy új sorban írja ki a szöveg első karakterét, majd újabb
+hívásra a második karakterét és így tovább.</li>
+<li>Ha a sztring összes karakterét kiírtuk a képernyőre, akkor a metódus
+egy üres sort ír ki minden további hívásra.</li>
+</ul></li>
+<li>Készítse el a következő, főprogramot tartalmazó osztályokat:
+<code>Main</code> (a névtelen csomagban), <code>stringmain.Main</code>,
+<code>string.main.Main</code>, <code>string.utils.Main</code> és
+<code>string.utils.main.Main</code>.
+<ul>
+<li>Ezek közül egy kivételével mindegyiknek az a feladata, hogy áthívjon
+egy másik <code>main</code>re. Tehát egy négy hosszú híváslánc alakul
+ki.
+<ul>
+<li>A sorrend szabadon megválasztható.</li>
+<li>Tipp: az <code>X</code> osztály <code>y</code> (osztályszintű)
+metódusát így lehet meghívni: <code>X.y(...)</code>.
+<ul>
+<li>Hogyan kell most leírni <code>X</code> nevét?</li>
+</ul></li>
+<li>Hányfajta sorrend létezik?</li>
+<li>Néhány sorrend érvénytelen. Melyek? Miért?</li>
+</ul></li>
+<li>Az utoljára érintett főprogram két parancssori paramétert kap meg. A
+kód a <code>printNext</code> metódust annyiszor hívja meg a második
+paraméter szövegével, amennyi az első paraméterben kapott szám
+értéke.</li>
+<li>Futtassa mindegyik főprogramot. Paraméterként válasszon különféle
+szövegeket, az üreset is (ez <code>""</code> alakban adható át).</li>
+</ul></li>
+<li>Az <code>IterLetter</code> <code>reset()</code> metódusa újrakezdi a
+szöveg végigjárását.
+<ul>
+<li>Tehát a soron következő <code>printNext</code> hívások az első
+karaktertől folytatják a kiírásokat.</li>
+<li>A főprogramok egyszer hívják meg ezt a metódust <code>m</code>
+kiírás után, és még <code>k</code> kiírást tegyenek meg. Itt
+<code>m</code> és <code>k</code> a harmadik és negyedik parancssori
+paraméter.</li>
+</ul></li>
+<li>Legyen az osztályban egy <code>hasNext()</code> metódus is. Ez
+pontosan akkor tér vissza igaz értékkel, ha van még kiírható betű.
+<ul>
+<li>A főprogramok hívják ezt meg az újrakezdés előtt és után, valamint
+közvetlenül a program befejeződése előtt.</li>
+</ul></li>
+</ol>
+<h2 class="hu" id="gyakorló-feladatok-3">Gyakorló feladatok</h2>
+<h3 class="hu" id="gyakorló-feladat">1. gyakorló feladat</h3>
+<p>A <code>zoo.animal.Panda</code> osztály egy pandát reprezentál.</p>
+<ol type="a">
+<li>Az osztály a panda nevének, életkorának és tartózkodási országának
+eltárolására alkalmas. Ehhez értelemszerű típusú és nevű adattagokat
+kell használni.</li>
+<li>Az osztálynak két konstruktora van.
+<ol type="i">
+<li>Az első egy újszülött pandát ír le: megkapja és eltárolja a másik
+két adatát.</li>
+<li>A másik konstruktor a név kivételével kapja meg az adatokat. Ennek a
+pandának az legyen a neve, hogy
+<code>Y years old foundling from C</code>, ahol <code>Y</code> és
+<code>C</code> helyén az életkor és az ország szerepel.</li>
+</ol></li>
+<li>Az osztály rendelkezik egy <code>happyBirthday()</code> metódussal
+is. Ez kiírja a panda nevét, országát és az eggyel megnövekedett
+életkorát is. A metódus egy számot is kap paraméterül
+(<code>limitYear</code>), amennyiben az életkor ezt meghaladja, akkor a
+pandát visszaköltöztetik a Kínai Népköztársaságba.</li>
+<li>A <code>zoo.keeper.Crikey</code> főprogramja próbálja ki a
+fentieket.</li>
+</ol>
+<h3 class="hu" id="gyakorló-feladat-1">2. gyakorló feladat</h3>
+<p>Bővítse a <code>string.utils</code> csomagot a
+<code>string.utils.IterWord</code> osztállyal.</p>
+<ol type="a">
+<li>Az osztály konstruáláskor egy szöveget kap meg.</li>
+<li>Az osztály <code>printNext()</code> metódusa új sorban a képernyőre
+írja a sztring következő szavát.</li>
+<li>Az osztálynak szintén legyen <code>restart()</code> és
+<code>hasNext()</code> metódusa.</li>
+<li>A már létező főprogramok mellé kerüljön egy-egy
+<code>WordMain</code>, amely bemutatja az osztály használatát.</li>
+</ol>
+<h3 class="hu" id="gyakorló-feladat-2">3. gyakorló feladat</h3>
+<p>Készítse el a <code>magic.library.Incantation</code> osztályt, amely
+egy varázslatos ráolvasást ábrázol. Ez egy <code>text</code> szöveges és
+egy <code>index</code> egész szám adatot tárol.</p>
+<ol type="a">
+<li>Az osztály egyik konstruktora átveszi és beállítja a két paraméter
+értékét.
+<ul>
+<li>Ha az előbbi <code>null</code>, váltson ki
+<code>IllegalArgumentException</code> kivételt.</li>
+</ul></li>
+<li>A másik konstruktor egy <code>Incantation</code> példányt kap meg,
+és ennek az adattagjaiból tölti fel a sajátokat.</li>
+<li>Legyen mindkét adattagnak gettere, az <code>index</code>nek settere
+is.</li>
+<li>Az osztály <code>enchant()</code> metódusa egy
+<code>Incantation</code> példányt (<code>otherInc</code>) kap meg és egy
+<code>isPrepend</code> logikai értéket. A metódus az alábbiak szerint
+módosítja a hívott példány szövegét.
+<ol type="i">
+<li>Először megpróbáljuk felvenni a <code>text</code> szöveg
+<code>index</code>edik szavát.
+<ul>
+<li>Ha például <code>index</code> értéke <code>3</code>, akkor a
+harmadik szóról van szó.</li>
+<li>Tipp: a <code>String</code> osztály <code>split</code> metódusát
+érdemes használni.</li>
+</ul></li>
+<li>Ha nincsen ilyen szó, mert <code>index</code> túl magas vagy
+alacsony (akár negatív is lehet), a metódus hamis visszatérési értéket
+ad.</li>
+<li>A felvett szót <code>otherInc</code> szövege elé írjuk, ha
+<code>isPrepend</code> értéke igaz, és mögé, ha hamis.
+<ul>
+<li>Egy szóköz is kerüljön a régi szöveg és az új szó közé.</li>
+</ul></li>
+<li>Az <code>index</code> adattag eggyel megnő/lecsökken
+<code>isPrepend</code> értékétől függően.</li>
+<li>A metódus igazzal tér vissza, jelezve, hogy a szöveg
+megváltozott.</li>
+</ol></li>
+<li>A <code>magic.Soliloquy</code> osztály
+<code>reciteIncantations()</code> metódusát a főprogram fogja hívni, és
+a következőket teszi.
+<ol type="i">
+<li>Két <code>Incantation</code> példányt kap meg (<code>inc1</code> és
+<code>inc2</code>), valamint egy <code>idx</code> egész és egy
+<code>startWithAppend</code> logikai értéket.</li>
+<li>Háromszor hívja meg az <code>inc1</code> példányra az
+<code>enchant</code> metódust. Az első paraméter mindegyik esetben
+<code>inc2</code>.
+<ul>
+<li>A második paraméter az első hívásban <code>startWithAppend</code>
+ellentéte.</li>
+<li>A másodikban <code>startWithAppend</code>.</li>
+<li>Harmadjára <code>true</code>.</li>
+</ul></li>
+<li>Mindegyik hívás után írja ki a kifejezés visszatérési értékét és
+mindkét objektum adatait.
+<ul>
+<li>Ez utóbbiakat a getterek segítségével lehet elérni.</li>
+<li>A formátumhoz lásd a lenti példát.</li>
+<li>A kiírás kódja a <code>printStatus</code> segédfüggvénybe
+kerüljön.</li>
+</ul></li>
+<li>Az első kiírás után <code>inc1</code> <code>index</code>
+adattagjának értéke álljon <code>idx</code>re.</li>
+</ol></li>
+<li>A <code>magic.Soliloquy</code> osztályban levő főprogram hat
+parancssori paramétert vár (<code>argN</code> lentebb) és a következőket
+teszi.
+<ol type="i">
+<li>Feltehető, hogy a paraméterek száma és tartalma megfelelő, nem kell
+ellenőrizni.</li>
+<li>A főprogram elkészíti az <code>inc1</code>, <code>inc2</code> és
+<code>inc3</code> <code>Incantation</code> példányokat. Az első kettő
+tartalmát az első négy parancssori paraméter értékei alapján
+inicializálja, a harmadikat pedig a másodikból.
+<ul>
+<li>Az első és harmadik parancssori paramétert idézőjellel
+(<code>"</code>) kell majd körbevenni, mert szóközöket
+tartalmaznak.</li>
+</ul></li>
+<li>Ezután a következőket teszi.
+<ul>
+<li>Meghívja a <code>reciteIncantations</code> segédfüggvényt az
+<code>inc1, inc2, arg5, true</code> paraméterekkel.</li>
+<li>Beállítja <code>inc1</code> <code>index</code>ét <code>arg6</code>
+értékre.</li>
+<li>Meghívja a <code>reciteIncantations</code> segédfüggvényt az
+<code>inc1, inc3, arg5, false</code> paraméterekkel.</li>
+</ul></li>
+</ol></li>
+<li>Kipróbálás: a főprogram kapja meg a következő paramétereket:
+<code>programming is a creative activity</code>, <code>4</code>,
+<code>to be or not to be</code>, <code>-123</code>, <code>1</code>.
+Ennek hatására a kiírások legyenek az alábbiak.</li>
+</ol>
+<pre><code>true;7;programming is a fun and creative activity;-123;to be or not to be creative
+true;1;programming is a fun and creative activity;-123;to be or not to be creative
+true;0;programming is a fun and creative activity;-123;programming to be or not to be creative
+false;0;programming is a fun and creative activity;-123;programming to be or not to be creative
+
+true;3;programming is a fun and creative activity;-123;fun to be or not to be
+true;1;programming is a fun and creative activity;-123;fun to be or not to be
+true;2;programming is a fun and creative activity;-123;fun to be or not to be programming
+true;1;programming is a fun and creative activity;-123;is fun to be or not to be programming</code></pre>
+<h3 class="hu" id="gyakorló-feladat-3">4. gyakorló feladat</h3>
+<p>Készítsen egy <code>game.utils.Vehicle</code> osztályt, amellyel egy
+játék járművét reprezentáljuk. Egy járműnek van modelid-je
+(<code>int</code>), rendszáma (<code>String</code>), és két színállapota
+(<code>color1</code>, <code>color2</code> <code>int</code> típusú
+adatok). A rendszámhoz készítsen setter és getter metódusokat.</p>
+<p>Készítsen <code>game.Player</code> osztályt, amellyel egy játékost
+reprezentálunk. Egy játékosnak van neve (<code>String</code>), IP-címe
+(<code>String</code>), egészségi állapota (<code>int</code>) és lehet
+járműve (<code>Vehicle</code>) (ha nincsen, akkor tároljunk
+<code>null</code> értéket).</p>
+<p>A játékos osztályhoz készítsen <code>print()</code> metódust,
+amellyel ki lehet íratni egy játékos legfontosabb információit: nevét,
+IP-címét, egészségi állapotát, illetve járművének rendszámát (ha
+van).</p>
+<p>Készítsen <code>game.Main</code> főprogramot, amelyben példányosít
+legalább 3 járművet és legalább 2 játékost. Az egyik játékoshoz
+tartozzon jármű. A főprogram írja ki a képernyőre a játékosok
+adatait.</p>
+</body>
+</html>

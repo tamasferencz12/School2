@@ -1,0 +1,34 @@
+type: matching
+captions:
+  - public class HelloWorld
+  - "public static void main(String[] args)"
+  - "System.out.println(&quot;Hello, World!&quot;);"
+options:
+  - This is where execution begins. It&#x27;s the heart of our program.
+  - We&#x27;re telling Java to create a new public class. This is like the birth certificate
+    of our program.
+  - "These are our program&#x27;s first words! This command instructs Java to print\
+  \ &quot;Hello, World!&quot;."
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/38629#comment
+status: Solved
+feedback:
+  message: "<html>Wow! I can't believe that Java is not your native language, but\
+    \ a foreign one! ;)</html>"
+  time: "Wed, 14 Feb 2024 07:48:41 UTC"
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2

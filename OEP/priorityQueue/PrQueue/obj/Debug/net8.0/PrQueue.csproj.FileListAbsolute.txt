@@ -1,0 +1,14 @@
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/bin/Debug/net8.0/PrQueue
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/bin/Debug/net8.0/PrQueue.deps.json
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/bin/Debug/net8.0/PrQueue.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/bin/Debug/net8.0/PrQueue.dll
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/bin/Debug/net8.0/PrQueue.pdb
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.dll
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/refint/PrQueue.dll
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.pdb
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/PrQueue.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/priorityQueue/PrQueue/obj/Debug/net8.0/ref/PrQueue.dll

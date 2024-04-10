@@ -1,0 +1,30 @@
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.deps.json
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.runtimeconfig.json
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.dll
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.pdb
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.csproj.AssemblyReference.cache
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.AssemblyInfoInputs.cache
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.AssemblyInfo.cs
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.csproj.CoreCompileInputs.cache
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.dll
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/refint/Labyrinth.dll
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.pdb
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.genruntimeconfig.cache
+/Users/tamas/School_2/OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/ref/Labyrinth.dll
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.deps.json
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.runtimeconfig.json
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.dll
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/bin/Debug/net7.0/Labyrinth.pdb
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.csproj.AssemblyReference.cache
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.AssemblyInfoInputs.cache
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.AssemblyInfo.cs
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.csproj.CoreCompileInputs.cache
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.dll
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/refint/Labyrinth.dll
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.pdb
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/Labyrinth.genruntimeconfig.cache
+/Users/tamas/Desktop/School II./OEP/Labyrinth/Labyrinth/obj/Debug/net7.0/ref/Labyrinth.dll

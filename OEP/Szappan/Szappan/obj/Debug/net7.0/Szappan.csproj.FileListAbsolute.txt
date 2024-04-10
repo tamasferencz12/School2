@@ -1,0 +1,15 @@
+/Users/tamas/School_2/OEP/Szappan/Szappan/bin/Debug/net7.0/Szappan
+/Users/tamas/School_2/OEP/Szappan/Szappan/bin/Debug/net7.0/Szappan.deps.json
+/Users/tamas/School_2/OEP/Szappan/Szappan/bin/Debug/net7.0/Szappan.runtimeconfig.json
+/Users/tamas/School_2/OEP/Szappan/Szappan/bin/Debug/net7.0/Szappan.dll
+/Users/tamas/School_2/OEP/Szappan/Szappan/bin/Debug/net7.0/Szappan.pdb
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.csproj.AssemblyReference.cache
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.AssemblyInfoInputs.cache
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.AssemblyInfo.cs
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.csproj.CoreCompileInputs.cache
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.dll
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/refint/Szappan.dll
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.pdb
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/Szappan.genruntimeconfig.cache
+/Users/tamas/School_2/OEP/Szappan/Szappan/obj/Debug/net7.0/ref/Szappan.dll

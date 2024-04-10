@@ -1,0 +1,16 @@
+MARKETING = csere, exchange
+-product(BRAND) + szolgáltatás
+-price
+-promotion
+-place
+
+SAVE
+-solution
+-acces
+-value
+-education
+
+STP
+-segmenting: LEGO - kor, család, jövedelem (+500 nettó), nem, tematika, szülő 
+-targeting
+-positioning

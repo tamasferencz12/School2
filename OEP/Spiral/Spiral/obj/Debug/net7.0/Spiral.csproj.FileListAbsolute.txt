@@ -1,0 +1,15 @@
+/Users/tamas/School_2/OEP/Spiral/Spiral/bin/Debug/net7.0/Spiral
+/Users/tamas/School_2/OEP/Spiral/Spiral/bin/Debug/net7.0/Spiral.deps.json
+/Users/tamas/School_2/OEP/Spiral/Spiral/bin/Debug/net7.0/Spiral.runtimeconfig.json
+/Users/tamas/School_2/OEP/Spiral/Spiral/bin/Debug/net7.0/Spiral.dll
+/Users/tamas/School_2/OEP/Spiral/Spiral/bin/Debug/net7.0/Spiral.pdb
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.csproj.AssemblyReference.cache
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.AssemblyInfoInputs.cache
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.AssemblyInfo.cs
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.csproj.CoreCompileInputs.cache
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.dll
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/refint/Spiral.dll
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.pdb
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/Spiral.genruntimeconfig.cache
+/Users/tamas/School_2/OEP/Spiral/Spiral/obj/Debug/net7.0/ref/Spiral.dll
