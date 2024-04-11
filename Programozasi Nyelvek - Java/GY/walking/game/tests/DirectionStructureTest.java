@@ -1,4 +1,4 @@
-package beadando.walking.game.tests;
+package walking.game.tests;
 
 import static check.CheckThat.*;
 import static check.CheckThat.Condition.*;

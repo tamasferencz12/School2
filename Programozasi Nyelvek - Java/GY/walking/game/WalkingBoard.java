@@ -1,4 +1,5 @@
-package beadando.walking.game;
+package walking.game;
+import walking.game.util.Direction;
 
 public class WalkingBoard{
         
@@ -6,6 +7,18 @@ public class WalkingBoard{
     private int x;
     private int y;
     public final static int BASE_TILE_SCORE = 3;
+
+    public void setTiles(int[][] tiles){
+        this.tiles = tiles;
+    }
+
+    public int getY(){
+        return y;
+    }
+
+    public void setY(int y){
+        this.y = y;
+    }
 
     public WalkingBoard(int size){
         tiles = new int[size][size];
@@ -30,23 +43,28 @@ public class WalkingBoard{
     }
 
     public int getTile(int x, int y) throws IllegalArgumentException{
-        if(true){
-            return tiles[x][y];
-        }else{
-            throw new IllegalArgumentException();
-        }
+        return tiles[x][y];
     }
 
-    public void setTiles(int[][] tiles){
-        this.tiles = tiles;
+    public int[] getPosition(){
+        int[] a = new int[0];
+        return a;
     }
 
-    public int getY(){
-        return y;
+    public boolean isValidPosition(int x, int y){
+        return false;
     }
 
-    public void setY(int y){
-        this.y = y;
+    public static int getXStep(Direction direction ){
+        return 0;
+    }
+
+    public static int getYStep(Direction direction){
+       return 0;
+    }
+
+    public int moveAndSet(Direction direction,int value){
+        return 0;
     }
 
 }

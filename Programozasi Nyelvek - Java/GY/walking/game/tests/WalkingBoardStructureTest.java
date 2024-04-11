@@ -1,4 +1,5 @@
-package beadando.walking.game.tests;
+package walking.game.tests;
+
 
 import static check.CheckThat.*;
 import static check.CheckThat.Condition.*;
@@ -12,7 +13,7 @@ import check.CheckThat;
 public class WalkingBoardStructureTest {
     @BeforeAll
     public static void init() {
-        CheckThat.theClass("beadando.walking.game.WalkingBoard")
+        CheckThat.theClass("walking.game.WalkingBoard")
                  .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL);
     }
 
@@ -107,7 +108,7 @@ public class WalkingBoardStructureTest {
     @Test
     @DisabledIf(notApplicable)
     public void methodMoveAndSet() {
-        it.hasMethod("moveAndSet", withParams("TODOname: walking.game.util.Direction", "TODOname: int"))
+        it.hasMethod("moveAndSet", withParams("direction: walking.game.util.Direction", "value: int"))
           .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL)
           .thatReturns("int");
     }
