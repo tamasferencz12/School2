@@ -1,0 +1,15 @@
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.AssemblyInfoInputs.cache
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.AssemblyInfo.cs
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.sourcelink.json
+/Users/tamas/School2/OEP/HF8/8HFConsole/bin/Debug/net8.0/8HFConsole
+/Users/tamas/School2/OEP/HF8/8HFConsole/bin/Debug/net8.0/8HFConsole.deps.json
+/Users/tamas/School2/OEP/HF8/8HFConsole/bin/Debug/net8.0/8HFConsole.runtimeconfig.json
+/Users/tamas/School2/OEP/HF8/8HFConsole/bin/Debug/net8.0/8HFConsole.dll
+/Users/tamas/School2/OEP/HF8/8HFConsole/bin/Debug/net8.0/8HFConsole.pdb
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.dll
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/refint/8HFConsole.dll
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.pdb
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/8HFConsole.genruntimeconfig.cache
+/Users/tamas/School2/OEP/HF8/8HFConsole/obj/Debug/net8.0/ref/8HFConsole.dll
