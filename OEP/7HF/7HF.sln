@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atmConsole", "atmConsole\atmConsole.csproj", "{37F89780-7BFA-402F-86DA-64A8E9641A71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7HFConsole", "7HFConsole\7HFConsole.csproj", "{F7C37C7F-E22A-4A4E-8633-FABE4658ED8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37F89780-7BFA-402F-86DA-64A8E9641A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37F89780-7BFA-402F-86DA-64A8E9641A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37F89780-7BFA-402F-86DA-64A8E9641A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37F89780-7BFA-402F-86DA-64A8E9641A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C37C7F-E22A-4A4E-8633-FABE4658ED8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C37C7F-E22A-4A4E-8633-FABE4658ED8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C37C7F-E22A-4A4E-8633-FABE4658ED8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C37C7F-E22A-4A4E-8633-FABE4658ED8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

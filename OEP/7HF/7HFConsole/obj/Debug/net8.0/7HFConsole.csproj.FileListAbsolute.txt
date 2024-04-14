@@ -1,0 +1,15 @@
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.AssemblyInfoInputs.cache
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.AssemblyInfo.cs
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.sourcelink.json
+/Users/tamas/School2/OEP/7HF/7HFConsole/bin/Debug/net8.0/7HFConsole
+/Users/tamas/School2/OEP/7HF/7HFConsole/bin/Debug/net8.0/7HFConsole.deps.json
+/Users/tamas/School2/OEP/7HF/7HFConsole/bin/Debug/net8.0/7HFConsole.runtimeconfig.json
+/Users/tamas/School2/OEP/7HF/7HFConsole/bin/Debug/net8.0/7HFConsole.dll
+/Users/tamas/School2/OEP/7HF/7HFConsole/bin/Debug/net8.0/7HFConsole.pdb
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.dll
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/refint/7HFConsole.dll
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.pdb
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/7HFConsole.genruntimeconfig.cache
+/Users/tamas/School2/OEP/7HF/7HFConsole/obj/Debug/net8.0/ref/7HFConsole.dll
