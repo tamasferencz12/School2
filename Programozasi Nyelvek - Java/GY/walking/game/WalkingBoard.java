@@ -9,8 +9,15 @@ public class WalkingBoard {
     private int y;
     public final static int BASE_TILE_SCORE = 3;
 
+    // helper function
+    public int getSize() {
+        return this.tiles.length;
+    }
+
     public WalkingBoard(int size) {
         this.tiles = new int[size][size];
+        this.x = size;
+        this.y = size;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 tiles[i][j] = BASE_TILE_SCORE;
@@ -19,7 +26,7 @@ public class WalkingBoard {
     }
 
     public WalkingBoard(int[][] tiles) {
-        copy = new int[tiles.length][tiles.length];
+        int[][] copy = new int[tiles.length][tiles.length];
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 if (tiles[i][j] != BASE_TILE_SCORE) {
@@ -32,15 +39,18 @@ public class WalkingBoard {
     }
 
     public int[][] getTiles() {
-        int[][] copy = new int[x][y];
-
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                copy[i][j] = tiles[i][j];
-            }
-        }
-
-        return copy;
+        /*
+         * int[][] copy = new int[x][y];
+         * 
+         * for (int i = 0; i < x; i++) {
+         * for (int j = 0; j < y; j++) {
+         * copy[i][j] = tiles[i][j];
+         * }
+         * }
+         * 
+         * return copy;
+         */
+        return this.tiles.clone();
     }
 
     public int getTile(int x, int y) throws IllegalArgumentException {

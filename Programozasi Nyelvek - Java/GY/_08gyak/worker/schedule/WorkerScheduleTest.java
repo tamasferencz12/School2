@@ -19,36 +19,36 @@ import check.*;
 public class WorkerScheduleTest {
 
     @Test
-    public void emptySchedule(){
+    public void emptySchedule() {
         WorkerSchedule ws = new WorkerSchedule();
         assertTrue(ws.emptySchedule());
-        assertFalse( !ws.emptySchedule());
+        assertFalse(!ws.emptySchedule());
     }
 
     @Test
-    public void isWorkingOnWeekTest(){
+    public void isWorkingOnWeekTest() {
         WorkerSchedule ws = new WorkerSchedule();
         ws.add(1, new HashSet<>(Arrays.asList("John", "Jack", "Jill", "Judy")));
         ws.add(2, new HashSet<>(List.of("John", "Joe", "Bill", "Judy")));
 
         assertTrue(ws.isWorkingOnWeek("John", 1));
-        assertFalse( ws.isWorkingOnWeek("Jill", 2));
-        assertFalse( ws.isWorkingOnWeek("Mary", 2));
-        assertFalse( ws.isWorkingOnWeek("John", 3));
+        assertFalse(ws.isWorkingOnWeek("Jill", 2));
+        assertFalse(ws.isWorkingOnWeek("Mary", 2));
+        assertFalse(ws.isWorkingOnWeek("John", 3));
     }
 
     @Test
-    public void getWorkWeeksTest(){
+    public void getWorkWeeksTest() {
         WorkerSchedule ws = new WorkerSchedule();
-        ws.add(new HashSet<>(Arrays.asList(1,2,3)), new ArrayList<>(List.of("John", "Jack")));
-        ws.add(new HashSet<>(Arrays.asList(2,3,4)), new ArrayList<>(List.of("John", "Mark", "Mary")));
+        ws.add(new HashSet<>(Arrays.asList(1, 2, 3)), new ArrayList<>(List.of("John", "Jack")));
+        ws.add(new HashSet<>(Arrays.asList(2, 3, 4)), new ArrayList<>(List.of("John", "Mark", "Mary")));
         HashSet<Integer> weeksJohn = ws.getWorkWeeks("John");
         HashSet<Integer> weeksMark = ws.getWorkWeeks("Mark");
         System.out.println(weeksJohn);
         System.out.println(weeksMark);
         System.out.println(ws);
 
-        int[] expected = new int[]{1,2,3,4};
+        int[] expected = new int[] { 1, 2, 3, 4 };
         for (int i = 0; i < weeksJohn.size(); i++) {
             assertTrue(weeksJohn.contains(expected[i]));
         }
