@@ -12,8 +12,8 @@
     height: auto;
   }
 
-  @media only screen and (max-width: 75em) {
-    height: 120vh;
+  @include respond(tab-land) {
+    height: auto;
     padding: 10rem 0;
   }
 }
@@ -36,9 +36,9 @@
     padding: 10rem 0;
   }
 
-  @media only screen and (max-width: 75em) {
-    padding: 0;
+  @include respond(tab-land) {
     height: 120vh;
+    padding: 10rem 0;
   }
 }
 

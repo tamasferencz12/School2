@@ -5,21 +5,14 @@ import walking.game.util.Direction;
 public class WalkingBoard {
 
     private int[][] tiles;
-    private int x;
-    private int y;
+    private int x = 0;
+    private int y = 0;
     public final static int BASE_TILE_SCORE = 3;
-
-    // helper function
-    public int getSize() {
-        return this.tiles.length;
-    }
 
     public WalkingBoard(int size) {
         this.tiles = new int[size][size];
-        this.x = size;
-        this.y = size;
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 tiles[i][j] = BASE_TILE_SCORE;
             }
         }
@@ -27,30 +20,31 @@ public class WalkingBoard {
 
     public WalkingBoard(int[][] tiles) {
         int[][] copy = new int[tiles.length][tiles.length];
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        for (int i = 0; i < tiles.length; i++) {
+            for (int j = 0; j < tiles.length; j++) {
                 if (tiles[i][j] != BASE_TILE_SCORE) {
-                    throw new IllegalArgumentException();
+                    tiles[i][j] = BASE_TILE_SCORE;
+                    copy[i][j] = tiles[i][j];
                 } else {
                     copy[i][j] = tiles[i][j];
                 }
             }
         }
+        this.tiles = copy;
     }
 
     public int[][] getTiles() {
-        /*
-         * int[][] copy = new int[x][y];
-         * 
-         * for (int i = 0; i < x; i++) {
-         * for (int j = 0; j < y; j++) {
-         * copy[i][j] = tiles[i][j];
-         * }
-         * }
-         * 
-         * return copy;
-         */
-        return this.tiles.clone();
+
+        int[][] copy = new int[this.tiles.length][this.tiles.length];
+
+        for (int i = 0; i < this.tiles.length; i++) {
+            for (int j = 0; j < this.tiles.length; j++) {
+                copy[i][j] = tiles[i][j];
+            }
+        }
+
+        return copy;
+
     }
 
     public int getTile(int x, int y) throws IllegalArgumentException {
@@ -69,7 +63,7 @@ public class WalkingBoard {
     }
 
     public boolean isValidPosition(int x, int y) {
-        if ((x < 0 || x > this.x) || (y < 0 || y > this.y)) {
+        if ((x < 0 || x > this.tiles.length) || (y < 0 || y > this.tiles.length)) {
             return false;
         } else {
             return true;
@@ -114,13 +108,12 @@ public class WalkingBoard {
         int setY = y + getYStep(direction);
 
         if (!isValidPosition(setX, setY)) {
-            x -= getXStep(direction);
-            y -= getYStep(direction);
             return 0;
         } else {
-            int oldValue = tiles[setX][setY];
-            tiles[setX][setY] = value;
-
+            int oldValue = tiles[x][y];
+            tiles[x][y] = value;
+            x = setX;
+            y = setY;
             return oldValue;
         }
     }

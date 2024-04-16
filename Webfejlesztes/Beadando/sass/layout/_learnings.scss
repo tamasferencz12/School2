@@ -86,13 +86,18 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
 
-  @include respond(tab-port) {
-    padding: 2rem;
-  }
-
   @include respond(tab-land) {
     height: 15vh;
-    width: 10vh;
+    width: auto;
+  }
+  @include respond(tab-port) {
+    height: 10vh;
+    width: auto;
+  }
+
+  @include respond(phone) {
+    height: 10vh;
+    width: auto;
   }
 
   &__icon {
@@ -118,8 +123,13 @@
 
 .row {
   @media only screen and (max-width: 75em) {
-    height: 10vh;
+    height: auto;
     padding: 5vw;
+  }
+  @include respond(tab-land) {
+    height: auto;
+    width: 100vw;
+    padding: 0;
   }
 }
 
