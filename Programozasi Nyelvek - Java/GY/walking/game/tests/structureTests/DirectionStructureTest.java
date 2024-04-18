@@ -1,4 +1,4 @@
-package walking.game.tests;
+package walking.game.tests.structureTests;
 
 import static check.CheckThat.*;
 import static check.CheckThat.Condition.*;
@@ -10,8 +10,7 @@ public class DirectionStructureTest {
     @Test
     public void testEnum() {
         CheckThat.theEnum("walking.game.util.Direction")
-            .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL)
-            .hasEnumElements("UP", "DOWN", "LEFT", "RIGHT");
+                .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL)
+                .hasEnumElements("UP", "DOWN", "LEFT", "RIGHT");
     }
 }
-

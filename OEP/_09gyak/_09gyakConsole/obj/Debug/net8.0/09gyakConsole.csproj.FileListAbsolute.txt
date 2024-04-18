@@ -1,0 +1,15 @@
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/bin/Debug/net8.0/09gyakConsole
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/bin/Debug/net8.0/09gyakConsole.deps.json
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/bin/Debug/net8.0/09gyakConsole.runtimeconfig.json
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/bin/Debug/net8.0/09gyakConsole.dll
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/bin/Debug/net8.0/09gyakConsole.pdb
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.AssemblyInfoInputs.cache
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.AssemblyInfo.cs
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.sourcelink.json
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.dll
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/refint/09gyakConsole.dll
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.pdb
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/09gyakConsole.genruntimeconfig.cache
+/Users/tamas/School2/OEP/_09gyak/09gyakConsole/obj/Debug/net8.0/ref/09gyakConsole.dll

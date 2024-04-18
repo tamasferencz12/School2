@@ -1,4 +1,4 @@
-package walking.game.tests;
+package walking.game.tests.functionalTests;
 
 import walking.game.*;
 import walking.game.util.Direction;
