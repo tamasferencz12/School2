@@ -1,24 +1,28 @@
-package walking.game.tests;
+package walking.game.tests.testSuites;
 
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
-import walking.game.WalkingBoardWithPlayersTest;
+import walking.game.tests.functionalTests.WalkingBoardWithPlayersTest;
+import walking.game.tests.structureTests.PlayerStructureTest;
+import walking.game.tests.structureTests.WalkingBoardWithPlayersStructureTest;
 
 @SelectClasses({
-      WalkingBoardExtendedTestSuite.StructuralTests.class
-    , WalkingBoardExtendedTestSuite.FunctionalTests.class
+        WalkingBoardExtendedTestSuite.StructuralTests.class, WalkingBoardExtendedTestSuite.FunctionalTests.class
 })
-@Suite public class WalkingBoardExtendedTestSuite {
+@Suite
+public class WalkingBoardExtendedTestSuite {
     @SelectClasses({
-          WalkingBoardWithPlayersStructureTest.class
-        , PlayerStructureTest.class
+            WalkingBoardWithPlayersStructureTest.class, PlayerStructureTest.class
     })
-    @Suite public static class StructuralTests {}
+    @Suite
+    public static class StructuralTests {
+    }
 
     @SelectClasses({
-        WalkingBoardWithPlayersTest.class
+            WalkingBoardWithPlayersTest.class
     })
-    @Suite public static class FunctionalTests {}
+    @Suite
+    public static class FunctionalTests {
+    }
 }
-

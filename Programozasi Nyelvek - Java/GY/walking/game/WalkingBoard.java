@@ -21,7 +21,7 @@ public class WalkingBoard {
     public WalkingBoard(int[][] tiles) {
         int[][] copy = new int[tiles.length][tiles.length];
         for (int i = 0; i < tiles.length; i++) {
-            for (int j = 0; j < tiles.length; j++) {
+            for (int j = 0; j < tiles[0].length; j++) {
                 if (tiles[i][j] != BASE_TILE_SCORE) {
                     tiles[i][j] = BASE_TILE_SCORE;
                     copy[i][j] = tiles[i][j];
@@ -38,7 +38,7 @@ public class WalkingBoard {
         int[][] copy = new int[this.tiles.length][this.tiles.length];
 
         for (int i = 0; i < this.tiles.length; i++) {
-            for (int j = 0; j < this.tiles.length; j++) {
+            for (int j = 0; j < this.tiles[0].length; j++) {
                 copy[i][j] = tiles[i][j];
             }
         }
@@ -63,10 +63,13 @@ public class WalkingBoard {
     }
 
     public boolean isValidPosition(int x, int y) {
-        if ((x < 0 || x > this.tiles.length) || (y < 0 || y > this.tiles.length)) {
-            return false;
-        } else {
+        int maxX = this.tiles.length - 1;
+        int maxY = this.tiles[0].length - 1;
+
+        if (x >= 0 && x <= maxX && y >= 0 && y <= maxY) {
             return true;
+        } else {
+            return false;
         }
     }
 
