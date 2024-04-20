@@ -4,6 +4,10 @@
   position: relative;
   height: 70vh;
 
+  @include respond(phone) {
+    height: auto;
+  }
+
   &__side {
     height: 70vh;
     transition: all 0.8s ease;
@@ -181,19 +185,19 @@
   }
 
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
-    height: auto;
+    height: fit-content;
     border-radius: 3px;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__side {
-      height: auto;
+      height: fit-content;
       position: relative;
       box-shadow: none;
 
       &--back {
         transform: rotateY(0);
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       }
     }
 
@@ -211,7 +215,7 @@
       top: 0%;
       left: 0;
       transform: translate(0);
-      width: 100%;
+      width: auto;
       padding: 7rem 4rem 4rem 4rem;
     }
 

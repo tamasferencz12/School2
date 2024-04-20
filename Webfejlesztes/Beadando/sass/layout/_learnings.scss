@@ -17,7 +17,7 @@
 
   &:hover {
     z-index: 100;
-    scale: (1.1);
+    transform: scale(1.5);
     border-radius: 30%;
   }
 
@@ -39,7 +39,7 @@
 
   &:hover {
     z-index: 100;
-    scale: (1.1);
+    transform: scale(1.5) translate(-15rem, 7rem);
     border-radius: 30%;
   }
 
@@ -61,7 +61,7 @@
 
   &:hover {
     z-index: 100;
-    scale: (1.1);
+    transform: scale(1.5) translate(-25rem, -2rem);
     border-radius: 30%;
   }
 
@@ -87,17 +87,20 @@
   transition: transform 0.3s;
 
   @include respond(tab-land) {
-    height: 15vh;
+    height: 35vh;
     width: auto;
+    margin: 2rem;
   }
   @include respond(tab-port) {
-    height: 10vh;
+    height: auto;
     width: auto;
+    margin: 1rem;
   }
 
   @include respond(phone) {
     height: 10vh;
     width: auto;
+    margin: 1rem;
   }
 
   &__icon {
@@ -133,31 +136,95 @@
   }
 }
 
-.justify {
-  @include respond(phone) {
-    display: flex;
-    justify-content: center;
+details {
+  width: 100vw;
+}
+
+.table-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  font-size: 4rem;
+  width: 100vw;
+  height: auto;
+
+  @include respond(tab-land) {
+    height: 100vh;
   }
 }
 
-.ind2-feature-box {
-  background-color: rgba($color-grey-dark-3, 1);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  height: 23rem;
-  width: 23rem;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-  transition: transform 0.3s;
+table {
+  border: 1px solid $color-grey-dark;
+  border-collapse: collapse;
+  width: 100vw;
+  height: 65vh;
+  table-layout: fixed;
+}
 
-  @include respond(tab-port) {
-    padding: 2rem;
+caption {
+  font-size: 4rem;
+  color: $color-white;
+  padding: 2rem;
+}
+
+table tr {
+  background-color: $color-white;
+  border: 1px solid $color-grey-dark-2;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+table th {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 60em) {
+  table {
+    border: 0;
   }
 
-  @include respond(tab-land) {
-    height: auto;
-    width: auto;
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 2rem;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
   }
 }
 

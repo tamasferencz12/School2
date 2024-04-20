@@ -27,7 +27,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
     ></script>
 
-    <title>Portfolio</title>
+    <title>Write</title>
   </head>
 
   <body id="body">
@@ -145,24 +145,30 @@
                   placeholder="Full name"
                   id="name"
                   name="name"
+                  maxlength="40"
+                  autocomplete="name"
                   required
                 />
-                <label id="placeholder-name" for="name" class="form__label"
+                <label id="placeholder-name" for="FullName" class="form__label"
                   >Full Name</label
                 >
               </div>
 
               <div class="form__group" id="input-2">
                 <input
-                  id="Email"
+                  id="EmailAddress"
                   type="email"
                   class="form__input"
                   placeholder="Email address"
-                  id="email"
                   name="email"
+                  maxlength="35"
+                  autocomplete="email"
                   required
                 />
-                <label id="placeholder-email" for="email" class="form__label"
+                <label
+                  id="placeholder-email"
+                  for="EmailAddress"
+                  class="form__label"
                   >Email Address</label
                 >
               </div>
@@ -170,19 +176,54 @@
               <div class="form__group" id="input-3">
                 <input
                   id="Message"
-                  type="message"
+                  type="Message"
                   class="form__input"
                   placeholder="Message"
-                  id="message"
-                  name="message"
+                  name="Message"
+                  maxlength="100"
                   required
                 />
                 <label
                   id="placeholder-message"
-                  for="message"
+                  for="Message"
                   class="form__label"
                   >Message</label
                 >
+              </div>
+              <div class="check_radio">
+                <form class="checkbox" action="/submit" method="post">
+                  <div class="checkContainer">
+                    <label class="checkbox-text" for="checkbox"
+                      >Want to recive emails:</label
+                    >
+                    <input
+                      type="checkbox"
+                      id="checkbox"
+                      name="checkbox"
+                      class="actual-button"
+                    />
+                  </div>
+                </form>
+
+                <form class="radio-buttons" action="/submit" method="post">
+                  <label class="radio-label" for="option1">Personal:</label>
+                  <input
+                    class="actual-button"
+                    type="radio"
+                    id="option1"
+                    name="option"
+                    value="option1"
+                  />
+
+                  <label class="radio-label" for="option2">Work:</label>
+                  <input
+                    class="actual-button"
+                    type="radio"
+                    id="option2"
+                    name="option"
+                    value="option2"
+                  />
+                </form>
               </div>
 
               <div class="form__group">
