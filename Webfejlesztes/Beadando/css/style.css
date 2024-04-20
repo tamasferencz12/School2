@@ -1131,8 +1131,8 @@ body {
 @media only screen and (max-width: 75em) {
   .row {
     height: auto;
-    width: 100vw;
-    padding: 0; } }
+    width: auto;
+    padding: 2rem; } }
 
 details {
   width: 100vw; }

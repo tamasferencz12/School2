@@ -131,8 +131,8 @@
   }
   @include respond(tab-land) {
     height: auto;
-    width: 100vw;
-    padding: 0;
+    width: auto;
+    padding: 2rem;
   }
 }
 
