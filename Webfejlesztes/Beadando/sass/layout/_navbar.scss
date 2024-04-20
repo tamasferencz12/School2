@@ -101,3 +101,21 @@
   }
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $color-primary;
+  color: $color-black;
+  padding: 8px;
+  z-index: 3000000;
+  font-size: 1.5rem;
+  font-style: none;
+  opacity: 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  opacity: 1;
+}
+

@@ -32,11 +32,12 @@
   background-size: cover;
   margin-top: -10rem;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
+    height: 90vh;
     padding: 0 0;
   }
 
-  @include respond(tab-land) {
+  @include respond(phone) {
     height: 120vh;
     padding: 0 0;
   }
@@ -46,9 +47,19 @@
   background-image: linear-gradient(to left, $color-secondary, $color-primary);
   height: 100vh;
 
+  @include respond(tab-land) {
+    padding: 20rem 0 10rem 0;
+    height: 120vh;
+  }
+
   @include respond(tab-port) {
     padding: 20rem 0 10rem 0;
-    height: auto;
+    height: 210vh;
+  }
+
+  @include respond(phone) {
+    padding: 20rem 0 10rem 0;
+    height: 310vh;
   }
 }
 
@@ -58,6 +69,12 @@
 
   @include respond(tab-port) {
     padding: 10rem 0;
+    height: 80vh;
+  }
+
+  @include respond(phone) {
+    padding: 10rem 0;
+    height: 120vh;
   }
 }
 

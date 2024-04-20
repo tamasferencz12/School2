@@ -26,6 +26,9 @@
     height: auto;
     transform: translate(0rem, 0rem);
     margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.5) translate(0rem, 0rem);
+    }
   }
 }
 
@@ -48,6 +51,9 @@
     height: auto;
     transform: translate(0rem, 0rem);
     margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.5) translate(0rem, 0rem);
+    }
   }
 }
 
@@ -70,10 +76,17 @@
     height: auto;
     transform: translate(0rem, 0rem);
     margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.5) translate(0rem, 0rem);
+    }
   }
 }
 
 .feature-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba($color-grey-dark-3, 1);
   font-size: 1.5rem;
   padding: 2.5rem;
@@ -87,7 +100,7 @@
   transition: transform 0.3s;
 
   @include respond(tab-land) {
-    height: 35vh;
+    height: 30vh;
     width: auto;
     margin: 2rem;
   }
@@ -132,7 +145,7 @@
   @include respond(tab-land) {
     height: auto;
     width: auto;
-    padding: 2rem;
+    padding: 3rem;
   }
 }
 
