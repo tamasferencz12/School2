@@ -35,15 +35,15 @@ public class Player {
     public void turn() {
         switch (getDirection()) {
             case Direction.UP:
+                setDirection(Direction.RIGHT);
+                break;
+            case Direction.RIGHT:
                 setDirection(Direction.DOWN);
                 break;
             case Direction.DOWN:
                 setDirection(Direction.LEFT);
                 break;
             case Direction.LEFT:
-                setDirection(Direction.RIGHT);
-                break;
-            case Direction.RIGHT:
                 setDirection(Direction.UP);
                 break;
         }

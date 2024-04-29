@@ -27,7 +27,7 @@ public class WalkingBoardWithPlayersTest {
 
         int[] x = board.walk(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-        int[] y = { 27, 12, 15 };
+        int[] y = { 27, 39, 15 };
         assertArrayEquals(y, x);
     }
 
@@ -37,7 +37,7 @@ public class WalkingBoardWithPlayersTest {
 
         int[] x = board.walk(1, 2, 3, 4, 5, 6);
 
-        int[] y = { 12, 12 };
+        int[] y = { 12, 24 };
         assertArrayEquals(y, x);
     }
 
