@@ -36,7 +36,9 @@
       <i class="fa-solid fa-laptop-code header__logo-box__logo1"></i>
       <ul class="nav-bar-elements">
         <a href="index.html" id="nav-1" class="btn-c btn-nav">Home Page</a>
-        <a href="learnings.html" id="nav-2" class="btn-c btn-nav">Learnings</a>
+        <a href="learnings.html" id="nav-2" class="btn-c btn-nav btn-active"
+          >Learnings</a
+        >
         <a href="specialities.html" id="nav-3" class="btn-c btn-nav"
           >Specialities</a
         >
@@ -121,7 +123,7 @@
 
     <section class="section-learnings learnings" id="My learnings">
       <div class="row">
-        <div class="col-1-of-2">
+        <article class="col-1-of-2">
           <h3
             class="heading-tertiary u-margin-bottom-small bold"
             id="mylearnings-title-1"
@@ -153,12 +155,20 @@
             id="link"
             >See more &rarr;</a
           >
-        </div>
+        </article>
         <div class="col-1-of-2">
           <div class="composition">
-            <img class="img1" src="./img/C++.png" alt="img1" />
-            <img class="img2" src="./img/HTML.jpeg" alt="img2" />
-            <img class="img3" src="./img/MYSQL.avif" alt="img3" />
+            <img class="img1" src="./img/C++.png" alt="image of a C++ logo" />
+            <img
+              class="img2"
+              src="./img/HTML.jpeg"
+              alt="image of a HTML logo"
+            />
+            <img
+              class="img3"
+              src="./img/MYSQL.avif"
+              alt="image of a MYSQL logo"
+            />
           </div>
         </div>
       </div>
@@ -285,13 +295,13 @@
           </div>
         </div>
         <div class="col-1-of-2">
-          <p class="footer__copyright">
+          <aside id="footer-text-box-6" class="footer__copyright">
             Built by
-            <a id="footer-text-box-6" href="#" class="footer__link"
+            <a id="footer-text-box-7" href="#" class="footer__link"
               >TAMAS FERENCZ</a
             >
             Copyright &copy; by Tamas Ferencz.
-          </p>
+          </aside>
         </div>
       </div>
     </footer>

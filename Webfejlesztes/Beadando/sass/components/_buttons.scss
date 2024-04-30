@@ -164,3 +164,11 @@
     font-size: small;
   }
 }
+
+.btn-active {
+  color: $color-secondary;
+  border-top: 2px solid $color-secondary;
+  border-bottom: 2px solid $color-secondary;
+  border-radius: 0%;
+}
+
