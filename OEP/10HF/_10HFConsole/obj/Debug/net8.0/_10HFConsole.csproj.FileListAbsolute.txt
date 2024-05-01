@@ -1,0 +1,15 @@
+/Users/tamas/School2/OEP/10HF/10HFConsole/bin/Debug/net8.0/_10HFConsole
+/Users/tamas/School2/OEP/10HF/10HFConsole/bin/Debug/net8.0/_10HFConsole.deps.json
+/Users/tamas/School2/OEP/10HF/10HFConsole/bin/Debug/net8.0/_10HFConsole.runtimeconfig.json
+/Users/tamas/School2/OEP/10HF/10HFConsole/bin/Debug/net8.0/_10HFConsole.dll
+/Users/tamas/School2/OEP/10HF/10HFConsole/bin/Debug/net8.0/_10HFConsole.pdb
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.AssemblyInfoInputs.cache
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.AssemblyInfo.cs
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.csproj.CoreCompileInputs.cache
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.sourcelink.json
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.dll
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/refint/_10HFConsole.dll
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.pdb
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/_10HFConsole.genruntimeconfig.cache
+/Users/tamas/School2/OEP/10HF/10HFConsole/obj/Debug/net8.0/ref/_10HFConsole.dll
