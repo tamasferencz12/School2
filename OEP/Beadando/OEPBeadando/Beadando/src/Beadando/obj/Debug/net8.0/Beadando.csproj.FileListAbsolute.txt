@@ -1,0 +1,15 @@
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/bin/Debug/net8.0/Beadando
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/bin/Debug/net8.0/Beadando.deps.json
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/bin/Debug/net8.0/Beadando.runtimeconfig.json
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/bin/Debug/net8.0/Beadando.dll
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/bin/Debug/net8.0/Beadando.pdb
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.AssemblyInfoInputs.cache
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.AssemblyInfo.cs
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.csproj.CoreCompileInputs.cache
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.sourcelink.json
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.dll
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/refint/Beadando.dll
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.pdb
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/Beadando.genruntimeconfig.cache
+/Users/tamas/School2/OEP/Beadando/OEPBeadando/Beadando/src/Beadando/obj/Debug/net8.0/ref/Beadando.dll
