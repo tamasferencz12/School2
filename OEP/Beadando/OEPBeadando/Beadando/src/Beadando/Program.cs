@@ -132,10 +132,10 @@ namespace Beadando
             {
                 alive = false;
                 countDouble = false;
-                Console.WriteLine("------------Zsakmanyallat szaporodik-------------");
+                Console.WriteLine("------------Zsakmanyallat szaporodik(?)-------------");
                 foreach (var allat in preyColonies)
                 {
-                    if (allat.GetType().Name == "Lemming")
+                    /*if (allat.GetType().Name == "Lemming")
                     {
                         Lemming lemming = (Lemming)allat.AllatSG;
                         lemming.Szaporodik();
@@ -149,7 +149,8 @@ namespace Beadando
                     {
                         Javorszarvas javorszarvas = (Javorszarvas)allat.AllatSG;
                         javorszarvas.Szaporodik();
-                    }
+                    }*/
+                    allat.AllatSG.Szaporodik();
                     Console.WriteLine($"Becenev: {allat.Becenev}, Allat: {allat.AllatSG.GetType().Name}, Letszam: {allat.Letszam}");
                 }
                 Console.WriteLine("-------------------------------------------------");
@@ -158,7 +159,7 @@ namespace Beadando
                 Console.WriteLine("------------Zsakmanyallat elvandorol(?)-------------");
                 foreach (var allat in preyColonies)
                 {
-                    if (allat.GetType().Name == "Lemming")
+                    /*if (allat.GetType().Name == "Lemming")
                     {
                         Lemming lemming = (Lemming)allat.AllatSG;
                         lemming.Elvandorol();
@@ -172,7 +173,8 @@ namespace Beadando
                     {
                         Javorszarvas javorszarvas = (Javorszarvas)allat.AllatSG;
                         javorszarvas.Elvandorol();
-                    }
+                    }*/
+                    allat.AllatSG.Elvandorol();
                     Console.WriteLine($"Becenev: {allat.Becenev}, Allat: {allat.AllatSG.GetType().Name}, Letszam: {allat.Letszam}");
                 }
                 Console.WriteLine("-------------------------------------------------");
