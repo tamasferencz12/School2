@@ -158,20 +158,20 @@ namespace Beadando
                 Console.WriteLine("------------Zsakmanyallat elvandorol(?)-------------");
                 foreach (var allat in preyColonies)
                 {
-                    if (allat.GetType().Name == "Hobagoly")
+                    if (allat.GetType().Name == "Lemming")
                     {
-                        Hobagoly hobagoly = (Hobagoly)allat.AllatSG;
-                        hobagoly.Szaporodik();
+                        Lemming lemming = (Lemming)allat.AllatSG;
+                        lemming.Elvandorol();
                     }
                     if (allat.GetType().Name == "Sarkinyul")
                     {
-                        Sarkiroka sarkiroka = (Sarkiroka)allat.AllatSG;
-                        sarkiroka.Szaporodik();
+                        Sarkinyul sarkinyul = (Sarkinyul)allat.AllatSG;
+                        sarkinyul.Elvandorol();
                     }
-                    if (allat.GetType().Name == "Jegesmedve")
+                    if (allat.GetType().Name == "Javorszarvas")
                     {
-                        Jegesmedve jegesmedve = (Jegesmedve)allat.AllatSG;
-                        jegesmedve.Szaporodik();
+                        Javorszarvas javorszarvas = (Javorszarvas)allat.AllatSG;
+                        javorszarvas.Elvandorol();
                     }
                     Console.WriteLine($"Becenev: {allat.Becenev}, Allat: {allat.AllatSG.GetType().Name}, Letszam: {allat.Letszam}");
                 }
@@ -199,7 +199,7 @@ namespace Beadando
 
                     if (predatorColony.AllatSG is Ragadozo && preyColony.AllatSG is Zsakmanyallat)
                     {
-                        if (predatorColony.AllatSG.GetType().Name == "Jegesmedve" && preyColony.AllatSG.GetType().Name == "Lemming")
+                        /*if (predatorColony.AllatSG.GetType().Name == "Jegesmedve" && preyColony.AllatSG.GetType().Name == "Lemming")
                         {
 
                             Lemming lemming = (Lemming)preyColony.AllatSG;
@@ -263,7 +263,10 @@ namespace Beadando
                             Javorszarvas javorszarvas = (Javorszarvas)preyColony.AllatSG;
                             Sarkiroka sarkiroka = (Sarkiroka)predatorColony.AllatSG;
                             javorszarvas.Tamadott(sarkiroka);
-                        }
+                        }*/
+                        Zsakmanyallat zsakmanyallat = (Zsakmanyallat)preyColony.AllatSG;
+                        Ragadozo ragadozo = (Ragadozo)predatorColony.AllatSG;
+                        zsakmanyallat.Tamadott(ragadozo);
 
                         Console.WriteLine("--------------Tamadas----------------");
                         Console.WriteLine($"Ragadozo beceneve: {predatorColony.Becenev}, Allat: {predatorColony.AllatSG.GetType().Name}, Letszam: {predatorColony.Letszam}");
