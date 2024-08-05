@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Formatted_output-String_Format_Precision" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Formatted output/String Format Precision" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Simple Tic-Tac-Toe (Java)" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Formatted output/String Format Precision">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Formatted output/String Format Precision/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Formatted output/String Format Precision/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Formatted output/String Format Precision/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

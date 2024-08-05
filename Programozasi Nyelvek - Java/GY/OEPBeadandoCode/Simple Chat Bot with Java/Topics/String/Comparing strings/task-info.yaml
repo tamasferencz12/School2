@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "(1) equals( ) method, (2) == operator"
+  - text: "(1) == operator, (2) equals( ) method"
+  - text: "(1) == operator, (2) compare( ) method"
+  - text: "(1) equals( ) method, (2) === operator"
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3418#comment
+status: Solved
+record: -1
+local_check: false

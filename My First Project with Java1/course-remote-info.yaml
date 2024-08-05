@@ -1,0 +1,50 @@
+hyperskill_project:
+  id: 380
+  ide_files: https://cogniterra.org/media/attachments/lesson/32334/additional_files.json
+  is_template_based: false
+  use_ide: true
+update_date: "Thu, 01 Jan 1970 00:00:00 UTC"
+stages:
+  - id: 2266
+    step: 35119
+    is_completed: true
+  - id: 2267
+    step: 35120
+    is_completed: true
+  - id: 2268
+    step: 35121
+    is_completed: true
+topics:
+  0:
+    - title: Introduction to Java
+      theory_id: 38627
+    - title: "Basic literals: numbers, strings and characters"
+      theory_id: 3522
+    - title: Writing first program
+      theory_id: 3521
+    - title: Printing data
+      theory_id: 3749
+  1:
+    - title: Types and variables
+      theory_id: 3518
+    - title: Arithmetic operations
+      theory_id: 3519
+  2:
+    - title: Comments
+      theory_id: 3520
+    - title: Reading user's input with Scanner
+      theory_id: 9055
+    - title: Coding style conventions
+      theory_id: 12411
+    - title: Naming variables
+      theory_id: 3513
+    - title: Integer types and operations
+      theory_id: 3565
+    - title: Increment and decrement
+      theory_id: 5008
+    - title: Characters
+      theory_id: 3514
+    - title: String
+      theory_id: 3523
+    - title: Formatted output
+      theory_id: 7046

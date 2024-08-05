@@ -1,0 +1,14 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: b
+  - text: a
+  - text: c
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2154#comment
+status: Solved
+record: -1
+local_check: false

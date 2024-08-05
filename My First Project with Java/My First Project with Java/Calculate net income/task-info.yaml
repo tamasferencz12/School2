@@ -1,0 +1,11 @@
+type: edu
+files:
+  - name: src/calculator/Main.java
+    visible: true
+    learner_created: false
+  - name: test/MyFirstProjectTest.java
+    visible: false
+    learner_created: false
+feedback_link: https://hyperskill.org/projects/380/stages/2268/implement#comment
+status: Unchecked
+record: -1

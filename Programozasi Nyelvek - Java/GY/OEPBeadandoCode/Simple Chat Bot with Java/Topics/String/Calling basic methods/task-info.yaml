@@ -1,0 +1,31 @@
+type: matching
+captions:
+  - str.charAt(3)
+  - "str.substring(5, 6)"
+  - str.charAt(12)
+  - str.get(0)
+options:
+  - a
+  - This code cannot be compiled.
+  - An exception occurs.
+  - t
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2712#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3

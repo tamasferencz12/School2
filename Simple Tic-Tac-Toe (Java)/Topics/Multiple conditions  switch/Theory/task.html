@@ -1,0 +1,90 @@
+<div class="step-text">
+<p>You already know how to shape the <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, control flow refers to the order in which various parts of a program are executed. | It is often discussed in the context of control flow statements, which determine the order of execution based on certain conditions. For example, a loop is a control flow statement that allows for the repeated execution of a block of code a specified number of times. The while loop is a type of pre-test loop that repeatedly executes a block of code as long as a certain condition is true. The loop's body can contain any valid Java statement, including conditional statements and even other loops (known as nested loops).">control flow</a> of a program using <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an if-else statement is a conditional statement that allows a program to make a decision between two courses of action based on whether a certain condition is true or false. | It consists of an if keyword followed by a boolean expression in parentheses, and two bodies enclosed in curly braces - one for the if case and one for the else case. If the expression is true, the code inside the first set of curly braces is executed, and if it's false, the code inside the second set of curly braces is executed.">if-else statements</a>. Perhaps, you have faced situations in which you had to stack and nest multiple if-else statements to get the desired result. In this topic, you will learn an alternative way to deal with multiple choices: <strong>the <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a switch statement is a control flow statement used to evaluate an expression against multiple cases. | It serves as an alternative to long chains of if-else statements, enhancing code readability. A switch statement consists of the keywords switch, case, and default. The general form of a switch statement involves evaluating a given expression against several case constants. If a match is found, the corresponding code block is executed. However, switch statements can be verbose and prone to errors due to strict requirements for placing statements. Java 12 introduced switch expressions as a more concise and less error-prone alternative.">switch statement</a></strong>. It enhances code readability, efficiency, and organization compared to lengthy <code class="language-java">if-else</code> chains, making it valuable for handling multiple conditions.</p>
+<h5 id="when-a-conditional-statement-is-not-so-good" style="text-align: center;">When a conditional statement is not so good</h5>
+<p>Suppose you need to write a program that performs different actions depending on the value of a variable. For example, choosing an action from the menu of a game. To do that you can use a conditional statement with multiple branches as shown below.</p>
+<pre><code class="language-java">int action = ...; // a certain value from 1 to 4
+        
+if (action == 1) {
+    System.out.println("Starting a new game...");
+} else if (action == 2) {
+    System.out.println("Loading a saved game");
+} else if (action == 3) {
+    System.out.println("Displaying help...");
+} else if (action == 4) {
+    System.out.println("Exiting...");
+} else {
+    System.out.println("Unsuitable action, please, try again");
+}</code></pre>
+<p>Of course, this code handles the task. But if your conditional statement has a lot of branches, it can be hard to understand for people.</p>
+<h5 id="three-keywords-switch-case-and-default" style="text-align: center;">Three keywords: switch, case, and default</h5>
+<p><strong>The switch statement</strong> provides a way to choose between multiple cases based on the value of a single variable (not an <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an expression is a construct that can be evaluated to a value. | This value can then be used in further computations or assigned to a variable. A lambda expression, specifically, is an anonymous function that can be assigned to a variable. Its general form consists of a list of parameters followed by the body of the function. The body can return a value. Lambda expressions are particularly useful when you want to pass a small function as a parameter to a method, or when you want to create a function on the fly, without having to define a separate method for it. Unlike a switch statement, which can update the value of a predefined variable, a switch expression evaluates to a specific value and is assigned to a variable.">expression</a>!). The <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a variable is a named storage location that is used to store a value of a specific type. | It is declared with a specific data type, which determines the kind of value that can be stored in it. Every variable has a unique name, also known as an identifier, which is used to access its value. Variables can be declared and initialized in a single statement, and their value can be accessed and modified using the name. It's important to note that variables can be changed, meaning you can assign a new value to a variable without having to declare it again.">variable</a> can be an <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an integer number is a type of data that represents whole numbers, including positive, negative, and zero. | The most commonly used types for integer numbers in Java are `int` and `long`. The `int` type can store numbers within a certain range, while `long` can store a wider range of numbers. You can perform various arithmetic operations such as addition, subtraction, multiplication, division, and modulus with variables of integer types. Java also allows the use of the underscore character to separate groups of digits within a number for better readability.">integer number</a>, character, string, or enumeration. The last two types will be examined further in the following topics.</p>
+<p>With the switch statement, the previous code will look like this:</p>
+<pre><code class="language-java">switch (action) {
+    case 1:
+        System.out.println("Starting a new game...");
+        break;
+    case 2:
+        System.out.println("Loading a saved game");
+        break;
+    case 3:
+        System.out.println("Displaying help...");
+        break;
+    case 4:
+        System.out.println("Exiting...");
+        break;
+    default:
+        System.out.println("Unsuitable action, please, try again");
+}</code></pre>
+<p>As you can see, this code is well-structured and easier to read than the equal <a class="theory-lookup not-relevant" href="/learn/step/3504" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a conditional statement is a construction that allows a program to perform different computations depending on the value of a boolean expression. | If the expression is true, the program performs one computation; otherwise, if it is false, the program performs another computation. The simplest form of the conditional statement consists of the keyword `if`, a boolean expression enclosed in parentheses, and a body enclosed in curly braces. If the expression is true, the statement inside the code block is executed; otherwise, the program skips it.">conditional statement</a>. We have not explained the keywords <code class="language-java">switch</code>, <code class="language-java">case</code> and <code class="language-java">break</code> yet, but you can already guess what they mean.</p>
+<h5 id="the-general-form-of-the-switch-statement" style="text-align: center;">The general form of the switch statement</h5>
+<p>The most general form of the switch statement is the following</p>
+<pre><code class="language-java">switch (variable) {
+    case value1:
+        // do something here
+        break;
+    case value2:
+        // do something here
+        break;
+    
+    //... other cases
+    
+    case valueN:
+        // do something here
+        break;
+    default:
+        // do something by default
+        break; // it can be omitted
+}</code></pre>
+<p>The <code class="language-java">switch</code> and <code class="language-java">case</code> keywords are always required here. The keywords <code class="language-java">break</code> and <code class="language-java">default</code> are optional. The keyword <code class="language-java">break </code>stops the execution of the whole switch statement, not just one case.</p>
+<p>If a <code class="language-java">case</code> does not have the <code class="language-java">break</code> keyword, the following <code class="language-java">case</code> will be executed as well, including the <code class="language-java">default</code> case. The <code class="language-java">default</code> case is also executed if there's no other <code class="language-java">case</code> that matches the variable value. The <code class="language-java">break</code> keyword in the <code class="language-java">default</code> branch is optional and can be omitted.</p>
+<p>A <code class="language-java">case</code> section may contain any block of code, even a nested <code class="language-java">switch</code> statement, however, it is recommended to avoid deeply nested code structures whenever possible.</p>
+<h5 id="an-example-with-zero-one-and-two" style="text-align: center;">An example with "zero", "one" and "two"</h5>
+<p>Let's consider another example. The following code outputs the names of integer numbers or a default text. This switch statement has three base cases and a single default case.</p>
+<pre><code class="language-java">int val = ...;
+switch (val) {
+     case 0:
+         System.out.println("zero");
+         break;
+     case 1:
+         System.out.println("one");
+         break;
+     case 2:
+         System.out.println("two");
+         break;
+     default:
+         System.out.println("The value is less than zero or greater than two");
+} </code></pre>
+<p>If <code class="language-java">val</code> is 0, the code prints:</p>
+<pre><code class="language-java">zero</code></pre>
+<p>If <code class="language-java">val</code> is 1, the code prints:</p>
+<pre><code class="language-java">one</code></pre>
+<p>if <code class="language-java">val</code> is 10, the code prints:</p>
+<pre><code class="language-java">The value is less than zero or greater than two</code></pre>
+<p>If you forget the keyword <code class="language-java">break</code> in a case, the compiler won't consider it an error. Let's remove it from the second case (case 1) and assign 1 to <code class="language-java">val</code>. The program prints:</p>
+<pre><code class="language-java">one
+two</code></pre>
+<p>Omitting the <code class="language-java">break</code> keyword is not a good practice. Try to avoid it.</p>
+<p>Java 12 introduced some new features allowing to use <strong>switch</strong> as an <a href="https://hyperskill.org/learn/step/16036" rel="noopener noreferrer nofollow" target="_blank">expression</a>.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>When you have a limited number of cases to choose from, switch statements can help you avoid extensive if-else constructions. For that, you need the <code class="language-java">switch</code> keyword to introduce the value to evaluate, and <code class="language-java">case</code> for each of the possible values. Do not forget to also use the <code class="language-java">break</code> keyword to avoid executing extra cases and <code class="language-java">default</code> branch to indicate the default behavior.</p>
+</div>

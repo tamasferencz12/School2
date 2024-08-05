@@ -1,0 +1,15 @@
+type: hyperskill
+title: Simple Chat Bot with Java
+language: English
+summary: "<p>Begin grasping coding fundamentals by creating a simple console chat\
+  \ bot from scratch. This bot will be able to engage in basic conversation with you\
+  \ and perform simple arithmetic. During this journey, you will play some word and\
+  \ number games that you are going to implement on your own. Pack up and let’s hit\
+  \ the road!</p><br/><br/>Learn more at <a href=\"https://hyperskill.org/projects/113?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card\"\
+  >https://hyperskill.org/projects/113</a>"
+programming_language: Java
+programming_language_version: 11
+content:
+  - Topics
+  - Simple Chat Bot with Java
+mode: Study

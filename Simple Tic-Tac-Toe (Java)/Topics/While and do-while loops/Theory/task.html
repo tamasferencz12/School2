@@ -1,0 +1,106 @@
+<div class="step-text">
+<p>There are a number of approaches to repeating a fragment of the code while a certain condition is <code class="language-java">true</code>. In this lesson, we will learn how to do it by using two kinds of loops. They differ in the order of the repeated fragment execution and condition evaluation.</p>
+<h5 id="the-while-loop">The while loop</h5>
+<p>The <strong>while</strong> loop consists of a block of code and a condition (a <a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a boolean expression is an expression that evaluates to a boolean value, either true or false. | It is used to make decisions in a program based on whether a certain condition is met or not. Boolean expressions can be assigned to a boolean variable or used in control flow statements such as if-else and loop. They can be created using logical operators such as AND, OR, and NOT, which allow you to join a sequence of relational operations into one expression. An example of a boolean expression is (x &gt; 5) &amp;&amp; (y &lt; 10), which evaluates to true if both conditions x is greater than 5 and y is less than 10 are met.">Boolean expression</a>). If the condition is <code class="language-java">true</code>, the code within the block is executed. This code repeats until the condition becomes <code class="language-java">false</code>. Since this loop checks the condition before the block is executed, the control structure is also known as a <strong>pre-test loop</strong>. You can think of the <strong>while</strong> loop as a repetitive <a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a conditional statement is a construction that allows a program to perform different computations depending on the value of a boolean expression. | If the expression is true, the program performs one computation; otherwise, if it is false, the program performs another computation. The simplest form of the conditional statement consists of the keyword `if`, a boolean expression enclosed in parentheses, and a body enclosed in curly braces. If the expression is true, the statement inside the code block is executed; otherwise, the program skips it.">conditional statement</a>.</p>
+<p>The basic syntax of the <strong>while</strong> loop is the following:</p>
+<pre><code class="language-java">while (condition) {
+    // body: do something repetitive
+}</code></pre>
+<p>A loop's body can contain any correct Java statements, including conditional statements and even other loops, the latter being called nested loops.</p>
+<p>It is also possible to write an <strong><a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an infinite loop is a loop that keeps executing indefinitely because the condition that controls the loop never becomes false. | This can occur due to a programming error, such as forgetting to update a variable that is used in the loop's condition, or intentionally, for example, when a program needs to continuously monitor for certain events. Infinite loops can cause a program to become unresponsive or consume excessive system resources, so they should be used with caution. The while loop is an example of a pre-test loop, where the condition is tested before the loop's body is executed. If the condition is true, the loop's body is executed, and the condition is tested again. This process continues until the condition becomes false. If the condition is invariably true, it will result in an infinite loop. For example, the following loop prints integer numbers while a variable is less than 5:
+
+`int i = 0;`
+`while (i &lt; 5) {`
+ `System.out.println(i);`
+ `i++;`
+`}`
+
+Here, the value 0 is assigned to the variable i before the first execution of the loop. The condition (i &lt; 5) is tested before each execution of the loop's body. If the condition is true, the loop's body is executed, the value of i is incremented by 1, and the condition is tested again.">infinite loop</a></strong> if the condition is invariably <code class="language-java">true</code>:</p>
+<pre><code class="language-java">while (true) {
+    // body: do something indefinitely
+}</code></pre>
+<p>The application of infinite loops will be considered in the following topics.</p>
+<p><strong>Example 1.</strong> The following loop prints integer numbers while a variable is less than 5.</p>
+<pre><code class="language-java">int i = 0;
+while (i &lt; 5) {
+    System.out.println(i);
+    i++;
+}
+// next statement</code></pre>
+<p>Let's explain how this loop works. First, the value 0 is assigned to the variable <code class="language-java">i</code>. Before the first execution of the loop's body, the program checks if the condition <code class="language-java">i &lt; 5</code> is true. In our case, <code class="language-java">i</code> is 0, so the condition is true and the body of the loop starts executing. The body has two statements: displaying the current value of <code class="language-java">i</code> and incrementing it by 1. After this is done, the expression <code class="language-java">i &lt; 5</code> is evaluated again. Now <code class="language-java">i</code> equals 1, so the condition is still <code class="language-java">true</code>, and the loop's body is repeated again. This is repeated until <code class="language-java">i</code> has taken the value 5, after which the expression <code class="language-java">i &lt; 5</code> ceases to be <code class="language-java">true</code>, and the execution of this loop terminates. The program proceeds to the next statement after the loop.</p>
+<p><strong>The output:</strong></p>
+<pre><code class="language-java">0
+1
+2
+3
+4</code></pre>
+<p>Note that the last value of <code class="language-java">i</code>, that is 5, is not printed.</p>
+<p><strong>Example 2. </strong>The following program displays English letters in a single line.</p>
+<pre><code class="language-java">public class WhileDemo {
+
+    public static void main(String[] args) {
+        char letter = 'A';
+        while (letter &lt;= 'Z') {
+            System.out.print(letter);
+            letter++;
+        }
+    }
+}</code></pre>
+<p>The program takes the first letter <code class="language-java">'A'</code> and then goes on like this:</p>
+<ul><li><p>if the <code class="language-java">letter</code> is less than or equal to <code class="language-java">'Z'</code> the program goes to the loop's body;</p></li><li><p>inside the body, it prints the current character and <code class="language-java">letter</code> takes the next alphabet letter.</p></li></ul>
+<p>The program prints:</p>
+<pre><code class="language-java">ABCDEFGHIJKLMNOPQRSTUVWXYZ</code></pre>
+<p></p>
+<p></p>
+<div class="alert alert-primary"><p>Remember that it is possible to get the next character according to the Unicode table by using the increment operator. After the code execution, the <code class="language-java">letter</code> will equal <code class="language-java">[</code>.</p></div>
+<p></p>
+<p></p>
+<h5 id="the-do-while-loop">The do-while loop</h5>
+<p>In the <strong>do-while</strong> loop, the body is executed first, while the condition is tested afterwards. If the condition is <code class="language-java">true</code>, statements within the block are executed again. This repeats until the condition becomes <code class="language-java">false</code>. Because <strong>do-while</strong> loops check the condition after the block is executed, the <a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a control structure is a programming construct that determines the order in which statements are executed in a program. | Control structures include conditionals such as if-else statements and switch-case statements, as well as loops such as for loops, while loops, and do-while loops. These structures allow programmers to control the flow of execution by specifying conditions under which certain blocks of code should be executed. The initialization, condition, and modification parts of a loop work together to repeatedly execute a block of code as long as the specified condition is true.">control structure</a> is often also known as a <strong>post-test loop</strong>. In contrast to the <strong>while </strong>loop, which tests the condition before the code within the block is executed, the <strong>do-while</strong> loop is an exit-condition loop. So, the code within the block is always executed at least once.</p>
+<p>This loop contains three parts: the <code class="language-java">do</code> keyword, a body, and <code class="language-java">while(condition)</code>:</p>
+<pre><code class="language-java">do {
+    // body: do something
+} while (condition);</code></pre>
+<p>A good example of using it is a program that reads data from the <a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the standard input is a default source of input for a program, which is typically associated with the keyboard. | It is a mechanism provided by the operating system for a program to consume data and can be redirected from a file or other sources. The standard input is commonly used in programming problems to read data, process it, and output the result to the standard output. It can be accessed in Java using the System.in class, which allows a program to read values of various types from the standard input.">standard input</a> until a user enters a certain number or string. The following program reads <a class="theory-lookup not-relevant" href="/learn/step/3498" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an integer number is a type of data that represents whole numbers, including positive, negative, and zero. | The most commonly used types for integer numbers in Java are `int` and `long`. The `int` type can store numbers within a certain range, while `long` can store a wider range of numbers. You can perform various arithmetic operations such as addition, subtraction, multiplication, division, and modulus with variables of integer types. Java also allows the use of the underscore character to separate groups of digits within a number for better readability.">integer numbers</a> from the standard input and displays them. If the number 0 is entered, the program prints it and then stops. The following example demonstrates the <strong>do-while</strong> loop:</p>
+<pre><code class="language-java">public class DoWhileDemo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int value;
+        do {
+            value = scanner.nextInt();
+            System.out.println(value);
+        } while (value != 0);
+    }
+}</code></pre>
+<p>Input numbers:</p>
+<pre><code class="language-java">1 2 4 0 3</code></pre>
+<p>The program prints:</p>
+<pre><code class="language-java">1
+2
+4
+0</code></pre>
+<p></p>
+<p></p>
+<div class="alert alert-primary"><p>Note that like the <strong>while </strong>loop, the <strong>do-while</strong> loop can be infinite.</p></div>
+<p></p>
+<p></p>
+<p>In practice, the <strong>do-while</strong> loop is used less than the <strong>while </strong>loop. It is used when code inside the loop must be executed at least once.</p>
+<h5 id="reading-a-sequence-with-an-unknown-length">Reading a sequence with an unknown length</h5>
+<p>The <code class="language-java">while</code> loop can also be used to read a sequence of characters of an arbitrary length. For that, we can invoke the <code class="language-java">hasNextInt()</code> method of <code class="language-java">Scanner</code> inside the condition. The method returns <code class="language-java">true</code> if the next element is an integer number and <code class="language-java">false</code> otherwise.</p>
+<p>Here is a code that calculates the sum of all elements from the provided sequence:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+int sum = 0;
+while (scanner.hasNextInt()) {
+    int elem = scanner.nextInt();
+    sum += elem;
+}
+
+System.out.println(sum);</code></pre>
+<p>If the input sequence is <code class="language-java">1 2 3</code>, the code prints <code class="language-java">6</code>, if it is <code class="language-java">5 18 9 23 4</code>, the code prints <code class="language-java">59</code>.</p>
+<div class="alert alert-primary"><p>As you see, the <strong>while</strong> loop can be used to solve different interesting tasks in your programs. Similarly, our platform offers hands-on projects where you can apply these concepts in real-world scenarios. You can practice using loops extensively as real programs often involve repetitive tasks. Start with the first stage of one project, and consider <a href="https://hyperskill.org/pricing" rel="noopener noreferrer nofollow" target="_blank">upgrading</a> to unlock all stages and get a chance to build a portfolio to show to your future employer.</p></div>
+<h5 id="conclusion">Conclusion</h5>
+<p>There are different ways to perform some fragments of your code several times. In this topic, we've discussed two alternative ways to use loops that are based on conditional statement evaluation. If you want to check the condition first and, based on the result, perform the operations or ignore them at all, the <strong>while </strong>loop is your choice. If you want to do one iteration of the loop in any case and then evaluate the condition for repetition, then choose <strong>do-while</strong>. Both types of loops can be used to read a sequence from the standard input: for <strong>do-while</strong>, you may use some stop value to terminate the loop, for <strong>while</strong>, use the <code class="language-java">hasNext()</code> method to check that the input is over.</p>
+</div>

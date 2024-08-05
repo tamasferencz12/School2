@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "The code will not cause any errors, as &#x27;finalVar&#x27; is assigned only\
+    \ once in each block."
+  - text: "The code will cause a runtime error, due to the assignment of &#x27;finalVar&#x27;\
+    \ in both conditional branches."
+  - text: "The code will lead to a compilation error, as &#x27;finalVar&#x27; must be\
+    \ assigned immediately after declaration."
+  - text: "The code will lead to a compilation error, as &#x27;finalVar&#x27; is assigned\
+    \ a value more than once."
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29808#comment
+status: Solved
+record: -1
+local_check: false

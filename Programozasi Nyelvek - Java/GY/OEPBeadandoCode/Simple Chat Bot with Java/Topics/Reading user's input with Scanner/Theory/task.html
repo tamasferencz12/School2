@@ -1,0 +1,109 @@
+<h2>Reading user's input with Scanner</h2>
+<div class="step-text">
+<p>The <strong><a class="theory-lookup not-relevant" href="/learn/step/9055" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the standard input is a default source of input for a program, which is typically associated with the keyboard. | It is a mechanism provided by the operating system for a program to consume data and can be redirected from a file or other sources. The standard input is commonly used in programming problems to read data, process it, and output the result to the standard output. It can be accessed in Java using the System.in class, which allows a program to read values of various types from the standard input.">standard input</a></strong> is a data stream going into a program and supported by the operating system. By default, the standard input acquires data from keyboard input, but it can be redirected from a file.</p>
+<p>Not every program needs to use the standard input, but you'll use it frequently here to help master your programming skills! The typical approach to solving programming problems is:</p>
+<ol><li><p>Read data from the standard input (System.in);</p></li><li><p>Process data to obtain a result;</p></li><li><p>Output the result to the <a class="theory-lookup not-relevant" href="/learn/step/9055" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a standard output is a receiver to which a program can send information in the form of text. | It is supported by all common operating systems and Java provides a special object, `System.out`, to work with the standard output. This object is often used to print data, with the `println()` method displaying the passed string followed by a new line on the screen. Standard output is a way for a program to write data to a destination, which can be a console, a file, or even a web socket. It is important to note that there are two types of streams: byte and character.">standard output</a> (System.out).</p></li></ol>
+<p>This type of code challenge can be eaily tested with different input data formats, so we'll use them often.</p>
+<h5 id="reading-data-with-a-scanner">Reading data with a scanner</h5>
+<p>The simplest method to obtain data from the standard input is using the standard class <code class="language-java">Scanner</code>. It allows a program to read values of various types, like strings or numbers, from the standard input. In this topic, we consider reading data from the input.</p>
+<p>To use this class, you should add the following import statement at the top of your file with the source code.</p>
+<pre><code class="language-java">import java.util.Scanner;</code></pre>
+<p>After the import, add a class with this construction:</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+    }
+}</code></pre>
+<p>In the <code class="language-java">main</code> method, we make an object of <code class="language-java">Scanner</code> class, which allows us to use its methods. <code class="language-java">System.in</code> signals that the program will read the text that you entered in the standard input. You'll need this line exactly as it is for now.</p>
+<p>The <code class="language-java">Scanner</code> class offers two ways to read strings. If your input is an integer number or a single word, you can use the <code class="language-java">next()</code> method. For example, the following code snippet reads the user's name and prints a <em>hello</em> message:</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.next();
+        System.out.println("Hello, " + name + "!");
+    }
+}</code></pre>
+<p>For example, if the user enters their name as James, the program's output will be:</p>
+<pre><code class="language-no-highlight">Hello, James!</code></pre>
+<p>If you enter an integer number like 123 as the user's input, the program will output this number. Remember that the <code class="language-java">next()</code> method will store 123 or some other integer number as a string, even if we know that this string represents a number.</p>
+<pre><code class="language-no-highlight">Hello, 123!</code></pre>
+<p>Now, what if a user inputs a compound name like Erich Maria? The program will only output the first word:</p>
+<pre><code class="language-no-highlight">Hello, Erich!</code></pre>
+<p>In this case, you'll need to invoke the <code class="language-java">next()</code> method again:</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String firstName = scanner.next(); // "Erich"
+        String lastName = scanner.next(); // "Maria"
+        System.out.println("Hello, " + firstName + " " + lastName  + "!");
+    }
+}</code></pre>
+<p>However, it would be more efficient to use another method, the <code class="language-java">nextLine()</code> method, which reads and outputs the entire line:</p>
+<pre><code class="language-no-highlight">Hello, Erich Maria!</code></pre>
+<p>You may notice that the <code class="language-java">next()</code> method only reads a single word and excludes any whitespace. On the other hand, the <code class="language-java">nextLine()</code> method includes all space characters it encounters.</p>
+<p>Note that in Java, <strong>whitespace</strong> includes not just the space character, but also everything that appears empty when printed: a tab, the <a class="theory-lookup not-relevant" href="/learn/step/9055" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a newline is a type of whitespace character that is created when you press the enter key and start a new line. | It is essentially a character that represents the end of a line of text. Whitespace in Java includes not just the space character, but also tabs, newline characters, and other non-printing characters. When you use the `println()` method to display a string followed by a new line on the screen, the newline character is what causes the cursor to move down to the next line.">newline</a> character, and other non-printing characters.</p>
+<p>In this article, we'll discuss space and newline characters: essentially, we create a corresponding character when we press Enter and start a new line. The term "whitespace" refers to either of these. A more correct term for what we've been calling a "word" is a <strong><a class="theory-lookup not-relevant" href="/learn/step/9055" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a token is a sequence of characters that represents a single unit of meaning in a program. | It is a fundamental element of the language's syntax and is used by the Java compiler to parse and understand the code. Tokens can be keywords, identifiers, literals, operators, or separators. They are separated by whitespace and must adhere to the specific rules of the Java syntax. Understanding tokens is crucial for writing valid Java code and for debugging any syntax errors that may occur.">token</a></strong>, which can be described as a piece of text surrounded by whitespace. So we can say that the <code class="language-java">next()</code> method locates and returns the next token, while the <code class="language-java">nextLine()</code> reads all data till the end of the current line.</p>
+<h5 id="reading-a-multiline-input">Reading a multiline input</h5>
+<p>Reading multiline input might be a bit complicated; you need to consider the cursor's position and the behavior of the reading methods.</p>
+<p>Let's explore this with an example:</p>
+<pre><code class="language-no-highlight">|This is a simple
+
+multiline input,
+
+that is being read
+</code></pre>
+<p><strong>|</strong> indicates the cursor's position before reading the input.</p>
+<p>If we call the <code class="language-java">next()</code> method, the program will read the input up to the whitespace:</p>
+<pre><code class="language-no-highlight">This| is a simple
+
+multiline input,
+
+that is being read
+</code></pre>
+<p>After invoking the <code class="language-java">nextLine()</code> method, the program reads the remaining line starting from the whitespace. If there is such a line in your input, the <code class="language-java">nextLine()</code> places the cursor at the start of the new line:</p>
+<pre><code class="language-no-highlight">This is a simple
+
+|multiline input,
+
+that is being read
+</code></pre>
+<p>Next, let's invoke the <code class="language-java">next()</code> method two times. The first input is indicated by the position of the cursor which is right after the word and before the whitespace:</p>
+<pre><code class="language-no-highlight">This is a simple
+
+multiline| input,
+
+that is being read
+</code></pre>
+<p>We're now invoking the <code class="language-java">next()</code> method once again. The program outputs the second word in the line <em>without</em> any whitespace. The number of space characters doesn't matter, as the <code class="language-java">next()</code> method will skip the whitespace until it finds the next token.</p>
+<p>As you'll see, the cursor's position remains at the current line, just before the new line and after the comma:</p>
+<pre><code class="language-no-highlight">This is a simple
+
+multiline input,|
+
+that is being read
+</code></pre>
+<p>Here's a tricky thing about the <code class="language-java">nextLine()</code> method, which also shows a major difference between <code class="language-java">next()</code> and <code class="language-java">nextLine()</code> methods. As you know already, the program will read input from the cursor's position to the new line (again, if such a line exists in your input). In this example, the cursor is placed before the new line. This means the <code class="language-java">nextLine()</code> method will return an empty line ("") and place the cursor at the start of a new line.</p>
+<pre><code class="language-no-highlight">This is a simple
+
+multiline input,
+
+|that is being read</code></pre>
+<p>To sum it all up, let's look at the entire code and consider what variables we've just read:</p>
+<pre><code class="language-java">import java.util.Scanner; 
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);  
+
+        String word1 = scanner.next(); // "This"
+        String line1 = scanner.nextLine(); // " is a simple" 
+        String word2 = scanner.next(); // "multiline"
+        String word3 = scanner.next(); // "input,"
+        String line2 = scanner.nextLine(); // "" 
+    }
+}</code></pre>
+<p>This example may seem a bit artificial, but it should assist you in understanding the difference between these two methods—remember that usually, variables have more expressive names.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>You can read data from the standard input with a specialized <code class="language-java">Scanner</code> class. The <code class="language-java">next()</code> and <code class="language-java">nextLine()</code> methods help you read strings. Both are used for gathering input, but they act differently. The <code class="language-java">next()</code> method reads input until the next whitespace, while the <code class="language-java">nextLine()</code> method reads input to the end of the line.</p>
+<p>We suggest using the <code class="language-java">Scanner</code> class when solving programming challenges—it is one of the simplest ways to obtain values from the standard input.</p>
+</div>

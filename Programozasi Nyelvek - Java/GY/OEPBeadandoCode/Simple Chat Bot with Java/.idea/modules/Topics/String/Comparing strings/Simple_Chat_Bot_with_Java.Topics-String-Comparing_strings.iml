@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-String-Comparing_strings" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/String/Comparing strings" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Simple Chat Bot with Java" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/String/Comparing strings">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/String/Comparing strings/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/String/Comparing strings/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/String/Comparing strings/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

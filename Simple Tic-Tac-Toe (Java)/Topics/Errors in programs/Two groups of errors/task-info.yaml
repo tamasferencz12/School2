@@ -1,0 +1,25 @@
+type: table
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3478#comment
+status: Solved
+record: -1
+rows:
+  - incorrect keyword
+  - incorrect text output
+  - missed semi-colon
+  - a program cannot open a file
+columns:
+  - compile-time
+  - run-time ("bugs")
+selected:
+  - - false
+    - false
+  - - false
+    - false
+  - - false
+    - false
+  - - false
+    - false

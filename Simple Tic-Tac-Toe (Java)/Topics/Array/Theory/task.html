@@ -1,0 +1,91 @@
+<div class="step-text">
+<p>When you need to process multiple objects of the same type, you can save them in an <strong>array</strong> and then process them together as a single unit. It is a very convenient approach if you know how many objects the program will process during runtime.</p>
+<p>You may consider an array as a collection of elements of the same type. All elements are stored in the memory sequentially.</p>
+<p>All elements in a collection are stored under the same name. The possible number of elements to be stored is established when the array is created and cannot be changed. But a stored element can be modified at any time.</p>
+<h5 id="arrays-in-java">Arrays in Java</h5>
+<p>The picture below illustrates an array of five <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a floating-point number is a type of numeral that represents fractional numbers, consisting of an integer part, a fractional part, and a separator (e.g., 0.01 or 3.1415). | Java has two basic types to represent such numbers: float and double, which are called floating-point types. These types can only represent a limited number of significant decimal digits (6-7 for float and 14-16 for double) and cannot represent all real numbers exactly. Programmers mostly use the type float, but it is recommended to use double for greater precision. Floating-point numbers can be represented using floating-point literals, which consist of digits, a decimal point, and an optional suffix to indicate the type.">floating-point numbers</a>. Each element has an integer index (0-4) to be accessed.</p>
+<p style="text-align: center;"><picture><img alt="Arrays in Java" height="159" src="https://ucarecdn.com/9e6fb36e-293b-4fce-99e5-430e520d0783/" width="520"/></picture></p>
+<p></p>
+<p></p>
+<div class="alert alert-warning"><p>The first element has an index of 0, and the last element has an index equal to<strong> array size minus 1</strong>.</p></div>
+<p></p>
+<p></p>
+<p>In Java, an array has the following important features:</p>
+<ul><li><p>an array is a <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a reference type is a type of variable that stores a reference to an object located elsewhere in memory, rather than storing the object's value directly. | When an object is created using the new operator, it returns a reference to the location of the object in memory, allowing access to its fields and methods. Reference types can be assigned to variables, passed as arguments to methods, and returned as values from methods. They are important for creating complex, object-oriented programs in Java. Unlike primitive types, which store their values directly, reference types store a reference to an object. When comparing reference types using the == operator, it compares the references (memory addresses) rather than the actual values. Additionally, assigning one value of a reference variable to another creates a copy of the reference, rather than the value itself. Reference types can also refer to a special value that represents the fact that it is not initialized yet or does not have a value. It is important to note that in Java, the heap is the region of memory where objects are stored and allocated dynamically during runtime.">reference type</a>;</p></li><li><p>all array elements are stored in the memory sequentially;</p></li><li><p>each element of the array is accessed by its numerical index, the first element has the <strong>index 0</strong>;</p></li><li><p>the last element is accessed by the index equal to <strong>array size – 1</strong>;</p></li><li><p>it is possible to create an array to store elements of any type.</p></li></ul>
+<h5 id="declaration-instantiation-initialization">Declaration, instantiation, initialization</h5>
+<p>To create an array filled with elements we should:</p>
+<ul><li><p>declare a variable of an array type <strong>(</strong><strong><a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a declaration is a statement that introduces a variable, method, or class into the program. | It specifies the type of the entity being declared, its name, and other relevant information such as access modifiers, return type (for methods), and initial values (for variables). For example, the declaration of a method may include its name, return type, access modifier, and parameter list. Declarations are essential for Java to understand the structure and behavior of the program. Incorrect declarations can lead to compilation errors. Java 10 introduced type inference, which allows developers to use the var keyword instead of a specific type, and the type is automatically inferred based on the assigned value.">declaration</a></strong><strong>);</strong></p></li><li><p>create an instance of the array object <strong>(</strong><strong><a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, instantiation is the process of creating an object from a class blueprint. | This is done using the 'new' keyword followed by the class name, which allocates memory for the object and calls its constructor to initialize the object's state. Instantiated objects have their own identity and state, allowing them to interact with other objects and methods in the program. It's important to note that instantiation is a fundamental concept in object-oriented programming, as it enables the creation of multiple instances of a class, each with its own unique characteristics and behavior.">instantiation</a></strong><strong>)</strong>;</p></li><li><p>initialize the array by some values <strong>(</strong><strong><a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, initialization is the process of assigning an initial value to a variable or an object. | This can be done in several ways, such as through a constructor, an instance initialization block, or a static initialization block. The Java compiler also allows for automatic type inference during initialization, where the type is determined based on the assigned value. Initialization is an important concept in Java because it ensures that objects are properly set up before they are used in a program.">initialization</a></strong><strong>)</strong>.</p></li></ul>
+<p>When we declare a <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a variable is a named storage location that is used to store a value of a specific type. | It is declared with a specific data type, which determines the kind of value that can be stored in it. Every variable has a unique name, also known as an identifier, which is used to access its value. Variables can be declared and initialized in a single statement, and their value can be accessed and modified using the name. It's important to note that variables can be changed, meaning you can assign a new value to a variable without having to declare it again.">variable</a>, we define its type and name. Instantiation happens when memory is allocated for this object. Initializing the array object means that we put certain values of the array object into the memory of our program.</p>
+<p>To declare an array, we must use two special characters <strong>[ ]</strong> after the type of elements in the array:</p>
+<pre><code class="language-java">int[] array; // declaration form 1</code></pre>
+<p>It can also be used after the name of the array variable:</p>
+<pre><code class="language-java">int array[]; // declaration form 2: less used in practice</code></pre>
+<p>We will use the first form of declaration because it is most often used when writing Java.</p>
+<h5 id="creating-an-array-with-specified-elements">Creating an array with specified elements</h5>
+<p>Java provides several ways to create an array with specified elements.</p>
+<p>The simplest way to <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, instantiation is the process of creating an object from a class blueprint. | This is done using the 'new' keyword followed by the class name, which allocates memory for the object and calls its constructor to initialize the object's state. Instantiated objects have their own identity and state, allowing them to interact with other objects and methods in the program. It's important to note that instantiation is a fundamental concept in object-oriented programming, as it enables the creation of multiple instances of a class, each with its own unique characteristics and behavior.">instantiate</a> and initialize an array is to enumerate all its elements:</p>
+<pre><code class="language-java">int[] numbers = { 1, 2, 3, 4 }; // instantiating and initializing an array of 1, 2, 3, 4</code></pre>
+<p>Another way is to initialize an array using variables:</p>
+<pre><code class="language-java">int a = 1, b = 2, c = 3, d = 4;
+int[] numbers = { a, b, c, d }; // instantiating and initializing an array of 1, 2, 3, 4</code></pre>
+<p>In this case, we should have all the elements at the moment of the array creation.</p>
+<h5 id="creating-an-array-using-the-new-keyword">Creating an array using the "new" keyword</h5>
+<p>The most general way to create an array is to use the special keyword <code class="language-java">new</code> and specify the necessary number of elements:</p>
+<pre><code class="language-java">int n = ...; // n is a length of an array
+int[] numbers = new int[n];</code></pre>
+<p>This form is useful when the number of elements is known before starting the program. When we create an instance of the array object with indicated length like <code class="language-java">[n]</code> or <code class="language-java">[5]</code> and don't enumerate its elements explicitly, the array is initialized with <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a default value is a value that is automatically assigned to a variable, field, or array element if no explicit initial value is provided. | For example, an array of a primitive type is initialized with default values. Variables of type boolean are initialized to false, while numeric types are initialized to zero. For object reference types, the default value is null. When creating an object of a class, if no constructor is defined, the compiler automatically provides a default no-argument constructor that initializes all fields with their default values. However, if a specific constructor is defined, the default constructor will not be created.">default values</a> of its type.</p>
+<p>Now, the array has <code class="language-java">n</code> elements. Each element is equal to zero (the default value of the type <code class="language-java">int</code>). Next, we should make an explicit initialization of elements.</p>
+<p></p>
+<p></p>
+<div class="alert alert-warning"><p>The size of an array cannot be greater than <code class="language-java">Integer.MAX_VALUE</code>. Actually, it is even slightly smaller than this value.</p></div>
+<p></p>
+<p></p>
+<p>It's possible to separate declaration and instantiation into two lines:</p>
+<pre><code class="language-java">int[] numbers; // declaration
+numbers = new int[n]; // instantiation and initialization with default values</code></pre>
+<p>Also, we can write the keyword <code class="language-java">new</code> and enumerate all elements of an array:</p>
+<pre><code class="language-java">float[] floatNumbers; // declaration 
+floatNumbers = new float[] { 1.02f, 0.03f, 4f }; // instantiation and initialization</code></pre>
+<p>By default, an array of a <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a primitive type is one of eight built-in data types provided by the language. | They are represented by keywords and are not objects, unlike reference types. Primitive types are divided into groups based on their meaning, and each group operates similarly but has different sizes and ranges of value. The most commonly used primitive type is `int`, which represents an integer number. Java also provides several types for integer and fractional numbers, which are often used in arithmetic expressions. Primitive types store their value directly, unlike reference types that store a reference to an object located elsewhere.">primitive type</a> is initialized with default values. For other values, you need to fill values explicitly or use the utility class Arrays. It provides a convenient way to fill a whole array or a part of it with some values:</p>
+<pre><code class="language-java">int size = 10;
+char[] characters = new char[size];
+
+// It takes an array, start index, end index (exclusive) and the value for filling the array
+Arrays.fill(characters, 0, size / 2, 'A'); 
+Arrays.fill(characters, size / 2, size, 'B');
+
+System.out.println(Arrays.toString(characters)); // it prints [A, A, A, A, A, B, B, B, B, B]</code></pre>
+<h5 id="the-length-of-an-array">The length of an array</h5>
+<p>To obtain the length of an existing array, access the special property <code class="language-java">arrayName.length</code>. Here is an example:</p>
+<pre><code class="language-java">int[] array = { 1, 2, 3, 4 }; // an array of numbers
+        
+int length = array.length; // number of elements of the array
+        
+System.out.println(length); // 4</code></pre>
+<h5 id="accessing-elements">Accessing elements</h5>
+<p>The values of elements of an array can be changed. You can use the index to set a value of the array or to get a value from it.</p>
+<p>Set the value by the index:</p>
+<pre><code class="language-java">array[index] = val;</code></pre>
+<p>Get the value by the index:</p>
+<pre><code class="language-java">val = array[index];</code></pre>
+<p>Indexes of an array have numbers from <strong>0</strong> to <strong>length – 1</strong> inclusive.</p>
+<p>Let's see an example.</p>
+<pre><code class="language-java">int[] numbers = new int[3]; // numbers: [0, 0, 0]
+numbers[0] = 1; // numbers: [1, 0, 0]
+numbers[1] = 2; // numbers: [1, 2, 0]
+numbers[2] = numbers[0] + numbers[1]; // numbers: [1, 2, 3]</code></pre>
+<p>This code works as follows:</p>
+<ul><li><p>In the first line, the array of integers named <code class="language-java">numbers</code> with three elements in it is created. It is initialized with default values, which is 0 for the <code class="language-java">int</code> type.</p></li><li><p>In the second line, the value "1" is assigned to the very first element of the array by its index (do not forget, the first element has the index 0).</p></li><li><p>In the third line, the value "2" is assigned to the second element of the array by its index (numbers[1] is the second element).</p></li><li><p>In the last line, the sum of the first two elements is assigned to the third element by its index.</p></li></ul>
+<p></p>
+<p></p>
+<div class="alert alert-primary"><p>If we try to access a non-existing element by an index then a <a class="theory-lookup not-relevant" href="/learn/step/3511" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a runtime exception is an exception that occurs during the execution of a program, as opposed to a compile-time error. | These exceptions are caused by errors in the code that do not prevent the program from running, but will cause the program to crash when it encounters a broken line of code - a line containing an error. Runtime exceptions are instances of classes that are part of a class hierarchy rooted at the base class Throwable. When a runtime exception is thrown, the Java runtime system attempts to find a suitable handler for it, which can be located in the same method where the exception occurred or in a calling method.">runtime exception</a> occurs.</p></div>
+<p></p>
+<p></p>
+<p>For instance, let's try to get the fourth element (with index 3) of the considered array <code class="language-java">numbers</code>.</p>
+<pre><code class="language-java">int elem = numbers[3];</code></pre>
+<p>The program throws an <code class="language-java">ArrayIndexOutOfBoundsException.</code></p>
+<p>Be careful when indexing elements of an array. Read more on this topic in Multidimensional arrays in Java on Hyperskill Blog!</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>An array is a collection of elements of the same type. It allows to store elements in memory sequentially and process them all together as one unit. In this topic, you learned how to declare, instantiate and initialize an array, as well as create an array with specified elements. We also showed you how to create an array using the <code class="language-java">new</code> keyword, obtain an array's length, and access its elements to change their values.</p>
+<div class="alert alert-primary"><p>Arrays can be complex to grasp at first, but don't worry! We prepared various tasks to help you master this concept. Remember, making mistakes is a part of learning, and you have <strong>seven</strong> lives to cover you, replenishing every 24 hours. If you want unlimited practice and a more expansive learning experience, consider our premium subscription for <a href="https://hyperskill.org/pricing" rel="noopener noreferrer nofollow" target="_blank">unlimited</a> lives.</p></div>
+</div>

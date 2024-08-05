@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "numbers[numbers.length - 1]"
+  - text: "numbers[numbers.length]"
+  - text: "numbers[numbers.length + 1]"
+  - text: "numbers[100_000_000]"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2710#comment
+status: Solved
+record: -1
+local_check: false

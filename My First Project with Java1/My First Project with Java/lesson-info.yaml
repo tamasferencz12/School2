@@ -1,0 +1,6 @@
+type: framework
+content:
+  - Print the prices
+  - Measuring total income
+  - Calculate net income
+current_task: 2

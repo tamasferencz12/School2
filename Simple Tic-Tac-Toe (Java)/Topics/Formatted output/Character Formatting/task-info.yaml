@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Marks for my assignment is 56
+  - text: Marks for my assignment is 6
+  - text: Compile time error
+  - text: Runtime error
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7051#comment
+status: Solved
+record: -1
+local_check: false

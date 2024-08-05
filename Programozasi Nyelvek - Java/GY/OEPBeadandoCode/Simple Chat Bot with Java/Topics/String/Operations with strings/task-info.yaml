@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: s1 * 5
+  - text: s1 - s2
+  - text: s1 + s2
+  - text: s1 &lt;= s2
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3415#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 24 Jul 2024 18:59:17 UTC"
+record: -1
+selected_options:
+  - 2
+local_check: false

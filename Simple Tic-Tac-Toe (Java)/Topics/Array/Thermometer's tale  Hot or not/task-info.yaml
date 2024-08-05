@@ -1,0 +1,13 @@
+type: code
+custom_name: "Thermometer's tale: Hot or not?"
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/49067#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 01 Aug 2024 16:35:31 UTC"
+record: -1
+submission_language: java17

@@ -1,0 +1,28 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      import java.util.Scanner;
+      
+      public class Main {
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              // Get the number of rows for the pyramid
+              int n = scanner.nextInt();
+              // For each row..
+              // write a loop that starts at 'n' and ends at 1 (hint: you can use a decrement)
+              // For each column..
+              // write another loop inside the first one that starts at the current row number and ends at 1
+              // print an asterisk ('*') without going to the next line (use 'System.out.print' instead of 'println')
+              // After each row, print a newline character ('\n')
+          }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/40337#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 25 Jul 2024 19:52:50 UTC"
+record: -1
+submission_language: java17

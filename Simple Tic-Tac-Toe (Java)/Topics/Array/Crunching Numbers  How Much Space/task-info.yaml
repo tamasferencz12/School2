@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: The total memory is a fixed value regardless of the number of elements in
+      the array
+  - text: Memory consumption depends linearly on the number of elements without any
+      overhead
+  - text: Total memory = (Number of elements * 4 bytes) + 12 bytes overhead
+  - text: Memory usage can be calculated as Number of elements multiplied by 8 bytes
+  - text: "Total memory depends only on the array length, ignoring the size of individual\
+    \ elements"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/47804#comment
+status: Solved
+record: -1
+custom_name: "Crunching Numbers: How Much Space?"
+local_check: false

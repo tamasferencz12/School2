@@ -1,0 +1,9 @@
+custom_name: "Multiple conditions: switch"
+content:
+  - Theory
+  - Shape
+  - Creating a digit to word conversion program
+  - Rewriting code using switch
+  - Removing breaks
+  - From string to a number
+  - Decoding traffic signal colors from input codes

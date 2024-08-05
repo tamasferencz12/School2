@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: alloc
+  - text: malloc
+  - text: new
+  - text: create
+  - text: array
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3388#comment
+status: Solved
+record: -1
+local_check: false

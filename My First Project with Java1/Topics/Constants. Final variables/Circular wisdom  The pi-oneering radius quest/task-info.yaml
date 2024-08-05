@@ -1,0 +1,13 @@
+type: code
+custom_name: "Circular wisdom: The pi-oneering radius quest"
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/49070#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 05 Aug 2024 18:37:57 UTC"
+record: -1
+submission_language: java17

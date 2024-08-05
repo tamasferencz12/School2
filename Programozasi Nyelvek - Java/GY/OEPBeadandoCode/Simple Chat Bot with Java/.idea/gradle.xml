@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Simple Chat Bot with Java/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Arithmetic average" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Creating a program to identify even and odd numbers" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/From sum to product" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Generate an inverted pyramid from asterisks" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Grades" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Multiplication Table" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Numbers divisible by six" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Statements" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/The product of numbers from a to b" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/The sum of integers from a to b" />
+            <option value="$PROJECT_DIR$/Topics/For-loop/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Print strings in the reverse order" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Printing each word in a new line" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Reading a single word" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Reorder the sequence" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Repeater" />
+            <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Theory" />
+            <option value="$PROJECT_DIR$/Topics/String/Calling basic methods" />
+            <option value="$PROJECT_DIR$/Topics/String/Check burgs" />
+            <option value="$PROJECT_DIR$/Topics/String/Comparing strings" />
+            <option value="$PROJECT_DIR$/Topics/String/Comparing strings ignoring whitespaces" />
+            <option value="$PROJECT_DIR$/Topics/String/Extracting a character" />
+            <option value="$PROJECT_DIR$/Topics/String/Extracting a specific character from a greeting message" />
+            <option value="$PROJECT_DIR$/Topics/String/Extracting a substring" />
+            <option value="$PROJECT_DIR$/Topics/String/Fixing code to display a character from a string" />
+            <option value="$PROJECT_DIR$/Topics/String/Operations with strings" />
+            <option value="$PROJECT_DIR$/Topics/String/Theory" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+type: edu
+custom_name: Welcome to the battlefield!
+files:
+  - name: src/tictactoe/Main.java
+    visible: true
+    learner_created: false
+  - name: test/TicTacToeTest.java
+    visible: false
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5397#comment
+status: Solved
+record: 1

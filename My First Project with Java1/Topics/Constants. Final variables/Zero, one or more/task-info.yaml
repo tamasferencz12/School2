@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: from zero to one
+  - text: zero or more times
+  - text: exactly one
+  - text: one or more times
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7429#comment
+status: Solved
+record: -1
+local_check: false

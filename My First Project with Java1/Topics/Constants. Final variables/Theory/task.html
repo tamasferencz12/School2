@@ -1,0 +1,71 @@
+<div class="step-text">
+<p>Sometimes, you need to use a variable that should not be modified during the program. Such variables are known as <strong>constants</strong>. Java provides a special keyword called <code class="language-java">final</code> to declare them. The only difference between a regular variable and a <a class="theory-lookup not-relevant" href="/learn/step/7427" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a final variable is a variable that is declared with the final keyword and cannot be modified once it has been initialized. | Final variables can be of any data type, including primitive types and reference types. They are typically used for values that should remain constant throughout the execution of a program. Once a final variable is assigned a value, it cannot be reassigned. However, if the final variable is a reference type, the state of the object it references can still be modified, as long as the reference itself remains unchanged. If a final variable is not initialized at the time of declaration, it must be assigned a value in a constructor of the class.">final variable</a> is that we cannot modify the value of a final variable once assigned. Hence final variables must be used only for the values that we want to remain <strong>constant</strong> throughout the execution of the program.</p>
+<h5 id="final-variables">Final variables</h5>
+<p>The following code demonstrates two final variables: <code class="language-java">PI</code> which represents a well-known math constant and <code class="language-java">HELLO_MSG</code> which represents a string text.</p>
+<pre><code class="language-java">final double PI = 3.1415;
+final String HELLO_MSG = "Hello";
+
+System.out.println(PI); // 3.1415
+System.out.println(HELLO_MSG); // Hello</code></pre>
+<p>Both variables cannot be modified since they are marked as final, but they can be accessed as many times as we need them.</p>
+<p>A good practice is to represent a final variable in all caps using an underscore to separate words. It allows you to distinguish them from regular variables. But sometimes, you will also see final variables written in lowercase: this is also admissible for <strong>local final variables</strong>.</p>
+<p> </p>
+<p></p>
+<div class="alert alert-warning"><p>Note, that the compiler will produce an error when trying to modify the value of a final variable.</p></div>
+<p></p>
+<p> </p>
+<p>Here is an example:</p>
+<pre><code class="language-java">final double PI = 3.1415;
+PI = 3.1416; // error line</code></pre>
+<p>The Java <a class="theory-lookup" href="/learn/step/9055" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a compiler is a program that takes Java source code and converts it into bytecode, which is an intermediate representation of the program. | This bytecode is stored in a .class file and can be executed by the Java Virtual Machine (JVM). The compiler is responsible for catching and reporting any compile-time errors in the source code, such as syntax errors or mismatched method declarations. Additionally, modern IDEs often include static code analyzers that work with the compiler to identify potential errors and provide suggestions for improving the code before the compilation process even begins.">compiler</a> outputs the message: <code class="language-java">cannot assign a value to final variable 'PI'</code>.</p>
+<p> </p>
+<p></p>
+<div class="alert alert-warning"><p>Important, if a final variable has not been assigned before using it, the compiler also will produce an error <code class="language-java">"variable might not have been initialized"</code>.</p></div>
+<p></p>
+<p> </p>
+<p>Here is an example:</p>
+<pre><code class="language-java">final boolean FALSE;
+System.out.println(FALSE); // error line</code></pre>
+<p>To fix it, just assign a value before accessing the value of a final variable:</p>
+<pre><code class="language-java">final boolean FALSE;       // not initialized
+FALSE = false;             // initialized
+System.out.println(FALSE); // no errors here</code></pre>
+<p>Notice that the value of a final variable can be reassigned to a regular variable without any restrictions:</p>
+<pre><code class="language-java">final int count = 10;
+int cnt = count;
+cnt = 20; // no errors here, cnt is not final</code></pre>
+<p>The value of a regular variable can be changed any time as always.</p>
+<h5 id="final-reference-variables">Final reference variables</h5>
+<p>The <code class="language-java">final</code> keyword can be legally used with <a class="theory-lookup not-relevant" href="/learn/step/7427" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a reference variable is a variable that refers to an object or instance of a class. | When an object is created using the new operator, it returns a reference in memory where the object is located. With this reference, you can access and modify the object's fields. Multiple variables can refer to the same object through a reference. It is also possible to create two independent objects with the same field's content, but it's important to note that references to such objects are different. Assigning one value of a reference variable to another creates a copy of the reference rather than the value itself. Comparing reference types using '==' checks if the references point to the same object, whereas comparing primitive types checks for value equality. When comparing two variables of a reference type, it compares the references (memory addresses) rather than the actual values. A variable of a reference type can refer to a special value that represents the fact that it is not initialized yet or does not have a value. This is different from primitive types, where a variable stores the actual value, whereas a variable of a reference type stores a memory address (reference) where the data is located.">reference variables</a>. In this case, the final keyword means that it is not possible to reassign a reference to the variable.</p>
+<p>Here is an example with the <code class="language-java">StringBuilder</code> class which is a mutable version of <code class="language-java">String</code>.</p>
+<pre><code class="language-java">final StringBuilder builder = new StringBuilder();
+builder = new StringBuilder(); // error line</code></pre>
+<p>In this code, the second line won't compile since we are trying to reassign a reference to the final variable <code class="language-java">builder</code>. But there is one important point.</p>
+<p> </p>
+<p></p>
+<div class="alert alert-warning"><p>Note, that it is always possible to change the internal state of an object pointed at by a final reference variable, i.e. the constant is only the variable itself (the reference), not the object to which it refers.</p></div>
+<p></p>
+<p> </p>
+<p>So, the following code is absolutely correct:</p>
+<pre><code class="language-java">final StringBuilder builder = new StringBuilder(); // ""
+builder.append("Hello!"); // it works
+System.out.println(builder.toString()); // Hello!</code></pre>
+<p>As you can see, this code changed the internal state of an object (<code class="language-java">""</code> → <code class="language-java">"Hello!"</code>)  referenced by a final variable. When we invoked the <code class="language-java">append()</code> method we changed not the object itself but just the value of its fields. The  <code class="language-java">append()</code> method is one of the main operations on a <code class="language-java">StringBuilder</code> that are not available in <code class="language-java">String</code>. It converts its argument to a <code class="language-java">String</code> and then appends its characters to the character sequence. We will discuss the <code class="language-java">StringBuilder</code> class and its methods in further topics.</p>
+<p>Since Java 11, it is also possible to use <code class="language-java">final</code> with <code class="language-java">var</code> to use automatic <a class="theory-lookup not-relevant" href="/learn/step/7427" rel="noopener noreferrer nofollow" target="_blank" title="In Java, type inference is a feature that allows the compiler to automatically deduce the data type of a variable, expression, or method based on the context in which it is used. | This feature was introduced in Java 7, and it became more powerful in Java 10 with the introduction of the diamond operator (&lt;&gt;) and pattern matching. With type inference, developers can write more concise and readable code by avoiding explicit type declarations.">type inference</a> for a constant variable.</p>
+<pre><code class="language-java">final var FINAL_VAR = 10; // int
+final var MSG = "Hello!"; // String</code></pre>
+<h5 id="when-to-use-final-variables">When to use final variables</h5>
+<p>We hope you understand how the <code class="language-java">final</code> keyword works for <a class="theory-lookup not-relevant" href="/learn/step/7427" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a local variable is a type of variable that is declared within a method or a block of code, and its scope is limited to that method or block. | It is not accessible from outside the method or block in which it is declared. Local variables must be initialized before they can be used, and they do not have a default value. They are typically used to store temporary values or intermediate results within a method. Unlike instance and class variables, local variables are not stored in the object or class, but rather on the stack.">local variables</a>. Now it's time to figure out when to use it.</p>
+<p>Some programmers mark all variables that they do not want to modify as <code class="language-java">final</code>. In this case, the program will contain a lot of such variables.</p>
+<pre><code class="language-java">final Scanner scanner = new Scanner(System.in);
+final int a = scanner.nextInt();
+final int b = scanner.nextInt();
+System.out.println(a + b);</code></pre>
+<p>This approach allows you to write programs with the minimum number of mutable variables which usually leads to fewer errors. In addition, the Java compiler can optimize code with final variables effectively and your program can be a little faster. But this is not always predictable behavior and needs some advanced knowledge.</p>
+<p>There is also a counterargument: massive use of the <code class="language-java">final</code> keyword makes your code less readable (<a href="https://en.wikipedia.org/wiki/Boilerplate_code" rel="noopener noreferrer nofollow" target="_blank">boilerplate code</a>).</p>
+<p>Thus, in our learning examples, we will not always write the <code class="language-java">final</code> keyword, but sometimes you will see such examples. In your solutions, you can write or avoid this keyword. During your real work as a programmer, we hope that the issue of using finals will be standardized for all programmers in the project.</p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary"><p>Interestingly, the <code class="language-java">final</code> keyword can also be used in some different contexts, not only for declaring constants. We will learn other ways to use this keyword in the next topics.</p></div>
+<p></p>
+</div>

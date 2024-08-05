@@ -1,0 +1,8 @@
+type: framework
+content:
+  - Meet your chat bot
+  - Introduce yourself
+  - Let the chat bot guess your age
+  - Teach your bot to count
+  - Play a simple quiz together
+current_task: 4

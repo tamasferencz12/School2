@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Constants._Final_variables-Creating_a_fixed_message_with_a_string_and_an_integer:main" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Constants. Final variables/Creating a fixed message with a string and an integer" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="My First Project with Java1" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Constants. Final variables/Creating a fixed message with a string and an integer/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Constants. Final variables/Creating a fixed message with a string and an integer/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Constants. Final variables/Creating a fixed message with a string and an integer/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
