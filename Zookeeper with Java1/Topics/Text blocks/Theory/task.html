@@ -1,0 +1,83 @@
+<div class="step-text">
+<p>Anyone who has ever written a Java program that deals with a lot of text has likely run into the nightmare of working with Java Strings that span more than one line. When a string fits on a single line, Java does not give us any trouble. But when we paste in a longer String that spans multiple lines, the dark underbelly of this ancient language comes to light. If you use an IDE like IntelliJ, the String will automatically be formatted for you when you paste it in between quotes. However, it is most definitely not a pretty sight, nor is it a pleasure to read. Java Text Blocks are Java 15's solution to these problems. Text Blocks are multi-line string literals that make our code easier to read and write, with more predictable formatting.</p>
+<h5 id="the-good-the-bad-and-the-ugly">The good, the bad, and the ugly</h5>
+<p>Imagine for a second that you are programming a computer game set in Ancient Greece. You set the mood of the story with some poetic quotations from Homer's <em>The Iliad</em>, painting a picture of the main character Achilles. You assign the following String to a variable named <code class="language-java">iliadQuote</code> for ease of reference. </p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary"><p>If you paste your String in between two quotation marks, IntelliJ will automatically format the String with required <a class="theory-lookup not-relevant" href="/learn/step/17316" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an escape character is a backslash (\) followed by a special character, which represents a special symbol that doesn't have a corresponding symbol on a keyboard. | Escape characters are used to represent special characters such as newline (\n), tab (\t), carriage return (\r), backslash (\), single quote mark (\'), and double quote mark (\). In Java, the backslash is also used as an escape character for literals, so to use a backslash in a regular expression, for example, we need to use an additional backslash to escape the one we need in the regular expression.">escape characters</a> and concatenations.</p></div>
+<p></p>
+<p> </p>
+<pre><code class="language-java">String iliadQuote = "\"But raging still, amidst his navy sat\n" +
+                    "The stern Achilles, stedfast in his hate;\n" +
+                    "Nor mix’d in combat, nor in council join’d;\n" +
+                    "But wasting cares lay heavy on his mind:\n" +
+                    "In his black thoughts revenge and slaughter roll,\n" +
+                    "And scenes of blood rise dreadful in his soul.\"";</code></pre>
+<p>As code goes, this isn't as terrible to read as it could be. The escaped quotation marks at the beginning and the end of the String, however, look a bit messy. Likewise, the quotation marks, the escaped newline character, and the concatenation operators in each line detract from the readability of the text. </p>
+<p>If the quotation from <em>The Iliad</em> was "the bad," then the following SQL query is without question "the ugly." You don't need to know anything about SQL, or databases in general, to recognize that this String is a nuisance to read:</p>
+<pre><code class="language-java">String query = "SELECT \"EMP_ID\", \"LAST_NAME\" FROM \"EMPLOYEE_TB\"\n" +
+               "WHERE \"CITY\" = 'INDIANAPOLIS'\n" +
+               "ORDER BY \"EMP_ID\", \"LAST_NAME\";\n";</code></pre>
+<p>Because SQL queries are conventionally written with the column names in quotes and spread over multiple lines, the above code is a mess of escaped quotation marks and escaped newlines characters. For a final example of a difficult to work with String, let's look at a block of properly indented HTML code that could be returned as a String from a Java server endpoint:</p>
+<pre><code class="language-java">String html = "&lt;html&gt;\n" +
+              "    &lt;body&gt;\n" +
+              "        &lt;p&gt;Hello, world&lt;/p&gt;\n" +
+              "    &lt;/body&gt;\n" +
+              "&lt;/html&gt;\n";</code></pre>
+<p>Now that we've been properly traumatized by the bad and the ugly, let's take a look at "the good."</p>
+<h5 id="the-java-text-block">The Java Text Block </h5>
+<p>Java <a class="theory-lookup not-relevant" href="/learn/step/17316" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a text block is a feature introduced in Java 15 that allows developers to define multi-line string literals in a more clutter-free and visually appealing way. | It removes the need for concatenating multiple lines of string and for the vast majority of escape characters. A text block is defined with an opening and closing pair of triple quotes. The leading and trailing indentation is stripped, while all other whitespaces are kept as they are, and there is no need to escape them. Additionally, escaped characters are processed after indented whitespace, allowing the use of new escape characters to override the algorithm when needed.">text blocks</a> simplify multiline Strings by using a group of three quotes at the beginning and end. Almost every character in between does not need to be escaped, no explicit newlines are required, and no concatenation operators are needed. Look how pleasant and clean the quote from <em>The Iliad</em> looks in a Java 15 text block: </p>
+<pre><code class="language-java">String iliadQuote = """
+    "But raging still, amidst his navy sat
+    The stern Achilles, stedfast in his hate;
+    Nor mix’d in combat, nor in council join’d;
+    But wasting cares lay heavy on his mind:
+    In his black thoughts revenge and slaughter roll,
+    And scenes of blood rise dreadful in his soul."
+    """;</code></pre>
+<p>Note that in earlier Java versions (up to 15), such a string with triple quotes will not be compiled.</p>
+<p>Likewise, the SQL query is improved significantly. If you don't know anything about SQL, just know that the String in the following code block is written exactly as a native SQL query would be. Where the traditional Java way of writing the query obscured the meaning of the code, the Java 15 text block could not make it any clearer. </p>
+<pre><code class="language-java">String query = """
+    SELECT "EMP_ID", "LAST_NAME" FROM "EMPLOYEE_TB"
+    WHERE "CITY" = 'INDIANAPOLIS'
+    ORDER BY "EMP_ID", "LAST_NAME";
+    """;</code></pre>
+<h5 id="indentation-and-whitespace">Indentation and whitespace</h5>
+<p>Writing the HTML code as a text block brings us to an important question yet to be addressed. How do Java text blocks sort out String indentation when they themselves are also indented in the Java source code? The short answer is that the Java compiler makes a distinction between <strong>incidental whitespace</strong> and <strong>essential whitespace</strong>. Incidental whitespace is the whitespace added in the IDE to make the code easier to read, which the developer does not want to be a part of the String. Another source of incidental whitespace is copying text from a source document with unnecessarily added extra trailing spaces.</p>
+<p>By contrast, essential whitespace is written when the developer intentionally wants the whitespace to be stored as part of the String. A common example of essential whitespace is a String of properly indented HTML code. The Java compiler counts the number of leading spaces that all the lines have in common and then subtracts them from the String. Any additional leading spaces are left in the String. The trailing spaces are also removed after that. Then the compiler concatenates all the lines together so that it conforms to the standard Java String type. </p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary"><p>If the closing delimiter (<code class="language-java">"""</code>) occurs on its own line at the bottom of the String, a newline character is automatically included. However, if it occurs at the end of the final line with text preceding it, nothing will be added.</p></div>
+<p></p>
+<p> </p>
+<p>This text block containing a String of HTML code is very readable in the Java <a class="theory-lookup not-relevant" href="/learn/step/17316" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a source code is the human-readable text version of a program written in the Java programming language. | It is typically stored in a file with a .java extension and can be edited using a text editor or an Integrated Development Environment (IDE). The source code is compiled by the Java compiler into bytecode, which is a low-level, platform-independent representation of the program. This bytecode can then be executed by the Java Virtual Machine (JVM) on any platform that has a JVM installed. The source code can also be decompiled back into readable Java code using a decompiler.">source code</a>. </p>
+<pre><code class="language-java">String html = """
+    &lt;html&gt;
+        &lt;body&gt;
+            &lt;p&gt;Hello, world&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    """;</code></pre>
+<p>If we print <code class="language-java">html</code> to the <a class="theory-lookup not-relevant" href="/learn/step/17316" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a standard output is a receiver to which a program can send information in the form of text. | It is supported by all common operating systems and Java provides a special object, `System.out`, to work with the standard output. This object is often used to print data, with the `println()` method displaying the passed string followed by a new line on the screen. Standard output is a way for a program to write data to a destination, which can be a console, a file, or even a web socket. It is important to note that there are two types of streams: byte and character.">standard output</a>, we will see the perfectly indented text below:</p>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;Hello, world&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h5 id="beyond-the-basics">Beyond the basics</h5>
+<p>Now that we have a handle on the basics of text blocks, let's look at a few extra features. One of the benefits of text blocks is that we don't have to escape quotation marks. However, because the closing delimiter of a text block is a triple quote, we cannot put an unescaped triple quote inside our text block; the compiler would incorrectly assume this is the end of the String. We only need to escape one of the quotes, because we are trying to prevent the total of unescaped quotes from reaching three in a row.</p>
+<p>If you want the enhanced readability of text blocks but don't want the new line character automatically added, you can add <code class="language-java">\</code> as a new line character suppresser at the end of each line. You can also use <code class="language-java">\s</code> at the end of a line to add a space that won't be stripped and to prevent the compiler from removing trailing spaces occurring before the <code class="language-java">\s</code>.</p>
+<pre><code class="language-java">String example = """
+    You can use "single" or ""double"" quotes any time you like. 
+    But you must escape one if you want triple quotes: \"""
+    or \"\""" if you want four. 
+    The line after me will be directly concatenated onto the same line\
+    But this line will preserve a single trailing space at the end\s
+    And this line will keep six trailing spaces     \s 
+    """;</code></pre>
+<p>Text blocks do not directly support String interpolation, but since a text block is still a String type, you can use the <code class="language-java">format</code> static method of <code class="language-java">String</code> class to create a new String with interpolated values. <code class="language-java">replace</code> method can be used for the same purpose but <code class="language-java">format</code> is more efficient if you are inserting multiple values. There is a newer and slightly simpler String instance method <code class="language-java">formatted(Object... args)</code> that you can use instead of the static <code class="language-java">format</code> method. Both of them have the same method body, so they are completely interchangeable.</p>
+<p>Internally, two new String methods are called during the process of compiling text blocks. They are <code class="language-java">stripIndent</code> and <code class="language-java">translateEscapes</code>. As you might guess from their names, the compiler strips the whitespace indentation with the first method and uses the second to make escaped characters appear properly. We do not need to use them directly with text blocks because they are already being called under the hood, but we do have access to them in case we want to utilize their functionality.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>In this topic, we looked at how Java handles long multi-line strings. In order to make them less cluttered and more visually appealing to developers, Java 15 introduced text blocks. Java text blocks remove the need for concatenating multiple lines of strings and for the vast majority of escape characters. A text block is defined with an opening and closing pair of triple quotes. Aside from stripping the leading and trailing indentation, all of the whitespaces are kept as they are, and there is no need to escape them.</p>
+<p>Because escaped characters are processed after indented whitespace, you can use the new escape characters <code class="language-java">\</code> and <code class="language-java">\s</code> to override the <code class="language-java">stripIndent</code> algorithm when needed. Adding <code class="language-java">\</code> to the end of a line indicates that the newline character is only meant for more readable Java code and not to be kept in the resulting String. <code class="language-java">\s</code> will alter how the trailing whitespace is stripped; any whitespace to the left of the <code class="language-java">\s</code> is kept in the string. String interpolation can be achieved by using <code class="language-java">replace</code>, <code class="language-java">format</code>,  or <code class="language-java">formatted</code>. While their use is not necessary, the <code class="language-java">stripIndent</code> and <code class="language-java">translateEscapes</code> of <code class="language-java">String</code> class expose the inner text block algorithms to the developer if needed. </p>
+</div>

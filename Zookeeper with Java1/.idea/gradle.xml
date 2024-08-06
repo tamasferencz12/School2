@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Mad SQL query" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Text block benefits" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Text blocks under the hood" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Translate escapes" />
+            <option value="$PROJECT_DIR$/Topics/Text blocks/Using a text block" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Zookeeper with Java/task/build/tmp" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

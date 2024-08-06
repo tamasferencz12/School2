@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -23,8 +24,10 @@
             <option value="$PROJECT_DIR$/Topics/Constants. Final variables/Final Variables and Conditionals" />
             <option value="$PROJECT_DIR$/Topics/Constants. Final variables/Theory" />
             <option value="$PROJECT_DIR$/Topics/Constants. Final variables/Zero, one or more" />
+            <option value="$PROJECT_DIR$/Topics/Floating-point types/Area of a circle" />
             <option value="$PROJECT_DIR$/Topics/Floating-point types/Determine the result" />
             <option value="$PROJECT_DIR$/Topics/Floating-point types/Distance" />
+            <option value="$PROJECT_DIR$/Topics/Floating-point types/Evaluate an expression" />
             <option value="$PROJECT_DIR$/Topics/Floating-point types/Exponential expression" />
             <option value="$PROJECT_DIR$/Topics/Floating-point types/Liquid pressure" />
             <option value="$PROJECT_DIR$/Topics/Floating-point types/Statements" />

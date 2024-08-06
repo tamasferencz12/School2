@@ -1,0 +1,47 @@
+[1;31m
+Start test 1[0m
+(How many pencils would you like to use:
+> 1
+$Who will be the first (John, Jack):
+[1;31m
+Start test 2[0m
+(How many pencils would you like to use:
+> 5
+$Who will be the first (John, Jack):
+> John
+|||||
+[1;31m
+Start test 3[0m
+(How many pencils would you like to use:
+> 20
+$Who will be the first (John, Jack):
+> John
+||||||||||||||||||||
+[1;31m
+Start test 4[0m
+(How many pencils would you like to use:
+> 300
+$Who will be the first (John, Jack):
+> John
+­||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+[1;31m
+Start test 5[0m
+(How many pencils would you like to use:
+> 5
+$Who will be the first (John, Jack):
+> Jack
+|||||
+[1;31m
+Start test 6[0m
+(How many pencils would you like to use:
+> 20
+$Who will be the first (John, Jack):
+> Jack
+||||||||||||||||||||
+[1;31m
+Start test 7[0m
+(How many pencils would you like to use:
+> 300
+$Who will be the first (John, Jack):
+> Jack
+­||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

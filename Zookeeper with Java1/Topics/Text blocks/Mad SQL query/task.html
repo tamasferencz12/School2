@@ -1,0 +1,4 @@
+<div class="step-text">
+<p></p>
+<p>Once upon a time, we tried to play mad scientist and create an SQL query using a text block. But alas! Our experiment didn't go as planned, and the code refused to compile. Fix the error and display the SQL query on the screen. There must be no empty lines in the output.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight"></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">SELECT u.username, COUNT(*) as num_posts<br>FROM users u<br>JOIN posts p ON u.id = p.user_id<br>WHERE p.published_at &gt;= &#39;2022-01-01&#39;<br>GROUP BY u.username<br>HAVING COUNT(*) &gt; 10<br>ORDER BY num_posts DESC<br>LIMIT 10;</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>
+</div>

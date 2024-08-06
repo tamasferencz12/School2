@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: String::stripIndent
+  - text: String::removeIndentation
+  - text: String::showEscapes
+  - text: String::formatted
+  - text: String::translateEscapes
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17319#comment
+status: Solved
+record: -1
+local_check: false
