@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: -1
+  - text: 0
+  - text: 1
+  - text: 2
+  - text: 3
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/4913#comment
+status: Solved
+record: -1
+local_check: false

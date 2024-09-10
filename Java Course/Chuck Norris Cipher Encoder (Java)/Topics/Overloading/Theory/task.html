@@ -1,0 +1,102 @@
+<div class="step-text">
+<p><strong>Method overloading</strong> is a programming concept that allows you to design numerous methods that share the same name but have distinct arguments. When a method is called, the language determines which version of the method to run based on the number, types, and order of the arguments given. With method overloading, you can declare different versions of a method with the same name, creating code that is more concise and easier to understand while still handling all sorts of inputs.</p>
+<p>Overloading allows you to change a method’s signature: the number of parameters, their type, or both. If methods have the same name, but a different number or type of parameters, they are <strong>overloaded</strong>. It means you can invoke different methods by the same name by passing different arguments.</p>
+<h5 id="what-is-a-method-signature">What is a method signature?</h5>
+<p>A <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a method signature is a unique identifier for a method that comprises the method's name and its argument type. | It specifies the number, type, and order of parameters that a method expects as input. Method signatures are used to distinguish between methods with the same name that take various kinds or quantities of parameters and may be overloaded. When a method is called, the compiler compares its signature to the method signatures of the method specifications to identify which method was called.">method signature</a> is a unique identifier for a method that comprises the method's name and its argument types. It specifies the number, type, and order of parameters that a method expects as arguments to determine its input.</p>
+<pre><code class="language-java">public int sum(int a, int b)
+</code></pre>
+<p>Here, the method name is "sum", and it takes two integer parameters named "a" and "b". This signature indicates that the "sum" function accepts two integer inputs. Method signatures are used to distinguish between methods with the same name that take various kinds or quantities of parameters and may be overloaded as a result. When a method is called, the <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a compiler is a program that takes Java source code and converts it into bytecode, which is an intermediate representation of the program. | This bytecode is stored in a .class file and can be executed by the Java Virtual Machine (JVM). The compiler is responsible for catching and reporting any compile-time errors in the source code, such as syntax errors or mismatched method declarations. Additionally, modern IDEs often include static code analyzers that work with the compiler to identify potential errors and provide suggestions for improving the code before the compilation process even begins.">compiler</a> compares its signature to the method signature of the method specification so as to identify which method was called.</p>
+<h5 id="how-to-overload-methods">How to overload methods</h5>
+<p>As an example, let's consider some overloaded methods from the standard class <code class="language-java">Math</code>:</p>
+<pre><code class="language-java">public static int abs(int a) { return (a &lt; 0) ? -a : a; }
+
+public static float abs(float a) { return (a &lt;= 0.0F) ? 0.0F - a : a; }</code></pre>
+<p>Since one of these methods has an integer parameter and another has a float parameter, but they have the same name, they are using method overloading.</p>
+<p>It is impossible to declare more than one method with the same signature (method name and number, types and order of parameters). The code snippet below leads to a compilation error <code class="language-java">abs(int) is already defined</code>. Despite the fact that the methods have different <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a return type is the data type of the value returned by a method. | Methods can return various types of data, such as integers, strings, or objects, depending on their implementation. If a method does not return a value, its return type is specified as void. When a method is called, the returned value can be assigned to a variable, printed, or passed as an argument to another method. Java also supports covariant return types, which allow a subclass to narrow the return type of an overridden method to a subtype of the original return type.">return types</a>, their signatures are identical:</p>
+<pre><code class="language-java">public static int abs(int a) { return (a &lt; 0) ? -a : a; } // abs(int) is already defined
+
+public static float abs(int a) { return (a &lt; 0.0F) ? 0.0F - a : a; } // abs(int) is already defined</code></pre>
+<p>Here are four methods <code class="language-java">print</code> for printing different values.</p>
+<pre><code class="language-java">public static void print(String stringToPrint) {
+    System.out.println(stringToPrint);
+}
+
+public static void print(String stringToPrint, int times) {
+    for (int i = 0; i &lt; times; i++) {
+        System.out.println(stringToPrint);
+    }
+}
+
+public static void print(int times, String stringToPrint) {
+    for (int i = 0; i &lt; times; i++) {
+        System.out.println(stringToPrint);
+    }
+}
+
+public static void print(int val) {
+    System.out.println(val);
+}</code></pre>
+<p>The first method prints an input string, the second and the third ones print an input string a given number of times, and the last one prints an integer value. These methods are overloaded.</p>
+<p>Let's invoke these methods:</p>
+<pre><code class="language-java">print("some string");
+print("another string", 2);
+print(2, "another string again");
+print(5);</code></pre>
+<p>As you can see, it's possible to call any of these methods by the same name passing suitable arguments. The code outputs:</p>
+<pre><code class="language-no-highlight">some string
+another string
+another string
+another string again
+another string again
+5</code></pre>
+<p>Note that in the case where methods have the same types of parameters, changing the order of these parameters is a valid case of overloading, as you can see in the second and third methods from the example above.</p>
+<p>The overloading mechanism allows us not to write different names for methods that perform similar operations.</p>
+<h5 id="overloading-and-casting">Overloading and casting</h5>
+<p>To understand how overloading deals with<strong> <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, type casting is the process of converting a value from one data type to another. | This can be done explicitly, which means the programmer manually specifies the conversion using parentheses, or implicitly, where the conversion is automatically done by the compiler. Explicit casting is used when converting to a narrower type, which can result in loss of information or precision. Implicit casting, on the other hand, occurs when the target type is wider than the source type, such as converting a smaller integer type to a larger integer type.">type casting</a></strong>, let's consider an example of overloaded methods that only differ in the type of the single argument and see when each of them will be invoked and why.</p>
+<pre><code class="language-java">public class OverloadingExample {
+
+    public static void print(short a) {
+        System.out.println("short arg: " + a);
+    }
+
+    public static void print(int a) {
+        System.out.println("int arg: " + a);
+    }
+
+    public static void print(long a) {
+        System.out.println("long arg: " + a);
+    }
+
+    public static void print(double a) {
+        System.out.println("double arg: " + a);
+    }
+
+    public static void main(String[] args) {
+        print(100);
+    }
+}</code></pre>
+<p>Now, if we call <code class="language-java">print(100)</code>, the program outputs:</p>
+<pre><code class="language-no-highlight">int arg: 100</code></pre>
+<p>What we see here is that 100 is treated as <code class="language-java">int</code>, and the corresponding method is invoked.</p>
+<p>In the case where the method parameter type is not exactly the same as the type of the passed argument, the compiler chooses the method that has the closest argument type in order of <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, implicit casting, also known as automatic casting, is a process where the compiler automatically converts a value of one type to another type without requiring any explicit instruction from the programmer. | This occurs when the target type is wider than the source type, meaning that the target type can accommodate all possible values of the source type. An example of implicit casting includes converting a smaller integer type to a larger integer type. Implicit casting works absolutely transparently, but it's important to note that it does not work when the target type is narrower than the source type.">implicit casting</a>.</p>
+<p>Since all integer literals are treated as <code class="language-java">int</code> by default, <code class="language-java">int</code> will be the starting point. The closest one will then be <code class="language-java">long</code>.</p>
+<p>Let's remove or comment out the method <code class="language-java">public static void print(int a)</code>, then recompile and run the program again. The result is as expected:</p>
+<pre><code class="language-no-highlight">long arg: 100</code></pre>
+<p>Ok, now let's remove <code class="language-java">public static void print(long a)</code> too. Since we have no method with the <code class="language-java">float</code>  argument, the next type in order of the implicit type casting will be <code class="language-java">double</code>. After recompiling, the program outputs:</p>
+<pre><code class="language-no-highlight">double arg: 100.0</code></pre>
+<p>If we remove the method <code class="language-java">public static void print(double a)</code> the only method we have left is the one with <code class="language-java">short</code> type of argument. The program won't compile if we just call <code class="language-java">print(100)</code> as we did before. </p>
+<p>Here is why: when we pass some value to the method, the compiler does not evaluate it. All that is known is that it is an <a class="theory-lookup not-relevant" href="/learn/step/3525" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an integer literal is a type of numeric literal that represents a whole number. | There are two types of integer literals in Java: int and long. The default type is int. Integer literals can be represented in different formats, including decimal, hexadecimal, octal, and binary. To indicate a long integer literal, you can add the suffix 'L' or 'l' to the end of the literal. It is recommended to use 'L' to avoid confusion with the digit '1'. It is important to note that you cannot assign a literal to a variable in Java.">integer literal</a>, so it has the integer type. </p>
+<p>In our case, 100 is treated as an <code class="language-java">int</code> by default and JVM doesn't know if the passed value can be cast to <code class="language-java">short</code> safely. So, the only way to pass the <code class="language-java">short</code> argument is by casting the value explicitly:</p>
+<pre><code class="language-java"> public class OverloadingExample {
+
+    public static void print(short a) {
+        System.out.println("short arg: " + a);
+    }
+
+    public static void main(String[] args) {
+        print((short) 100);  // explicit casting 
+    }
+}</code></pre>
+<h5 id="conclusion">Conclusion </h5>
+<p>Method overloading is an essential concept in object-oriented programming that makes the code more concise, easier to read and maintain, and enables its reuse. By understanding the method signature and the behavior of the compiler when matching method calls to method definitions, developers can take advantage of the flexibility of method overloading and create more versatile and reusable code.</p>
+</div>

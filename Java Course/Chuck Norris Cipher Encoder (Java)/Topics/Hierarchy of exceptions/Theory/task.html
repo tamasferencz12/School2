@@ -1,0 +1,70 @@
+<div class="step-text">
+<p>Java is primarily an object-oriented language. In such a paradigm, all exceptions are considered objects of special classes organized into a class hierarchy. Understanding this hierarchy is essential both for job interviews and daily programming practice.</p>
+<h5 id="hierarchy-of-exceptions">Hierarchy of exceptions</h5>
+<p>The following picture illustrates the simplified hierarchy of exceptions:</p>
+<p><picture><img alt="Hierarchy of exceptions" height="504" src="https://ucarecdn.com/dce2aef6-e0e1-408a-ad3e-0eff03b06ec7/" width="580"/></picture></p>
+<p>The base class for all exceptions is <code class="language-java">java.lang.Throwable</code>. This class provides a set of common methods for all exceptions:</p>
+<ul>
+<li>
+<p><code class="language-java">String getMessage()</code> returns the detailed string message of this exception object;</p>
+</li>
+<li>
+<p><code class="language-java">Throwable getCause()</code> returns the cause of this exception or <code class="language-java">null</code> if the cause is nonexistent or unknown;</p>
+</li>
+<li>
+<p><code class="language-java">printStackTrace()</code> prints the <a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a stack trace is a feature that helps you understand the sequence of method calls during program execution, and can be useful for debugging applications. | It represents the call stack in the application at the point where the stack trace message was generated, and appears as a message in your Integrated Development Environment (IDE) when the application throws an error. The call stack is a Last-In-First-Out (LIFO) data structure, where the method that was called when the application was launched is at the bottom and will be the last printed element of the stack trace.">stack trace</a> on the standard error stream.</p>
+</li>
+</ul>
+<p>We will return to the methods and constructors of this class in the following topics.</p>
+<p>The <code class="language-java">Throwable</code> class has two direct subclasses: <code class="language-java">java.lang.Error</code> and <code class="language-java">java.lang.Exception</code>.</p>
+<ul>
+<li>
+<p>subclasses of the <code class="language-java">Error</code> class represent low-<a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a level is a concept in logging that indicates the severity of a log message. | It is represented by a constant from the `Level` class in the logging package. There are seven log levels in the Java logging package, listed from highest to lowest severity: `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, and `FINEST`. Each log message is associated with a certain log level, such as warning in the example provided. The root logger is at the top of the logger hierarchy, and if a logger has a name that is a prefix of another logger name, it is the parent of the other logger. This allows for configuring logger levels for entire packages. To configure the log level for individual packages and classes, one can specify the logger and level parameters in the `logback.xml` file, with the logger parameter specifying the path to the package or class in the project and the level parameter specifying the desired logging level.">level</a> exceptions in the JVM, for example: <code class="language-java">OutOfMemoryError</code>, <code class="language-java">StackOverflowError</code>;</p>
+</li>
+<li>
+<p>subclasses of the <code class="language-java">Exception</code> class deal with exceptional events inside applications, such as: <code class="language-java">RuntimeException</code>, <code class="language-java">IOException</code>;</p>
+</li>
+<li>
+<p>the <code class="language-java">RuntimeException</code> class is a rather special subclass of <code class="language-java">Exception</code>. It represents so-called <strong>unchecked</strong> exceptions, including: <code class="language-java">ArithmeticException</code>, <code class="language-java">NumberFormatException</code>, <code class="language-java">NullPointerException</code>.</p>
+</li>
+</ul>
+<p>While developing an application, you normally will process objects of the <code class="language-java">Exception</code> class and its subclasses. We won't discuss <code class="language-java">Error</code> and its subclasses here.</p>
+<p> </p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary">
+<p>The four basic classes of exceptions (<code class="language-java">Throwable</code>, <code class="language-java">Exception</code>, <code class="language-java">RuntimeException</code> and <code class="language-java">Error</code>) are located in the <code class="language-java">java.lang</code> package. They do not need to be imported. Yet their subclasses might be placed in different packages.</p>
+<p></p></div>
+<p> </p>
+<p> </p>
+<h5 id="checked-and-unchecked-exceptions">Checked and unchecked exceptions</h5>
+<p>All exceptions can be divided into two groups:<strong> </strong>checked and unchecked. They are functionally equivalent but there is a difference from the compiler's point of view.</p>
+<p><strong>1. Checked exceptions</strong> are represented by the <code class="language-java">Exception</code> class, excluding the <code class="language-java">RuntimeException</code> subclass. The compiler checks whether the programmer expects the occurrence of such exceptions in a program or not.</p>
+<p>If a method throws a checked exception, this must be marked in the <a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a declaration is a statement that introduces a variable, method, or class into the program. | It specifies the type of the entity being declared, its name, and other relevant information such as access modifiers, return type (for methods), and initial values (for variables). For example, the declaration of a method may include its name, return type, access modifier, and parameter list. Declarations are essential for Java to understand the structure and behavior of the program. Incorrect declarations can lead to compilation errors. Java 10 introduced type inference, which allows developers to use the var keyword instead of a specific type, and the type is automatically inferred based on the assigned value.">declaration</a> using the special <code class="language-java">throws</code> keyword. Otherwise, the program will not compile.</p>
+<p>Let's take a look at the example. We use the <code class="language-java">Scanner</code> class, which you are already familiar with, as a means to read from <a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the standard input is a default source of input for a program, which is typically associated with the keyboard. | It is a mechanism provided by the operating system for a program to consume data and can be redirected from a file or other sources. The standard input is commonly used in programming problems to read data, process it, and output the result to the standard output. It can be accessed in Java using the System.in class, which allows a program to read values of various types from the standard input.">standard input</a>, to read from a file:</p>
+<pre><code class="language-java">public static String readLineFromFile() throws FileNotFoundException {
+    Scanner scanner = new Scanner(new File("file.txt")); // throws java.io.FileNotFoundException
+    return scanner.nextLine();
+}</code></pre>
+<p><code class="language-java">FileNotFoundException</code> is a standard checked exception. This constructor of <code class="language-java">Scanner</code> declares that it may throw the <code class="language-java">FileNotFoundException</code> exception if the specified file does not exist. To ensure that this method can be compiled successfully, we must include the <code class="language-java">throws</code> keyword in the method declaration to indicate that the method may throw the <code class="language-java">FileNotFoundException</code> exception. As a result, the caller of this method will need to decide whether to either handle the exception internally or throw it further to its caller method.</p>
+<p><strong>2. <a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an unchecked exception refers to an exception that is not checked at compile-time. | They are also known as runtime exceptions and are not explicitly declared in a method's throw clause. Examples of unchecked exceptions include NullPointerException, ArithmeticException, and ArrayIndexOutOfBoundsException. Unchecked exceptions are typically caused by programming errors and do not need to be handled or declared in the method signature. They are a part of the exception hierarchy, with the base class located in the java.lang package, and their subclasses may be placed in different packages.">Unchecked exceptions</a></strong> are represented by the <code class="language-java">RuntimeException</code> class and all its subclasses. The compiler does not check whether the programmer expects the occurrence of such exceptions in a program.</p>
+<p>Here is a method that throws a <code class="language-java">NumberFormatException</code> when the input string has an invalid format (e.g., <code class="language-java">"abc"</code>).</p>
+<pre><code class="language-java">public static Long convertStringToLong(String str) {
+    return Long.parseLong(str); // It may throw a NumberFormatException
+}</code></pre>
+<p>This code always successfully compiles without the <code class="language-java">throws</code> keyword in the declaration.</p>
+<p> </p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary">
+<p><a class="theory-lookup not-relevant" href="/learn/step/3570" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a runtime exception is an exception that occurs during the execution of a program, as opposed to a compile-time error. | These exceptions are caused by errors in the code that do not prevent the program from running, but will cause the program to crash when it encounters a broken line of code - a line containing an error. Runtime exceptions are instances of classes that are part of a class hierarchy rooted at the base class Throwable. When a runtime exception is thrown, the Java runtime system attempts to find a suitable handler for it, which can be located in the same method where the exception occurred or in a calling method.">Runtime exceptions</a> may occur anywhere in a program. The compiler doesn't require that you specify runtime exceptions in declarations. Adding them to each method's declaration would reduce the clarity of a program.</p>
+<p></p></div>
+<p> </p>
+<p> </p>
+<p>The <code class="language-java">Error</code> class and its subclasses are also considered as unchecked exceptions. However, they form a separate class.</p>
+<p> </p>
+<h5 id="conclusion">Conclusion</h5>
+<p>All exceptions are represented by the <code class="language-java">Throwable</code> class, which has two subclasses: <code class="language-java">Exception</code> and <code class="language-java">Error</code>. There are also two types of exceptions: checked and unchecked.</p>
+<p>Unchecked exceptions are not validated by the compiler, so you don't have to handle them. They are represented by the <code class="language-java">RuntimeException</code> subclass of the <code class="language-java">Exception</code> class. Errors from the <code class="language-java">Error</code> class are also considered unchecked.</p>
+<p>Checked exceptions have to be handled and indicated explicitly. They are located in all the other subclasses of <code class="language-java">Exception</code>.</p>
+</div>

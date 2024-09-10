@@ -1,0 +1,32 @@
+type: edu
+files:
+  - name: src/machine/CoffeeMachine.java
+    visible: true
+    learner_created: false
+  - name: test/CoffeeMachineTest.java
+    visible: false
+    learner_created: false
+  - name: src/machine/Recipe.java
+    visible: true
+    learner_created: true
+  - name: src/machine/Stock.java
+    visible: true
+    learner_created: true
+  - name: src/machine/IngredientStock.java
+    visible: true
+    learner_created: true
+  - name: src/machine/Money.java
+    visible: true
+    learner_created: true
+  - name: src/machine/IngredientWithQuantity.java
+    visible: true
+    learner_created: true
+  - name: src/machine/Ingredient.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/5333#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 20 Aug 2024 18:37:59 UTC"
+record: 5

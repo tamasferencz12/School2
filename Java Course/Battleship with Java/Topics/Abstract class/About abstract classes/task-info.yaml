@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: An abstract class cannot have fields
+  - text: It's possible to create an instance of an abstract class
+  - text: An abstract class can have private methods
+  - text: An abstract class can have several abstract methods
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3272#comment
+status: Solved
+record: -1
+local_check: false

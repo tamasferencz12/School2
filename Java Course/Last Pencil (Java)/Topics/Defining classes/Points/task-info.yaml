@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: The values of the fields are always the same for all objects of this class.
+  - text: The class has three fields of the same type.
+  - text: "The following statement creates an object of the class: <b>Point3D p = new\
+    \ Point3D();</b>"
+  - text: This is an incorrect class definition.
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2949#comment
+status: Solved
+record: -1
+local_check: false

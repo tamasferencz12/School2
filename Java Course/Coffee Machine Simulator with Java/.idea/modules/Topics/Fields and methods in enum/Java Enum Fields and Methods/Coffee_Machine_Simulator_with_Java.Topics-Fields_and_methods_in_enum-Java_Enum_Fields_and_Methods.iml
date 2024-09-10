@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Fields_and_methods_in_enum-Java_Enum_Fields_and_Methods" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Java Enum Fields and Methods" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Coffee Machine Simulator with Java" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Java Enum Fields and Methods">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Java Enum Fields and Methods/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Java Enum Fields and Methods/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Fields and methods in enum/Java Enum Fields and Methods/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

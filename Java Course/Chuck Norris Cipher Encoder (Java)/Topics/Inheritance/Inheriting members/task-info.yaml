@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: speedUp(int increment)
+  - text: speed
+  - text: cadence
+  - text: gear
+  - text: getSpeed()
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3047#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,62 @@
+<div class="step-text">
+<h5 id="passing-arrays-to-methods" style="text-align: center;">Passing arrays to methods</h5>
+<p>A method can have parameters of any types including arrays, strings, <a class="theory-lookup not-relevant" href="/learn/step/3594" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a primitive type is one of eight built-in data types provided by the language. | They are represented by keywords and are not objects, unlike reference types. Primitive types are divided into groups based on their meaning, and each group operates similarly but has different sizes and ranges of value. The most commonly used primitive type is `int`, which represents an integer number. Java also provides several types for integer and fractional numbers, which are often used in arithmetic expressions. Primitive types store their value directly, unlike reference types that store a reference to an object located elsewhere.">primitive types</a>, and so on.</p>
+<p>In the following example, the method <code class="language-java">processArray</code> has a single parameter of the type <code class="language-java">int[]</code>:</p>
+<pre><code class="language-java">public static void processArray(int[] array) { /* do something */ }
+</code></pre>
+<p>In the body of the method<strong>,</strong> we can process the input array in any way.</p>
+<p>A parameter of an array type looks like a primitive <a class="theory-lookup not-relevant" href="/learn/step/3594" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a type parameter is a placeholder for a specific type used in a class or method declaration. | It is defined within angle brackets following the class or method name. Once declared, a type parameter can be used within the class or method body as an ordinary type. The advantage of using type parameters is that they enable you to write more abstract code and develop reusable software libraries. At the time of creating an object of the class or invoking the method, a concrete type is determined for the type parameter.">type parameter</a>. But there is one important difference related to the fact that an array is a <a class="theory-lookup not-relevant" href="/learn/step/3594" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a reference type is a type of variable that stores a reference to an object located elsewhere in memory, rather than storing the object's value directly. | When an object is created using the new operator, it returns a reference to the location of the object in memory, allowing access to its fields and methods. Reference types can be assigned to variables, passed as arguments to methods, and returned as values from methods. They are important for creating complex, object-oriented programs in Java. Unlike primitive types, which store their values directly, reference types store a reference to an object. When comparing reference types using the == operator, it compares the references (memory addresses) rather than the actual values. Additionally, assigning one value of a reference variable to another creates a copy of the reference, rather than the value itself. Reference types can also refer to a special value that represents the fact that it is not initialized yet or does not have a value. It is important to note that in Java, the heap is the region of memory where objects are stored and allocated dynamically during runtime.">reference type</a>.</p>
+<p>When you pass a value of a primitive type to a method, a copy of the value is created. When you pass an array to a method, a copy of the reference is created, but the value is the same. It means that if you change the actual value (elements of an array) in the body of a method, you will see these changes outside the method.</p>
+<p>The following method swaps the first and the last elements of its parameter (array).</p>
+<pre><code class="language-java">public static void swapFirstAndLastElements(int[] nums) { // nums is an array
+    if (nums.length &lt; 1) {
+        return; // it returns nothing, i.e. just exits the method
+    }
+
+    int temp = nums[nums.length - 1]; // save the last element in a temporary local variable
+    nums[nums.length - 1] = nums[0];  // now, the last element becomes the first
+    nums[0] = temp;                   // now, the first element becomes the former last
+}</code></pre>
+<p>Calling the method from the main method:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+
+    int[] numbers = { 1, 2, 3, 4, 5 }; // numbers
+
+    System.out.println(Arrays.toString(numbers)); // before swapping
+
+    swapFirstAndLastElements(numbers); // swapping
+
+    System.out.println(Arrays.toString(numbers)); // after swapping
+}</code></pre>
+<p>The output is:</p>
+<pre><code class="language-java">[1, 2, 3, 4, 5]
+[5, 2, 3, 4, 1] </code></pre>
+<p>So, in the body of the main method, an array is visible as modified.</p>
+<h5 id="varargs" style="text-align: center;">Varargs</h5>
+<p>It's possible to pass an arbitrary number of the same type of arguments to a method using a special syntax named <strong>varargs (variable-length arguments)</strong>. These arguments are specified by three dots after the type. In the body of the method, you can process this parameter as a regular array of the specified type.</p>
+<p>The following method takes an integer <strong><a class="theory-lookup not-relevant" href="/learn/step/3594" rel="noopener noreferrer nofollow" target="_blank" title="In Java, varargs, short for variable number of arguments, is a feature that allows a method to take an indefinite number of arguments of the same type. | It is specified by three dots after the type in the method declaration, and in the method body, it can be processed as a regular array of the specified type. This feature is useful when you want to write a method that can handle a varying number of arguments, making the code more concise and flexible. Varargs are specified using the three-dot syntax, and in the body of the method, they can be processed as a regular array of the specified type.">vararg</a> </strong>parameter and outputs the number of arguments in the standard output using the<strong> length</strong> property of arrays.</p>
+<pre><code class="language-java">public static void printNumberOfArguments(int... numbers) {
+    System.out.println(numbers.length);
+}</code></pre>
+<p>As you can see, a special syntax <code class="language-java"><strong>...</strong></code> is used here to specify a <strong>vararg</strong> parameter.</p>
+<p>Now, you can invoke the method by passing several integer numbers or an array of ints.</p>
+<pre><code class="language-java">printNumberOfArguments(1);
+printNumberOfArguments(1, 2);
+printNumberOfArguments(1, 2, 3);
+printNumberOfArguments(new int[] { }); // no arguments here
+printNumberOfArguments(new int[] { 1, 2 });</code></pre>
+<p>This code outputs:</p>
+<pre><code class="language-java">1
+2
+3
+0
+2</code></pre>
+<p>This example also demonstrates the difference between the arguments and parameters of a method. The method has only a single parameter but it can be called with several arguments.</p>
+<h5 id="varargs-and-other-parameters" style="text-align: center;">Varargs and other parameters</h5>
+<p>If a method has more than one parameter, the <code class="language-java">vararg</code> parameter must be the last one in the declaration of the method.</p>
+<p>Here is an incorrect example:</p>
+<pre><code class="language-java">public static void method(double... varargs, int a) { /* do something */ }
+</code></pre>
+<p>The correct version of the method is:</p>
+<pre><code class="language-java">public static void method(int a, double... varargs) { /* do something */ }</code></pre>
+</div>

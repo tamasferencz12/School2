@@ -1,0 +1,77 @@
+<div class="step-text">
+<p>Sometimes you have a set of fields and methods that you need to reuse in all classes within a hierarchy. It is possible to put all the common members to a special <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a base class, also known as a superclass or parent class, is a class that is extended by another class, known as a subclass or derived class. | It serves as a blueprint for the subclass, providing it with inherited fields and methods. A parent class can have multiple child classes, but a child class can only have one parent class due to Java's single inheritance feature. The parent class reference can be used to refer to any subclass object derived from that superclass. An abstract class is often used as a base class in a hierarchy, and it represents an abstract concept that is used as a base class for subclasses.">base class</a> and then declare subclasses which can access these members. At the same time, you do not need to create objects of the base class. To achieve it, you can use an <strong><a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an abstract class is a class declared with the keyword abstract that represents an abstract concept and is used as a base class for subclasses. | It can have fields, constructors, and abstract methods, which are declared by adding the keyword abstract and have a declaration (modifier, a return type, and a signature) but don't have an implementation. Each concrete (non-abstract) subclass must implement these abstract methods. An abstract class cannot be instantiated, and its abstract method's implementation is provided by concrete subclasses.">abstract class</a></strong> as the base class in the hierarchy.</p>
+<h5 id="what-is-an-abstract-class" style="text-align: center;">What is an abstract class?</h5>
+<p>An <strong>abstract class</strong> is a class declared with the keyword <strong><code class="language-java">abstract</code></strong>. It represents an abstract concept that is used as a base class for subclasses.</p>
+<p>Abstract classes have some special features:</p>
+<ul>
+<li>it's impossible to create an instance of an abstract class;</li>
+<li>an abstract class can contain <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an abstract method is a method that is declared in an abstract class but does not contain an implementation. | It only includes a method signature, return type, and modifiers. The abstract keyword is used to declare an abstract method. Concrete subclasses of the abstract class must provide an implementation for these abstract methods. Since an abstract class cannot be instantiated, the purpose of an abstract method is to provide a common interface for its subclasses. If a class contains an abstract method, the class must be declared abstract as well.">abstract methods</a> that must be implemented in non-abstract subclasses;</li>
+<li>it can contain fields and non-abstract methods (including static);</li>
+<li>an abstract class can extend another class, including an abstract one;</li>
+<li>it can contain a constructor.</li>
+</ul>
+<p> </p>
+<p></p>
+<div class="alert alert-warning">As you can see, an abstract class has two main differences from regular (concrete) classes: <strong>no instances</strong> and <strong>abstract methods</strong>.</div>
+<p> </p>
+<p><strong>Abstract methods</strong> are <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a declaration is a statement that introduces a variable, method, or class into the program. | It specifies the type of the entity being declared, its name, and other relevant information such as access modifier, return type (for method), and initial value (for variable). For example, the declaration of a method may include its name, return type, access modifier, and parameter list. Declarations are essential for Java to understand the structure and behavior of the program. Incorrect declarations can lead to compilation errors. In the context of variables, a declaration specifies the type, name, and initial value of a variable. The type of a variable determines what possible operations can be performed on the variable and which value can be stored in it. Every variable has a name (also known as an identifier) to distinguish it from others. Before using a variable, it must be declared. The general form of a variable declaration is: `type identifier = value;`
+
+It's important to note that a declaration is not the same as an assignment.">declared</a> by adding the keyword <strong><code class="language-java">abstract</code></strong>. They have a <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a declaration is a statement that introduces a variable, method, or class into the program. | It specifies the type of the entity being declared, its name, and other relevant information such as access modifiers, return type (for methods), and initial values (for variables). For example, the declaration of a method may include its name, return type, access modifier, and parameter list. Declarations are essential for Java to understand the structure and behavior of the program. Incorrect declarations can lead to compilation errors. Java 10 introduced type inference, which allows developers to use the var keyword instead of a specific type, and the type is automatically inferred based on the assigned value.">declaration</a> (modifiers, a <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a return type is the data type of the value returned by a method. | Methods can return various types of data, such as integers, strings, or objects, depending on their implementation. If a method does not return a value, its return type is specified as void. When a method is called, the returned value can be assigned to a variable, printed, or passed as an argument to another method. Java also supports covariant return types, which allow a subclass to narrow the return type of an overridden method to a subtype of the original return type.">return type</a>, and a signature) but don't have an implementation. Each concrete (non-abstract) subclass must implement these methods.</p>
+<p> </p>
+<p></p>
+<div class="alert alert-primary">Note, static methods can't be abstract!</div>
+<p> </p>
+<h5 id="example" style="text-align: center;">Example</h5>
+<p>Here is an abstract class <code class="language-java">Pet</code>:</p>
+<pre><code class="language-java">public abstract class Pet {
+
+    protected String name;
+    protected int age;
+
+    protected Pet(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public abstract void say(); // an abstract method
+}</code></pre>
+<p>The class has two fields, a constructor, and an abstract method.</p>
+<p>Since <code class="language-java">Pet</code> is an abstract class we cannot create instances of this class:</p>
+<pre><code class="language-java">Pet pet = new Pet("Unnamed", 5); // this throws a compile time error</code></pre>
+<p>The method <code class="language-java">say()</code> is declared abstract because, at this level of abstraction, its implementation is unknown. <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a concrete subclass is a concrete implementation of an abstract class that contains the implementation of all its abstract methods. | An abstract class is a class with abstract methods, which are methods without implementation. These abstract methods must be implemented by any non-abstract (concrete) subclass. Concrete subclasses can also add new fields and methods, and they can be instantiated and used to call the implemented methods. A class can only extend one abstract class due to Java's single inheritance feature.">Concrete subclasses</a> of the class <code class="language-java">Pet</code> should have an implementation of this method.</p>
+<p>Below are two concrete subclasses of <code class="language-java">Pet</code>. You can see that they override the abstract method:</p>
+<pre><code class="language-java">class Cat extends Pet {
+
+    // It can have additional fields as well
+
+    public Cat(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Meow!");
+    }
+}
+
+class Dog extends Pet {
+
+    // It can have additional fields as well
+
+    public Dog(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Woof!");
+    }
+}</code></pre>
+<p>We can create instances of these classes and call the <code class="language-java">say()</code> method.</p>
+<pre><code class="language-java">Dog dog = new Dog("Boss", 5);
+Cat cat = new Cat("Tiger", 2);
+        
+dog.say(); // it prints "Woof!"
+cat.say(); // it prints "Meow!"</code></pre>
+<p>Do not forget that Java doesn't support <a class="theory-lookup not-relevant" href="/learn/step/3597" rel="noopener noreferrer nofollow" target="_blank" title="In Java, multiple inheritance refers to the ability of a class to inherit properties and methods from multiple interfaces. | A class can implement multiple interfaces by using the implements keyword, allowing it to adopt the methods and constants declared in those interfaces. This is useful when a class needs to exhibit behaviors from multiple sources, such as an amphibian animal that can live both in water and on land. However, Java does not support multiple inheritance from classes due to the single inheritance feature, where a class can only have one direct parent class.">multiple inheritance</a> for classes. Therefore, a class can extend only one abstract class.</p>
+</div>

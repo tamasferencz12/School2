@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: abs(int)
+  - text: int abs
+  - text: abs
+  - text: int abs(int)
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10984#comment
+status: Solved
+record: -1
+local_check: false

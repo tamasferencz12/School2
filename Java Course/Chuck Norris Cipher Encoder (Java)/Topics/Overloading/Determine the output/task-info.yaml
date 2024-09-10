@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: int int method
+  - text: int float method
+  - text: double double method
+  - text: float int method
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2038#comment
+status: Solved
+record: -1
+local_check: false

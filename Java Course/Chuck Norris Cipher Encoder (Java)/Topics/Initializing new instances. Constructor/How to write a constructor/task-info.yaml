@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "public void Order(String text, int amount) { }"
+  - text: "public void constructor(String text, int amount) { }"
+  - text: "public Order { }"
+  - text: "public Order(String text, int amount) { }"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3457#comment
+status: Solved
+record: -1
+local_check: false

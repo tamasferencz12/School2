@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: parameterized constructor
+  - text: copy constructor
+  - text: generic constructor
+  - text: default no-arg constructor
+  - text: private constructor
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/1983#comment
+status: Solved
+record: -1
+local_check: false

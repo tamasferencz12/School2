@@ -1,0 +1,8 @@
+type: framework
+content:
+  - Print seats
+  - Calculate the profit
+  - Set the ticket price
+  - Add menu to your application
+  - Manage stats and make your app error-prone
+current_task: 4

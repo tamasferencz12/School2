@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: The class <code>Rectangle</code> has constructor overloading.
+  - text: The class will generate a compile-time error due to multiple constructors
+      with the same name.
+  - text: The class <code>Rectangle</code> can't handle a square as a special case of
+      rectangle.
+  - text: Instance of the class can be created with only one parameter provided.
+  - text: The second constructor is an example of constructor chaining.
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29745#comment
+status: Solved
+record: -1
+local_check: false

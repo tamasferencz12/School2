@@ -1,0 +1,63 @@
+<div class="step-text">
+<p><strong>The <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the main method is a special method that serves as the entry point for any application and the starting point for program execution. | It is declared with the keyword public static void main(String[] args), where:
+
+- public indicates that the method can be accessed from outside the class. - static means that the method can be called without creating an instance of the class. - void indicates that the method does not return any value. - main is the name of the method, which should always be the same. - String[] args represents a sequence of arguments passed to the program from the outside world. The main method must be contained within a class, and its name is predefined and case-sensitive.">main method</a></strong> in Java serves as the gateway to the world of Java programming. It's the starting point for every Java application, the place where execution begins, and the foundation upon which your code is built. In this topic, we'll explore the main method's significance, structure, and how it kick-starts your Java programs.</p>
+<h5 id="the-declaration-of-the-main-method" style="text-align: center;">The declaration of the main method</h5>
+<p>Java is primarily an <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, object-oriented programming (OOP) is a programming paradigm that revolves around the concept of objects, which can represent real-world entities or abstract concepts. | Each object has its own state, which is stored in fields, and behavior, which is defined by methods. Objects are instances of classes, which serve as blueprints that define the properties and methods of their corresponding objects. OOP emphasizes encapsulation, inheritance, and polymorphism, making software design more reusable and maintainable. It is a good practice to use interface-oriented design, which means relying on interfaces instead of concrete implementations. Interfaces define a contract that classes must adhere to, allowing for greater flexibility and modularity in programming. Java is primarily an object-oriented programming language, but it also supports other programming paradigms, such as functional programming. OOP provides a way to create well-structured and readable programs by allowing developers to define the behavior of objects and classes using methods.">object-oriented</a> language. It means a Java program can be considered as a collection of objects that communicate via calling each other's methods. A typical Java program includes a lot of classes, interfaces, objects, and other concepts from object-oriented programming.</p>
+<p>Even the simplest "procedural-style" program should have at least one class and the main method inside to start the program. The main method is the entry point for any application. It means that the execution of any program begins right here. Ever since Java 7, there has been no other way to start an application than with this method (excluding the case in which you start your application inside a special container for applications but this is not considered in our materials).</p>
+<p>Let's see an example of the simplest application that prints the text <strong>"Hello, Java"</strong> to the <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a standard output is a receiver to which a program can send information in the form of text. | It is supported by all common operating systems and Java provides a special object, `System.out`, to work with the standard output. This object is often used to print data, with the `println()` method displaying the passed string followed by a new line on the screen. Standard output is a way for a program to write data to a destination, which can be a console, a file, or even a web socket. It is important to note that there are two types of streams: byte and character.">standard output</a>:</p>
+<pre><code class="language-java">public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Hello, Java");
+    }
+}</code></pre>
+<p>Here is a class named <code class="language-java">Main</code>. The class contains <strong>the main method</strong> for starting the program.</p>
+<p>It is important to mention that a class containing the main method can have any name, but the main method should always have the name <code class="language-java">main</code>.</p>
+<p>Let's take a closer look at the declaration of the main method:</p>
+<pre><code class="language-java">public static void main(String[] args)</code></pre>
+<ul>
+<li>the keyword <code class="language-java">public</code> indicates that the method can be invoked from everywhere;</li>
+<li>the keyword <code class="language-java">static</code> indicates the method can be invoked without creating an instance of the class;</li>
+<li>the keyword <code class="language-java">void</code> indicates the method doesn't return any value;</li>
+<li>the array variable <code class="language-java">args</code> contains arguments entered at the command line, the array is empty if there are no arguments.</li>
+</ul>
+<p>As you can see, even the simplest Java application contains a lot of concepts. All of them will be studied in the next topics related to methods and object-oriented programming. Now you should just understand how to write and run a simple Java program with <strong>the main method</strong>.</p>
+<p></p>
+<div class="alert alert-primary">
+<p><strong>Shortcut</strong> <strong>key: </strong>4 letters <strong>psvm</strong> and pressing the <strong>Tab</strong> key in the IntelliJ IDEA development environment will automatically create a <strong>main method</strong> with args arguments.</p>
+<p></p></div>
+<h5 id="invalid-declarations-of-the-main-method" style="text-align: center;">Invalid declarations of the main method</h5>
+<p>If the main method has an invalid declaration, two cases are possible:</p>
+<ul>
+<li>your program cannot be compiled</li>
+<li>your program is successfully <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a compile is the process of translating source code into bytecode that can be executed by the Java Virtual Machine (JVM). | During compilation, the Java compiler checks the code for errors, such as typos, incorrect method invocations, and mismatched variable declarations. If any errors are found, the code will not compile and an error message will be generated. To avoid compile-time errors, programmers can use tools like Integrated Development Environments (IDEs) with static code analyzers, which can identify and highlight potential errors before the code is compiled.">compiled</a> but can't be started</li>
+</ul>
+<p><strong>Your program cannot be compiled. </strong>This is the case when the main <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a method declaration is the way to define a method, which is a set of instructions that performs a specific task. | It includes the method's name, return type, access modifier, non-access modifier (such as static), parameter list, and the method body. The method name and parameter list in parentheses form the method signature, which is used to invoke the method. The method parameter is a value that the method uses internally, and it is declared in the method signature. The method body contains a set of instructions that are executed when the method is invoked. A method declaration must follow specific rules, such as the use of keywords like void, public, and static, and it must correctly declare the method's parameter.">method declaration</a> breaks the <a class="theory-lookup not-relevant" href="/learn/step/3489" rel="noopener noreferrer nofollow" target="_blank" title="In Java, syntax refers to a set of rules that define how a program needs to be written in order to be valid. | It includes the order of components, such as statements written from top to bottom in a sequential manner, and the use of specific symbols, such as semicolons to terminate a statement. Java has its own specific syntax, which includes the use of keywords, identifiers, literals, operators, and separators. These tokens must adhere to the specific rules of the Java syntax and are separated by whitespace.">syntax</a> of Java.</p>
+<p>Examples:</p>
+<ul>
+<li>invalid method declaration: no return value (even <code class="language-java">void</code>).</li>
+</ul>
+<pre><code class="language-java">public static main(String[] args)</code></pre>
+<ul>
+<li>invalid method declaration: a mistake in the keyword (<code class="language-java">pulic</code> instead of <code class="language-java">public</code>).</li>
+</ul>
+<pre><code class="language-java">pulic static void main(String[] args)</code></pre>
+<p><strong>A program can be compiled but cannot be run.</strong> This is the case when the main method has a correct declaration as a regular method but doesn't satisfy the specific requirement of the main method.</p>
+<p>Examples:</p>
+<ul>
+<li>invalid arguments (should be <code class="language-java">String[] args</code>)</li>
+</ul>
+<pre><code class="language-java">public static void main(String args) {
+    System.out.println("Hello, Java");
+}</code></pre>
+<ul>
+<li>the method declaration has no keyword <code class="language-java">static</code></li>
+</ul>
+<pre><code class="language-java">public void main(String[] args) { 
+    System.out.println("Hello, Java");
+} </code></pre>
+<p>In both cases, an error happens at runtime.</p>
+<h5 id="conclusion" style="text-align: center;">Conclusion</h5>
+<p>So, the main method is the entry point of any Java program. It has a very specific syntax which you need to remember. The declaration of the method must adhere to certain rules, including the keywords <code class="language-java">public</code>, <code class="language-java">static</code>, and <code class="language-java">void</code>, as well as the parameter <code class="language-java">String[] args</code>. Incorrect declaration of the main method can lead to the program being unable to compile.</p>
+</div>

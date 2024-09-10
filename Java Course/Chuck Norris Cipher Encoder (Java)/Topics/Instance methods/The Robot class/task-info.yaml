@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "(8, 4)"
+  - text: "(1, 4)"
+  - text: "(4, 0)"
+  - text: "(0, 0)"
+  - text: "(4, 1)"
+  - text: "(0, 4)"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2956#comment
+status: Solved
+record: -1
+local_check: false

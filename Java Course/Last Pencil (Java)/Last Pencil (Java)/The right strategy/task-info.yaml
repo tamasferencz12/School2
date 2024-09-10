@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lastpencil/Main.java
+    visible: true
+    learner_created: false
+  - name: test/LastPencilTest.java
+    visible: false
+    learner_created: false
+  - name: src/lastpencil/Player.java
+    visible: true
+    learner_created: true
+  - name: src/lastpencil/Bot.java
+    visible: true
+    learner_created: true
+  - name: src/lastpencil/Person.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/28002#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Tue, 13 Aug 2024 17:12:02 UTC"
+record: 5

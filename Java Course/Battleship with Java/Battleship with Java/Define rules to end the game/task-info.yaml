@@ -1,0 +1,23 @@
+type: edu
+files:
+  - name: src/battleship/Main.java
+    visible: true
+    learner_created: false
+  - name: test/Tests.java
+    visible: false
+    learner_created: false
+  - name: src/battleship/Matrix.java
+    visible: true
+    learner_created: true
+  - name: src/battleship/Ships.java
+    visible: true
+    learner_created: true
+  - name: src/battleship/Game.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/35308#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 07 Sep 2024 11:53:55 UTC"
+record: 5

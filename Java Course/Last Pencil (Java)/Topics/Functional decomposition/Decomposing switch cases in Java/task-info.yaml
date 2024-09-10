@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "Write separate methods for each complex operation, but call these methods\
+    \ outside the &#x27;switch statement&#x27; after task identification."
+  - text: "No need to modify anything, the block of code as is follows the principle\
+    \ of functional decomposition."
+  - text: "Declare separate methods for each case condition, each handling the corresponding\
+    \ complex operation, and call these methods inside the &#x27;switch statement&#x27;."
+  - text: Encapsulate the entire &#x27;switch statement&#x27; within a single method
+      and call this method from the main function.
+  - text: Combine all complex operations into a single method and call this method in
+      each case of the &#x27;switch statement&#x27;.
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/32373#comment
+status: Solved
+record: -1
+local_check: false

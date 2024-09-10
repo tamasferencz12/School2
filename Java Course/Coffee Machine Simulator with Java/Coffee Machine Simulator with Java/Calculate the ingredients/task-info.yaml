@@ -1,0 +1,20 @@
+type: edu
+files:
+  - name: src/machine/CoffeeMachine.java
+    visible: true
+    learner_created: false
+  - name: test/CoffeeMachineTest.java
+    visible: false
+    learner_created: false
+  - name: src/machine/Recipe.java
+    visible: true
+    learner_created: true
+  - name: src/machine/Ingredient.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/5330#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 19 Aug 2024 16:49:55 UTC"
+record: 2

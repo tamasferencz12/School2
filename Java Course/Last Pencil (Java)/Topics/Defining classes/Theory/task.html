@@ -1,0 +1,68 @@
+<div class="step-text">
+<p>When programmers are writing a real program, they use standard classes as building blocks. However, they often need to declare new program-specific classes to better represent the domain area. In this topic, we will see how you can create a <strong>custom class</strong> in Java.</p>
+<h5 id="declaring-new-classes">Declaring new classes</h5>
+<p>A new class is <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a declaration is a statement that introduces a variable, method, or class into the program. | It specifies the type of the entity being declared, its name, and other relevant information such as access modifier, return type (for method), and initial value (for variable). For example, the declaration of a method may include its name, return type, access modifier, and parameter list. Declarations are essential for Java to understand the structure and behavior of the program. Incorrect declarations can lead to compilation errors. In the context of variables, a declaration specifies the type, name, and initial value of a variable. The type of a variable determines what possible operations can be performed on the variable and which value can be stored in it. Every variable has a name (also known as an identifier) to distinguish it from others. Before using a variable, it must be declared. The general form of a variable declaration is: `type identifier = value;`
+
+It's important to note that a declaration is not the same as an assignment.">declared</a> with the <code class="language-java">class</code> keyword followed by the name of the class. For example, this is how you would create a class named <code class="language-java">Nothing</code>:</p>
+<pre><code class="language-java">class Nothing {
+    // empty body
+}</code></pre>
+<p>A class body can include fields, methods, and constructors. <strong>Fields</strong> store data, <strong>methods</strong> define behavior and <strong>constructors</strong> allow us to create and initialize new objects of the class. Not all Java classes have fields and methods so sometimes you will see classes without them.</p>
+<p>The <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a source code is the human-readable text version of a program written in the Java programming language. | It is typically stored in a file with a .java extension and can be edited using a text editor or an Integrated Development Environment (IDE). The source code is compiled by the Java compiler into bytecode, which is a low-level, platform-independent representation of the program. This bytecode can then be executed by the Java Virtual Machine (JVM) on any platform that has a JVM installed. The source code can also be decompiled back into readable Java code using a decompiler.">source code</a> of a class is placed in a <code class="language-java">.java</code> file. Usually, a source code file contains only one class and has the same name as that class, but sometimes a file can contain more classes.</p>
+<h5 id="writing-fields">Writing fields</h5>
+<p>A <strong>field</strong> is a <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a variable is a named storage location that is used to store a value of a specific type. | It is declared with a specific data type, which determines the kind of value that can be stored in it. Every variable has a unique name, also known as an identifier, which is used to access its value. Variables can be declared and initialized in a single statement, and their value can be accessed and modified using the name. It's important to note that variables can be changed, meaning you can assign a new value to a variable without having to declare it again.">variable</a> that stores data. It may have any type, including <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a primitive type is one of eight built-in data types provided by the language. | They are represented by keywords and are not objects, unlike reference types. Primitive types are divided into groups based on their meaning, and each group operates similarly but has different sizes and ranges of value. The most commonly used primitive type is `int`, which represents an integer number. Java also provides several types for integer and fractional numbers, which are often used in arithmetic expressions. Primitive types store their value directly, unlike reference types that store a reference to an object located elsewhere.">primitive types</a> (int, float, boolean and so on) and classes (even the same class). A class can have as many fields as you need.</p>
+<p>Let's declare a class <code class="language-java">Patient</code>:</p>
+<pre><code class="language-java">/**
+ * The class is a "blueprint" for patients
+ */
+class Patient {
+
+    String name;
+    int age;
+    float height;
+}</code></pre>
+<p>This class represents a patient in a hospital information system. It has three fields for storing important information about the patient: <code class="language-java">name</code>, <code class="language-java">age</code>, and <code class="language-java">height</code>. All objects of the class <code class="language-java">Patient</code> have the same fields, but their values may be different for each object.</p>
+<h5 id="creating-objects">Creating objects</h5>
+<p>Let's create an <strong>instance</strong> of the class <code class="language-java">Patient</code> using the keyword <strong>new</strong>:</p>
+<pre><code class="language-java">Patient patient = new Patient(); </code></pre>
+<p>When you create a new object, each field is initialized with the <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a default value is a value that is automatically assigned to a variable, field, or array element if no explicit initial value is provided. | For example, an array of a primitive type is initialized with default values. Variables of type boolean are initialized to false, while numeric types are initialized to zero. For object reference types, the default value is null. When creating an object of a class, if no constructor is defined, the compiler automatically provides a default no-argument constructor that initializes all fields with their default values. However, if a specific constructor is defined, the default constructor will not be created.">default value</a> of the corresponding type.</p>
+<pre><code class="language-java">System.out.println(patient.name); // it prints null
+System.out.println(patient.age); // it prints 0</code></pre>
+<h5 id="creating-multiple-objects-of-the-same-class">Creating multiple objects of the same class</h5>
+<p>The following program creates two objects of the class <code class="language-java">Patient</code> and prints the information about them.</p>
+<pre><code class="language-java">public class PatientDemo {
+    
+    public static void main(String[] args) {
+        
+        Patient john = new Patient();
+        
+        john.name = "John";
+        john.age = 30;
+        john.height = 180;
+        
+        System.out.println(john.name + " " + john.age + " " + john.height);
+            
+        Patient alice = new Patient();
+
+        alice.name = "Alice";
+        alice.age = 22;
+        alice.height = 165;
+        
+        System.out.println(alice.name + " " + alice.age + " " + alice.height);
+    }
+}
+
+class Patient {
+
+    String name;
+    int age;
+    float height;
+}</code></pre>
+<p>Note that<strong> </strong>both classes are placed in the same file named <code class="language-java">PatientDemo.java</code>. If we place two or more classes in the same <code class="language-java">.java</code> file, only one of them can be declared as public, and the name of the <code class="language-java">.java</code> file must match the <a class="theory-lookup not-relevant" href="/learn/step/3618" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a public class is the fundamental unit of a Java program and serves as the entry point for execution. | Every Java program must have at least one public class, which must be named appropriately and cannot start with a digit. The public class can contain fields, methods, and constructors, which define the properties and behavior of objects created from the class. It's important to note that a public class can be accessed from other packages, making it visible and usable outside of its defining package. This is in contrast to a package-private class, which is only visible to other classes within the same package.">public class</a> in the <code class="language-java">.java</code> file.</p>
+<p>In the code above, we've created two patients, John and Alice, defined the values of their fields and then printed out the information about them. So, the output of the code above is:</p>
+<pre><code class="language-java">John 30 180.0
+Alice 22 165.0</code></pre>
+<h5 id="summary">Summary</h5>
+<p>In this topic, we've learned how to create classes in Java. Custom classes can be very useful because they allow you to define fields and methods that work best for your purposes.</p>
+<p>Fields keep the current state (data) of the instances of the class and their values can be different for different instances. You can create objects of the class, assign values to their fields and use those objects in your programs. All in all, classes are a very powerful tool and we hope that you'll use them in your projects!</p>
+</div>

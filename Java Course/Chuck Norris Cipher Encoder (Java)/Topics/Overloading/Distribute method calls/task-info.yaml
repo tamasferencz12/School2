@@ -1,0 +1,38 @@
+type: table
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2248#comment
+status: Solved
+record: -1
+rows:
+  - float val = 2F; toString(val);
+  - long val = 2L; toString(val);
+  - int val = 2; toString(val);
+  - byte val = 2; toString(val);
+  - char val = 2; toString(val);
+  - double val = 2; toString(val);
+columns:
+  - toString(int num)
+  - toString(long num)
+  - None of these
+selected:
+  - - false
+    - false
+    - false
+  - - false
+    - false
+    - false
+  - - false
+    - false
+    - false
+  - - false
+    - false
+    - false
+  - - false
+    - false
+    - false
+  - - false
+    - false
+    - false

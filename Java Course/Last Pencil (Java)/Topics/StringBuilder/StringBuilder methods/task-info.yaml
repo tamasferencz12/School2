@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: <code>length</code>
+  - text: <code>reverse</code>
+  - text: <code>remove</code>
+  - text: <code>firstIndexOf</code>
+  - text: <code>add</code>
+  - text: <code>size</code>
+  - text: <code>charAt</code>
+  - text: <code>append</code>
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23734#comment
+status: Solved
+record: -1
+local_check: false

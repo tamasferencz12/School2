@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It can be placed anywhere in the body of the first constructor.
+  - text: It must be the last statement in the body of the second constructor.
+  - text: It must be the first statement in the body of the first constructor.
+  - text: It must be the first statement in the body of the second constructor.
+  - text: It must be the last statement in the body of the first constructor.
+  - text: It can be placed anywhere in the body of the second constructor.
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3286#comment
+status: Solved
+record: -1
+local_check: false

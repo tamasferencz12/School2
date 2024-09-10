@@ -1,0 +1,13 @@
+type: code
+custom_name: "Stop, yield, go: Traffic conductor's waltz"
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/49178#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Tue, 06 Aug 2024 18:13:45 UTC"
+record: -1
+submission_language: java17

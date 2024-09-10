@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: The code can't be compiled.
+  - text: "[4, 5, 6]"
+  - text: It throws an exception.
+  - text: "[ ]"
+  - text: "[1, 2, 3, 4, 5, 6]"
+  - text: "[1, 2, 3]"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2757#comment
+status: Solved
+record: -1
+local_check: false

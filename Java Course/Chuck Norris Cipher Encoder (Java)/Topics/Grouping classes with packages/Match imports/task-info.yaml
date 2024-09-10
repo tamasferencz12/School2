@@ -1,0 +1,20 @@
+type: matching
+captions:
+  - a
+  - b
+  - c
+options:
+  - Allows us to declare a variable of type Scanner without writing full class name
+  - "Allows us to use the method Math.max(1, 2) as max(1, 2)"
+  - It&#x27;s always automatically imported
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2252#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2

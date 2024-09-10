@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: <code>getSize()</code> method can be called on an instance of the enum.
+  - text: <code>getSize()</code> cannot be called as it's encapsulated inside the enum.
+  - text: You can create a new instance of the enum with <pre><code class="java">CoffeeSize
+      c = new CoffeeSize(400);</code></pre>
+  - text: Enum can't have the constructor <code>CoffeeSize(int size)</code>.
+  - text: The enum <code>CoffeeSize</code> can have a field <code>mlSize</code>.
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31272#comment
+status: Solved
+record: -1
+local_check: false

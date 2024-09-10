@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Both classes String and StringBuilder are <b>mutable</b>
+  - text: Only StringBuilder is <b>mutable</b>.
+  - text: Only String is <b>mutable</b>.
+  - text: Both classes String and StringBuilder are <b>immutable</b>
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3814#comment
+status: Solved
+record: -1
+local_check: false

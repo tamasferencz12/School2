@@ -1,0 +1,7 @@
+content:
+  - Theory
+  - Subclasses of Exception
+  - Overview the hierarchy
+  - BadRequestException
+  - Catching specific and general exceptions
+  - Base class

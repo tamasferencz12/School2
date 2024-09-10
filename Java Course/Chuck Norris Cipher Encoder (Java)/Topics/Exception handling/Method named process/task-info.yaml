@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It outputs nothing
+  - text: RuntimeException
+  - text: Exception
+  - text: NumberFormatException
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2826#comment
+status: Solved
+record: -1
+local_check: false

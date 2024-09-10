@@ -1,0 +1,7 @@
+custom_name: Method "main"
+content:
+  - Theory
+  - "Print  Hello, Java"
+  - Print  We are robots
+  - "Creating a 'Hello, World!' program from scrambled code"
+  - Fixing the main method

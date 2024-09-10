@@ -1,0 +1,18 @@
+type: edu
+files:
+  - name: src/cinema/Cinema.java
+    visible: true
+    learner_created: false
+  - name: test/CinemaTests.java
+    visible: false
+    learner_created: false
+  - name: src/cinema/Matrix.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/projects/133/stages/713/implement#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Thu, 05 Sep 2024 02:44:49 UTC"
+record: -1

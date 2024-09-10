@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "method(new int[] { 1, 2, 3 }, 4, 5);"
+  - text: "method(new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 });"
+  - text: "method(1, 2, 3);"
+  - text: "method(new int[] { 1, 2, 3 });"
+  - text: method();
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2755#comment
+status: Solved
+record: -1
+local_check: false

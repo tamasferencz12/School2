@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Processing_strings-Finding_the_longest_word_in_a_sentence" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Processing strings/Finding the longest word in a sentence" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Last Pencil (Java)" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Processing strings/Finding the longest word in a sentence">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Processing strings/Finding the longest word in a sentence/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Processing strings/Finding the longest word in a sentence/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Processing strings/Finding the longest word in a sentence/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

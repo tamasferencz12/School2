@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "public instance void method() { }"
+  - text: "public instance method() { }"
+  - text: "public void method() { }"
+  - text: "public static void method() { }"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2957#comment
+status: Solved
+record: -1
+local_check: false
